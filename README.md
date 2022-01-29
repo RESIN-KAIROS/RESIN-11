@@ -1,15 +1,15 @@
 # RESIN-pipeline
-RESIN: Schema-Guided Cross-document Cross-lingual Cross-media Information Extraction and Event Tracking System
+RESIN 2022: Schema-Guided Cross-document Cross-lingual Cross-media Information Extraction and Event Tracking System 2022
 
 ## Instructions
-1. Run `git clone https://github.com/RESIN-KAIROS/RESIN-pipeline-public`
+1. Run `git clone https://github.com/RESIN-KAIROS/RESIN-pipeline2022`
 
-2. Run `cd RESIN-pipeline-public`
+2. Run `cd RESIN-pipeline2022`
 
 3. Setup `${KAIROS_LIB}` dir: 
    - https://github.com/RESIN-KAIROS/RESIN-pipeline-public/blob/api/docker-compose.yaml#L8;
 
-   - Uncompress data package (e.g, LDC2020E33) and put everything under `${KAIROS_LIB}/resin/resin/input/task1`;
+   - Uncompress data package (e.g, LDC2021E19_KAIROS_Quizlet_9_Source_Data_V1.0) and put everything under `${KAIROS_LIB}/resin/resin/input/task1`;
    
      e.g., `${KAIROS_LIB}/resin/resin/input/task1/{data,docs,tools}`
    
@@ -23,7 +23,7 @@ RESIN: Schema-Guided Cross-document Cross-lingual Cross-media Information Extrac
    
 5. Set up device number for each GPU-based component, e.g.,
    
-   https://github.com/RESIN-KAIROS/RESIN-pipeline-public/blob/api/docker-compose.yaml#L44
+   https://github.com/RESIN-KAIROS/RESIN-pipeline-public/blob/api/docker-compose.yaml#L57
    
 6. Start APIs using: `docker-compose up`
 
@@ -39,13 +39,3 @@ RESIN: Schema-Guided Cross-document Cross-lingual Cross-media Information Extrac
 
 ## Source code
 Please view source code of each docker component in the docker-compose file.
-
-## Reference
-```
-@article{wen2021resin,
-  author    = {Haoyang Wen and Ying Lin and Tuan M. Lai and Xiaoman Pan and Sha Li and Xudong Lin and Ben Zhou and Manling Li and Haoyu Wang and Hongming Zhang and Xiaodong Yu and Alexander Dong and Zhenhailong Wang and Yi R. Fung and Piyush Mishra and Qing Lyu and Dídac Surís and Brian Chen and Susan W. Brown and Martha Palmer and Chris Callison-Burch and Carl Vondrick and Jiawei Han and Dan Roth and Shih-Fu Chang and Heng Ji},
-  title     = {RESIN: A Dockerized Schema-Guided Cross-document Cross-lingual Cross-media Information Extraction and Event Tracking System},
-  journal   = {NAACL Demo Track},
-  year      = {2021}
-}
-```
