@@ -46,7 +46,7 @@ services:
       - 20210:20210 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
     labels:
       - gpu
 
@@ -61,7 +61,7 @@ services:
       - 20200:20200 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
     labels:
       - gpu
 
@@ -108,7 +108,7 @@ services:
       - 20202:20202 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
     labels:
       - gpu
 
@@ -124,7 +124,7 @@ services:
       - 20203:20203 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
     labels:
       - gpu
 
@@ -169,7 +169,7 @@ services:
       - 30301:30301 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
     labels:
       - gpu
 
@@ -184,7 +184,7 @@ services:
       - 20208:20208 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
     labels:
       - gpu
 
@@ -201,6 +201,6 @@ services:
       - 20209:20209 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-     - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
+     - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
     labels:
       - gpu
