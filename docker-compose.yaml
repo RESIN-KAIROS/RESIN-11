@@ -100,7 +100,7 @@ services:
       - gpu
 
   relation-enrichment:
-    image: laituan245/relation_enrichment:api
+    image: mikewangwzhl/relation_enrichment:api
     container_name: relation-enrichment
     command: bash -c "
       /opt/conda/envs/aida_coreference/bin/python3.6 main.py --tmp_dir ${KAIROS_LIB}/${EXPERIMENT}/${PERFORMER_NAME}/persist/relation_enrichment --port 20207"
