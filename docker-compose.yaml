@@ -24,8 +24,6 @@ services:
     container_name: wikidata-es
     ports:
       - 9200:9200 # For local docker-compose test
-    networks:
-      - elastic
 
   input-mt:
     image: fishinnorthernmostsea/kairos_input_mt:api
@@ -100,8 +98,6 @@ services:
       - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
     labels:
       - gpu
-    networks:
-      - elastic
 
   relation-enrichment:
     image: laituan245/relation_enrichment:api
@@ -220,8 +216,3 @@ services:
      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
     labels:
       - gpu
-
-# Commnuication network between elasticsearch and kairos_wikidata_el
-networks:
-  elastic:
-    driver: bridge
