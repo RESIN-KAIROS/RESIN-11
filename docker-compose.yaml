@@ -30,6 +30,14 @@ services:
     ports:
       - 10100:10100 # For local docker-compose test
 
+  # An ElasticSearch (ES) Docker container that has information of Wikidata entities
+  wikidata-es:
+    image: laituan245/wikidata-es
+    container_name: wikidata-es
+    network_mode: "host"
+    ports:
+      - 9200:9200 # For local docker-compose test
+
   input-mt:
     image: fishinnorthernmostsea/kairos_input_mt:api
     container_name: input-mt
