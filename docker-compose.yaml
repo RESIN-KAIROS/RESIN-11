@@ -7,18 +7,6 @@ volumes:
       type: none
       device: /shared/nas/data/m1/yinglin8/tmpfile/docker-compose/var/kairosfs
       o: bind
-  # edl-db-data:
-  #   driver: local
-  #   driver_opts:
-  #     type: none
-  #     device: /shared/nas/data/m1/xiaoman6/tmp/20201013_kairos_docker-compose/edl_data/db
-  #     o: bind
-  # edl-resources-data:
-  #   driver: local
-  #   driver_opts:
-  #     type: none
-  #     device: /shared/nas/data/m1/xiaoman6/tmp/20201013_kairos_docker-compose/edl_data/resources
-  #     o: bind
 
 services:
   main:
@@ -34,9 +22,10 @@ services:
   wikidata-es:
     image: laituan245/wikidata-es
     container_name: wikidata-es
-    network_mode: "host"
     ports:
       - 9200:9200 # For local docker-compose test
+    networks:
+      - elastic
 
   input-mt:
     image: fishinnorthernmostsea/kairos_input_mt:api
@@ -97,27 +86,22 @@ services:
     labels:
       - gpu
 
-  # edl-db:
-  #   image: mongo:4
-  #   container_name: edl-db
-  #   logging:
-  #       driver: none
-  #   volumes:
-  #     - edl-db-data:/data/db
-  #   ports:
-  #     - 27017:27017 # For local docker-compose test
-
-  # edl:
-  #   image: panx27/edl:api
-  #   container_name: edl
-  #   command: bash -c "
-  #     python ./projs/docker_kairos/app.py --tmp_dir ${KAIROS_LIB}/${EXPERIMENT}/${PERFORMER_NAME}/persist/edl --port 20201"
-  #   volumes:
-  #     - edl-db-data:/data/db
-  #     - edl-resources-data:/data/resources
-  #     - root:${KAIROS_LIB}
-  #   ports:
-  #     - 20201:20201 # For local docker-compose test
+  edl:
+    image: laituan245/kairos_wikidata_el:api
+    container_name: edl
+    command: bash -c "
+      /opt/conda/envs/aida_coreference/bin/python3.6 main.py --tmp_dir ${KAIROS_LIB}/${EXPERIMENT}/${PERFORMER_NAME}/persist/edl --port 20201"
+    volumes:
+      - root:${KAIROS_LIB}
+    ports:
+      - 20201:20201 # For local docker-compose test
+    runtime: nvidia # For local docker-compose test
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
+    labels:
+      - gpu
+    networks:
+      - elastic
 
   relation-enrichment:
     image: laituan245/relation_enrichment:api
@@ -236,3 +220,8 @@ services:
      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
     labels:
       - gpu
+
+# Commnuication network between elasticsearch and kairos_wikidata_el
+networks:
+  elastic:
+    driver: bridge
