@@ -114,7 +114,7 @@ services:
       - 20207:20207 # For local docker-compose test
 
   coref:
-    image: laituan245/kairos_coref:api
+    image: laituan245/kairos_coref-v2:api
     container_name: coref
     command: bash -c "
       /opt/conda/envs/aida_coreference/bin/python3.6 main.py --tmp_dir ${KAIROS_LIB}/${EXPERIMENT}/${PERFORMER_NAME}/persist/coref --port 20202"
