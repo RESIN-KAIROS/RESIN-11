@@ -7,18 +7,18 @@ volumes:
       type: none
       device: /shared/nas/data/m1/yinglin8/tmpfile/docker-compose/var/kairosfs
       o: bind
-  edl-db-data:
-    driver: local
-    driver_opts:
-      type: none
-      device: /shared/nas/data/m1/xiaoman6/tmp/20201013_kairos_docker-compose/edl_data/db
-      o: bind
-  edl-resources-data:
-    driver: local
-    driver_opts:
-      type: none
-      device: /shared/nas/data/m1/xiaoman6/tmp/20201013_kairos_docker-compose/edl_data/resources
-      o: bind
+  # edl-db-data:
+  #   driver: local
+  #   driver_opts:
+  #     type: none
+  #     device: /shared/nas/data/m1/xiaoman6/tmp/20201013_kairos_docker-compose/edl_data/db
+  #     o: bind
+  # edl-resources-data:
+  #   driver: local
+  #   driver_opts:
+  #     type: none
+  #     device: /shared/nas/data/m1/xiaoman6/tmp/20201013_kairos_docker-compose/edl_data/resources
+  #     o: bind
 
 services:
   main:
@@ -40,7 +40,7 @@ services:
   fine-ent:
     image: wzq016/entity:api
     container_name: fine-ent
-    command: bash -c " 
+    command: bash -c "
       python ./process.py --port 20210"
     ports:
       - 20210:20210 # For local docker-compose test
@@ -49,7 +49,7 @@ services:
       - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
     labels:
       - gpu
-  
+
   weak-ed:
     image: fishinnorthernmostsea/kairos_weak_ed:api
     container_name: weak-ed
