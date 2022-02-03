@@ -181,12 +181,12 @@ services:
       - 30301:30301 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=3 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=1 # For local docker-compose test
     labels:
       - gpu
 
   gen-arg:
-    image: raspberryice/gen-arg:0.2
+    image: raspberryice/gen-arg:0.1
     container_name: gen-arg
     command: bash -c "
       conda run -n genie python app.py --port=20208"
@@ -196,7 +196,7 @@ services:
       - 20208:20208 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=3 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=1 # For local docker-compose test
     labels:
       - gpu
 
@@ -213,6 +213,6 @@ services:
       - 20209:20209 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-     - NVIDIA_VISIBLE_DEVICES=3 # For local docker-compose test
+     - NVIDIA_VISIBLE_DEVICES=1 # For local docker-compose test
     labels:
       - gpu
