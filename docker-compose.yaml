@@ -41,7 +41,7 @@ services:
       - 20210:20210 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
     labels:
       - gpu
 
@@ -53,7 +53,7 @@ services:
       - 20212:20212 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
     labels:
       - gpu
 
@@ -65,7 +65,7 @@ services:
       - 20213:20213 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
     labels:
       - gpu
 
@@ -80,7 +80,7 @@ services:
       - 20200:20200 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
     labels:
       - gpu
 
@@ -95,7 +95,7 @@ services:
       - 20201:20201 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
     labels:
       - gpu
 
@@ -120,7 +120,7 @@ services:
       - 20202:20202 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=2 # For local docker-compose test
     labels:
       - gpu
 
@@ -136,7 +136,7 @@ services:
       - 20203:20203 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=3 # For local docker-compose test
     labels:
       - gpu
 
@@ -161,10 +161,10 @@ services:
       - 20205:20205 # For local docker-compose test
 
   matching:
-    image: limteng/schema_matching:api
+    image: zixuan11/kairos-prediction:api
     container_name: matching
     command: bash -c "
-      python /schema_matching/app.py --schema_dir ${KAIROS_LIB}/${EXPERIMENT}/${PERFORMER_NAME}/schemas --port 20206"
+      python server.py --port 20206"
     volumes:
       - root:${KAIROS_LIB}
     ports:
@@ -181,7 +181,7 @@ services:
       - 30301:30301 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=3 # For local docker-compose test
     labels:
       - gpu
 
@@ -196,7 +196,7 @@ services:
       - 20208:20208 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-      - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
+      - NVIDIA_VISIBLE_DEVICES=3 # For local docker-compose test
     labels:
       - gpu
 
@@ -213,6 +213,6 @@ services:
       - 20209:20209 # For local docker-compose test
     runtime: nvidia # For local docker-compose test
     environment:
-     - NVIDIA_VISIBLE_DEVICES=0 # For local docker-compose test
+     - NVIDIA_VISIBLE_DEVICES=3 # For local docker-compose test
     labels:
       - gpu
