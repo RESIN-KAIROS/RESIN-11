@@ -186,7 +186,7 @@ services:
       - gpu
 
   gen-arg:
-    image: raspberryice/gen-arg:0.1
+    image: raspberryice/gen-arg:0.2
     container_name: gen-arg
     command: bash -c "
       conda run -n genie python app.py --port=20208"
