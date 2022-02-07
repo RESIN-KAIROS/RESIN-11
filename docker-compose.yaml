@@ -125,7 +125,7 @@ services:
       - gpu
 
   temporal:
-    image: wenhycs/uiuc_kairos_temporal_relation:api
+    image: wenhycs/uiuc_kairos_temporal_relation:api_v2
     container_name: temporal
     working_dir: /roberta_temporal_relation
     command: bash -c "
