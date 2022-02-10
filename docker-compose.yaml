@@ -161,7 +161,7 @@ services:
       - 20205:20205 # For local docker-compose test
 
   matching:
-    image: zixuan11/kairos-prediction:1.0
+    image: zixuan11/kairos-prediction:2.0
     container_name: matching
     command: bash -c "
       python server.py --port 20206"
