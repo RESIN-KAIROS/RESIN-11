@@ -2,7 +2,8 @@
 RESIN-11: Schema-guided Event Prediction for 11 Newsworthy Scenarios
 
 ## Schema Library
-
+The schema library is in `schemas/scenario-schemas`. 
+For each schema, we also provide visualizations and explanations in `schemas/hrf`.
 
 ## Instructions to Run the System
 1. Run `git clone https://github.com/RESIN-KAIROS/RESIN-pipeline2022`
