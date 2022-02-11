@@ -1,0 +1,2253 @@
+{
+  "@context": [
+    "https://kairos-sdf.s3.amazonaws.com/context/kairos-v1.4.1.jsonld",
+    {
+      "caci": "https://caci.com/kairos/",
+      "my_key": "caci:my_key",
+      "giant_bitstring": "caci:giant_bitstring",
+      "resin": "https://blender.cs.illinois.edu/kairos/"
+    }
+  ],
+  "@id": "resin:Submissions/TA1/schemas_quizlet9",
+  "sdfVersion": "1.4.1",
+  "version": "resin:kidnapping/quizlet9",
+  "events": [
+    {
+      "@id": "resin:Events/10000/resin:Events_kidnapping",
+      "name": "Resin:events_kidnapping",
+      "description": "Event complex for Resin:events_kidnapping",
+      "qnode": "wd:Q318296",
+      "qlabel": "kidnapping",
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "goal": "",
+      "ta1explanation": "taking away or transportation of a person against that person's will",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "participants": [],
+      "children": [
+        {
+          "child": "resin:Events/10001/Steps_kairos:Container:1",
+          "comment": "Contributory factors",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10002/Steps_kairos:Container:2"
+          ]
+        },
+        {
+          "child": "resin:Events/10002/Steps_kairos:Container:2",
+          "comment": "Planning",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10003/Steps_kairos:Container:3",
+            "resin:Events/10004/Steps_kairos:Container:4"
+          ]
+        },
+        {
+          "child": "resin:Events/10003/Steps_kairos:Container:3",
+          "comment": "Scrutiny",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10004/Steps_kairos:Container:4"
+          ]
+        },
+        {
+          "child": "resin:Events/10004/Steps_kairos:Container:4",
+          "comment": "Committing crime",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10005/Steps_kairos:Container:5",
+            "resin:Events/10006/Steps_kairos:Container:6"
+          ]
+        },
+        {
+          "child": "resin:Events/10005/Steps_kairos:Container:5",
+          "comment": "Authority response",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10007/Steps_kairos:Container:7"
+          ]
+        },
+        {
+          "child": "resin:Events/10006/Steps_kairos:Container:6",
+          "comment": "Non authority response",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10007/Steps_kairos:Container:7"
+          ]
+        },
+        {
+          "child": "resin:Events/10007/Steps_kairos:Container:7",
+          "comment": "Legality",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10001/Steps_kairos:Container:1",
+      "name": "Contributory factors",
+      "description": "Episode for Steps_kairos:container:1",
+      "qnode": "wd:Q18603648",
+      "qlabel": "contributing factor",
+      "minDuration": "",
+      "maxDuration": "",
+      "goal": "",
+      "ta1explanation": "Circumstance that contributes to a result, but is not 100% determinative of outcome",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "participants": [],
+      "children": [
+        {
+          "child": "resin:Events/10010/Steps_kairos:Primitives_Events_Earnings_and_losses:1",
+          "comment": "Earnings_and_losses:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10011/Steps_kairos:Primitives_Events_Quarreling:1",
+          "comment": "Quarreling:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10012/Steps_kairos:Primitives_Events_Revenge:1",
+          "comment": "Revenge:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10013/Steps_kairos:Primitives_Events_Warning:1",
+          "comment": "Warning:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10002/Steps_kairos:Container:2",
+      "name": "Planning",
+      "description": "Episode for Steps_kairos:container:2",
+      "qnode": "wd:Q1371819",
+      "qlabel": "plan",
+      "minDuration": "",
+      "maxDuration": "",
+      "goal": "",
+      "ta1explanation": "outline of a strategy for achievement of an objective",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "participants": [],
+      "children": [
+        {
+          "child": "resin:Events/10014/Steps_kairos:Primitives_Events_Choosing_victim:1",
+          "comment": "Choosing_victim:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10015/Steps_kairos:Primitives_Events_Choosing_location:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10015/Steps_kairos:Primitives_Events_Choosing_location:1",
+          "comment": "Choosing_location:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10016/Steps_kairos:Primitives_Events_Choosing_method:1",
+            "resin:Events/10017/Steps_kairos:Primitives_Events_Deciding_communication_protocols:1",
+            "resin:Events/10018/Steps_kairos:Primitives_Events_Getting_tools:1",
+            "resin:Events/10019/Steps_kairos:Primitives_Events_Getting_vehicle:1",
+            "resin:Events/10020/Steps_kairos:Primitives_Events_Getting_weapons:1",
+            "resin:Events/10021/Steps_kairos:Primitives_Events_Getting_place_to_keep_victim:1",
+            "resin:Events/10022/Steps_kairos:Primitives_Events_Cause_to_be_included_guards:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10016/Steps_kairos:Primitives_Events_Choosing_method:1",
+          "comment": "Choosing_method:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10017/Steps_kairos:Primitives_Events_Deciding_communication_protocols:1",
+          "comment": "Deciding_communication_protocols:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10018/Steps_kairos:Primitives_Events_Getting_tools:1",
+          "comment": "Getting_tools:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10019/Steps_kairos:Primitives_Events_Getting_vehicle:1",
+          "comment": "Getting_vehicle:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10020/Steps_kairos:Primitives_Events_Getting_weapons:1",
+          "comment": "Getting_weapons:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10021/Steps_kairos:Primitives_Events_Getting_place_to_keep_victim:1",
+          "comment": "Getting_place_to_keep_victim:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10022/Steps_kairos:Primitives_Events_Cause_to_be_included_guards:1",
+          "comment": "Cause_to_be_included_guards:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10003/Steps_kairos:Container:3",
+      "name": "Scrutiny",
+      "description": "Episode for Steps_kairos:container:3",
+      "qnode": "wd:Q334401",
+      "qlabel": "surveillance",
+      "minDuration": "",
+      "maxDuration": "",
+      "goal": "",
+      "ta1explanation": "monitoring of behavior, activities, or other changing information, for the purpose of influencing, managing or directing",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "participants": [],
+      "children": [
+        {
+          "child": "resin:Events/10023/Steps_kairos:Primitives_Events_Physical_surveillance:1",
+          "comment": "Physical_surveillance:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10024/Steps_kairos:Primitives_Events_Know_perception_active:1",
+            "resin:Events/10025/Steps_kairos:Primitives_Events_Cyber_surveillance:1",
+            "resin:Events/10026/Steps_kairos:Primitives_Events_Communication:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10024/Steps_kairos:Primitives_Events_Know_perception_active:1",
+          "comment": "Know_perception_active:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10026/Steps_kairos:Primitives_Events_Communication:1",
+            "resin:Events/10025/Steps_kairos:Primitives_Events_Cyber_surveillance:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10025/Steps_kairos:Primitives_Events_Cyber_surveillance:1",
+          "comment": "Cyber_surveillance:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10026/Steps_kairos:Primitives_Events_Communication:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10026/Steps_kairos:Primitives_Events_Communication:1",
+          "comment": "Communication:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10004/Steps_kairos:Container:4",
+      "name": "Committing crime",
+      "description": "Episode for Steps_kairos:container:4",
+      "qnode": "wd:Q83267",
+      "qlabel": "crime",
+      "minDuration": "",
+      "maxDuration": "",
+      "goal": "",
+      "ta1explanation": "unlawful act forbidden and punishable by criminal law",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "participants": [],
+      "children": [
+        {
+          "child": "resin:Events/10027/Steps_kairos:Primitives_Events_Motion_traveling:1",
+          "comment": "Motion_traveling:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10028/Steps_kairos:Primitives_Events_Violence_attack:1",
+            "resin:Events/10029/Steps_kairos:Primitives_Events_Kidnapping:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10028/Steps_kairos:Primitives_Events_Violence_attack:1",
+          "comment": "Violence_attack:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10029/Steps_kairos:Primitives_Events_Kidnapping:1",
+          "comment": "Kidnapping:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10030/Steps_kairos:Primitives_Events_Spatial_removing_victim:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10030/Steps_kairos:Primitives_Events_Spatial_removing_victim:1",
+          "comment": "Spatial_removing_victim:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10031/Steps_kairos:Primitives_Events_Spatial_placing_victim:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10031/Steps_kairos:Primitives_Events_Spatial_placing_victim:1",
+          "comment": "Spatial_placing_victim:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10032/Steps_kairos:Primitives_Events_Communication:2",
+            "resin:Events/10034/Steps_kairos:Primitives_Events_Motion_temporary_stay:1",
+            "resin:Events/10038/Steps_kairos:Primitives_Events_Violence_attack_killing:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10032/Steps_kairos:Primitives_Events_Communication:2",
+          "comment": "Communication:2",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10033/Steps_kairos:Primitives_Events_Request:1",
+            "resin:Events/10037/Steps_kairos:Primitives_Events_Agree_or_refuse_to_act:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10033/Steps_kairos:Primitives_Events_Request:1",
+          "comment": "Request:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10035/Steps_kairos:Primitives_Events_Ransom:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10034/Steps_kairos:Primitives_Events_Motion_temporary_stay:1",
+          "comment": "Motion_temporary_stay:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10035/Steps_kairos:Primitives_Events_Ransom:1",
+          "comment": "Ransom:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10036/Steps_kairos:Primitives_Events_GiveUp:1",
+          "comment": "GiveUp:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10037/Steps_kairos:Primitives_Events_Agree_or_refuse_to_act:1",
+          "comment": "Agree_or_refuse_to_act:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10036/Steps_kairos:Primitives_Events_GiveUp:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10038/Steps_kairos:Primitives_Events_Violence_attack_killing:1",
+          "comment": "Violence_attack_killing:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10005/Steps_kairos:Container:5",
+      "name": "Authority response",
+      "description": "Episode for Steps_kairos:container:5",
+      "qnode": "wd:Q174834",
+      "qlabel": "authority",
+      "minDuration": "",
+      "maxDuration": "",
+      "goal": "",
+      "ta1explanation": "power to command",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "participants": [],
+      "children": [
+        {
+          "child": "resin:Events/10039/Steps_kairos:Primitives_Events_Physical_surveillance:2",
+          "comment": "Physical_surveillance:2",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10040/Steps_kairos:Primitives_Events_Motion_traveling:2"
+          ]
+        },
+        {
+          "child": "resin:Events/10040/Steps_kairos:Primitives_Events_Motion_traveling:2",
+          "comment": "Motion_traveling:2",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10041/Steps_kairos:Primitives_Events_Finding:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10041/Steps_kairos:Primitives_Events_Finding:1",
+          "comment": "Finding:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10042/Steps_kairos:Primitives_Events_Communication:3"
+          ]
+        },
+        {
+          "child": "resin:Events/10042/Steps_kairos:Primitives_Events_Communication:3",
+          "comment": "Communication:3",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10043/Steps_kairos:Primitives_Events_Communication_expressing_publicly:1",
+            "resin:Events/10044/Steps_kairos:Primitives_Events_Request:2"
+          ]
+        },
+        {
+          "child": "resin:Events/10043/Steps_kairos:Primitives_Events_Communication_expressing_publicly:1",
+          "comment": "Communication_expressing_publicly:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10044/Steps_kairos:Primitives_Events_Request:2",
+          "comment": "Request:2",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10045/Steps_kairos:Primitives_Events_Suasion_negotiation:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10045/Steps_kairos:Primitives_Events_Suasion_negotiation:1",
+          "comment": "Suasion_negotiation:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10046/Steps_kairos:Primitives_Events_Influence:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10046/Steps_kairos:Primitives_Events_Influence:1",
+          "comment": "Influence:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10047/Steps_kairos:Primitives_Events_Getting_ransom:1",
+            "resin:Events/10048/Steps_kairos:Primitives_Events_Defending:1",
+            "resin:Events/10049/Steps_kairos:Primitives_Events_Helping:1",
+            "resin:Events/10050/Steps_kairos:Primitives_Events_Violence_attack:2",
+            "resin:Events/10052/Steps_kairos:Primitives_Events_Exchange_victim:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10047/Steps_kairos:Primitives_Events_Getting_ransom:1",
+          "comment": "Getting_ransom:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10048/Steps_kairos:Primitives_Events_Defending:1",
+          "comment": "Defending:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10049/Steps_kairos:Primitives_Events_Helping:1",
+          "comment": "Helping:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10050/Steps_kairos:Primitives_Events_Violence_attack:2",
+          "comment": "Violence_attack:2",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10051/Steps_kairos:Primitives_Events_Violence_attack_killing:2"
+          ]
+        },
+        {
+          "child": "resin:Events/10051/Steps_kairos:Primitives_Events_Violence_attack_killing:2",
+          "comment": "Violence_attack_killing:2",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10052/Steps_kairos:Primitives_Events_Exchange_victim:1",
+          "comment": "Exchange_victim:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10006/Steps_kairos:Container:6",
+      "name": "Non authority response",
+      "description": "Episode for Steps_kairos:container:6",
+      "qnode": "wd:Q2995644",
+      "qlabel": "result",
+      "minDuration": "",
+      "maxDuration": "",
+      "goal": "",
+      "ta1explanation": "final consequence or product of a sequence of actions or events",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "participants": [],
+      "children": [
+        {
+          "child": "resin:Events/10053/Steps_kairos:Primitives_Events_Suasion_negotiation:2",
+          "comment": "Suasion_negotiation:2",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10054/Steps_kairos:Primitives_Events_Getting_ransom:2",
+            "resin:Events/10057/Steps_kairos:Primitives_Events_Communication:4"
+          ]
+        },
+        {
+          "child": "resin:Events/10054/Steps_kairos:Primitives_Events_Getting_ransom:2",
+          "comment": "Getting_ransom:2",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10056/Steps_kairos:Primitives_Events_Motion_traveling:3"
+          ]
+        },
+        {
+          "child": "resin:Events/10055/Steps_kairos:Primitives_Events_Giving_ransom:1",
+          "comment": "Giving_ransom:1",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10056/Steps_kairos:Primitives_Events_Motion_traveling:3",
+          "comment": "Motion_traveling:3",
+          "optional": true,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10055/Steps_kairos:Primitives_Events_Giving_ransom:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10057/Steps_kairos:Primitives_Events_Communication:4",
+          "comment": "Communication:4",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10007/Steps_kairos:Container:7",
+      "name": "Legality",
+      "description": "Episode for Steps_kairos:container:7",
+      "qnode": "wd:Q7748",
+      "qlabel": "law",
+      "minDuration": "",
+      "maxDuration": "",
+      "goal": "",
+      "ta1explanation": "system of rules and guidelines, generally backed by governmental authority",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "participants": [],
+      "children": [
+        {
+          "child": "resin:Events/10058/Steps_kairos:Primitives_Events_Legality_investigation:1",
+          "comment": "Investigation:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10059/Steps_kairos:Primitives_Events_Legality_legal_rulings:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10059/Steps_kairos:Primitives_Events_Legality_legal_rulings:1",
+          "comment": "Legal_rulings:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": [
+            "resin:Events/10060/Steps_kairos:Primitives_Events_Legality_judgment_communication:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10060/Steps_kairos:Primitives_Events_Legality_judgment_communication:1",
+          "comment": "Judgment_communication:1",
+          "optional": false,
+          "importance": 0.0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10010/Steps_kairos:Primitives_Events_Earnings_and_losses:1",
+      "name": "Earnings_and_losses",
+      "comment": "",
+      "qnode": "wd:Q1527264",
+      "qlabel": "income",
+      "aka": "earn.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20000/kairos:Primitives_Events_Earnings_and_losses:1:earner",
+          "roleName": "A0_pag_earner",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "consumption and savings opportunity gained by an entity within a specified timeframe",
+      "goal": "",
+      "ta1explanation": "financial motivation for kidnapping operation",
+      "privateData": {
+        "@type": "resin:Events/10010/Steps_kairos:Primitives_Events_Earnings_and_losses:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10011/Steps_kairos:Primitives_Events_Quarreling:1",
+      "name": "Quarreling",
+      "comment": "",
+      "qnode": "wd:Q2672648",
+      "qlabel": "social_conflict",
+      "aka": "conflict.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20005/kairos:Primitives_Events_Quarreling:1:agentive_clasher",
+          "roleName": "A0_pag_agentive_clasher",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "struggle for agency or power in society, when two or more actors oppose each other in social interaction",
+      "goal": "",
+      "ta1explanation": "conflict between two or more parties that may lead to kidnapping as retribution",
+      "privateData": {
+        "@type": "resin:Events/10011/Steps_kairos:Primitives_Events_Quarreling:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10012/Steps_kairos:Primitives_Events_Revenge:1",
+      "name": "Revenge",
+      "comment": "",
+      "qnode": "wd:Q1712140",
+      "qlabel": "revenge",
+      "aka": "retribute.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20009/kairos:Primitives_Events_Revenge:1:vengeant_one",
+          "roleName": "A0_pag_vengeant_one",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "harmful action in response to a grievance",
+      "goal": "",
+      "ta1explanation": "motivation for kidnapping in response to earlier action",
+      "privateData": {
+        "@type": "resin:Events/10012/Steps_kairos:Primitives_Events_Revenge:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10013/Steps_kairos:Primitives_Events_Warning:1",
+      "name": "Warning",
+      "comment": "",
+      "qnode": "wd:Q21010924",
+      "qlabel": "safety_precaution",
+      "aka": "precaution.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20013/kairos:Primitives_Events_Warning:1:Entity_giving_warning",
+          "roleName": "A0_pag_Entity_giving_warning",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "preventative measure taken to ensure someone's health",
+      "goal": "",
+      "ta1explanation": "motivation for kidnapping in the attempt to convince other party to follow certain course of action",
+      "privateData": {
+        "@type": "resin:Events/10013/Steps_kairos:Primitives_Events_Warning:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10014/Steps_kairos:Primitives_Events_Choosing_victim:1",
+      "name": "Choosing_victim",
+      "comment": "",
+      "qnode": "wd:Q12888920",
+      "qlabel": "choice",
+      "aka": "choose.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20017/kairos:Primitives_Events_Choosing_victim:1:picker",
+          "roleName": "A0_pag_picker",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20018/kairos:Primitives_Events_Choosing_victim:1:thing_picked",
+          "roleName": "A1_ppt_thing_picked",
+          "entity": "resin:Entities/00094/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "act of judging the merits of multiple options and selecting one or more victims",
+      "goal": "",
+      "ta1explanation": "early step in planning process in which kidnapping victim is identified",
+      "privateData": {
+        "@type": "resin:Events/10014/Steps_kairos:Primitives_Events_Choosing_victim:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10015/Steps_kairos:Primitives_Events_Choosing_location:1",
+      "name": "Choosing_location",
+      "comment": "",
+      "qnode": "wd:Q12888920",
+      "qlabel": "choice",
+      "aka": "choose.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20023/kairos:Primitives_Events_Choosing_location:1:picker",
+          "roleName": "A0_pag_picker",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20024/kairos:Primitives_Events_Choosing_location:1:thing_picked",
+          "roleName": "A1_ppt_thing_picked",
+          "entity": "resin:Entities/00095/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "act of selecting location where to kidnap victim",
+      "goal": "",
+      "ta1explanation": "choice of location where victim is likely to be kidnapped",
+      "privateData": {
+        "@type": "resin:Events/10015/Steps_kairos:Primitives_Events_Choosing_location:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10016/Steps_kairos:Primitives_Events_Choosing_method:1",
+      "name": "Choosing_method",
+      "comment": "",
+      "qnode": "wd:Q12888920",
+      "qlabel": "choice",
+      "aka": "choose.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20029/kairos:Primitives_Events_Choosing_method:1:picker",
+          "roleName": "A0_pag_picker",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "act of selecting kidnapping methods",
+      "goal": "",
+      "ta1explanation": "choice of how to kidnap victim, including through restraint, coercion, or trickery",
+      "privateData": {
+        "@type": "resin:Events/10016/Steps_kairos:Primitives_Events_Choosing_method:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10017/Steps_kairos:Primitives_Events_Deciding_communication_protocols:1",
+      "name": "Deciding_communication_protocols",
+      "comment": "",
+      "qnode": "wd:Q16513426",
+      "qlabel": "decision",
+      "aka": "decide.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20035/kairos:Primitives_Events_Deciding_communication_protocols:1:decider",
+          "roleName": "A0_pag_decider",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "result of deliberation about how kidnappers should communicate before, during, and after the crime",
+      "goal": "",
+      "ta1explanation": "establishing how to communicate messages about kidnapping operation",
+      "privateData": {
+        "@type": "resin:Events/10017/Steps_kairos:Primitives_Events_Deciding_communication_protocols:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10018/Steps_kairos:Primitives_Events_Getting_tools:1",
+      "name": "Getting_tools",
+      "comment": "",
+      "qnode": "wd:Q12887029",
+      "qlabel": "buy",
+      "aka": "buy.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20040/kairos:Primitives_Events_Getting_tools:1:buyer",
+          "roleName": "A0_pag_buyer",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "purchase of tools necessary for crime",
+      "goal": "",
+      "ta1explanation": "planning for crime involves gathering tools such as restraints",
+      "privateData": {
+        "@type": "resin:Events/10018/Steps_kairos:Primitives_Events_Getting_tools:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10019/Steps_kairos:Primitives_Events_Getting_vehicle:1",
+      "name": "Getting_vehicle",
+      "comment": "",
+      "qnode": "wd:Q12887029",
+      "qlabel": "buy",
+      "aka": "buy.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20046/kairos:Primitives_Events_Getting_vehicle:1:buyer",
+          "roleName": "A0_pag_buyer",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "Purchase of vehicle necessary for crime",
+      "goal": "",
+      "ta1explanation": "obtaining vehicle for transport of victim from location of kidnapping to other location",
+      "privateData": {
+        "@type": "resin:Events/10019/Steps_kairos:Primitives_Events_Getting_vehicle:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10020/Steps_kairos:Primitives_Events_Getting_weapons:1",
+      "name": "Getting_weapons",
+      "comment": "",
+      "qnode": "wd:Q12887029",
+      "qlabel": "buy",
+      "aka": "buy.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20052/kairos:Primitives_Events_Getting_weapons:1:buyer",
+          "roleName": "A0_pag_buyer",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20053/kairos:Primitives_Events_Getting_weapons:1:thing_bought",
+          "roleName": "A1_ppt_thing_bought",
+          "entity": "resin:Entities/00054/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "purchase of weapons needed for crime",
+      "goal": "",
+      "ta1explanation": "obtaining weapons possibly needed to intimidate or hurt victim or authorities",
+      "privateData": {
+        "@type": "resin:Events/10020/Steps_kairos:Primitives_Events_Getting_weapons:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10021/Steps_kairos:Primitives_Events_Getting_place_to_keep_victim:1",
+      "name": "Getting_place_to_keep_victim",
+      "comment": "",
+      "qnode": "wd:Q12887029",
+      "qlabel": "buy",
+      "aka": "buy.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20058/kairos:Primitives_Events_Getting_place_to_keep_victim:1:buyer",
+          "roleName": "A0_pag_buyer",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20059/kairos:Primitives_Events_Getting_place_to_keep_victim:1:thing_bought",
+          "roleName": "A1_ppt_thing_bought",
+          "entity": "resin:Entities/00102/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "Acquisition of location where victim will stay",
+      "goal": "",
+      "ta1explanation": "obtaining room, house, or other location for short or long-term stay",
+      "privateData": {
+        "@type": "resin:Events/10021/Steps_kairos:Primitives_Events_Getting_place_to_keep_victim:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10022/Steps_kairos:Primitives_Events_Cause_to_be_included_guards:1",
+      "name": "Cause_to_be_included_guards",
+      "comment": "",
+      "qnode": "wd:Q3149923",
+      "qlabel": "social_inclusion",
+      "aka": "include.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20064/kairos:Primitives_Events_Cause_to_be_included_guards:1:agent",
+          "roleName": "A0_pag_agent",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "Employment of personnel needed to guard victim",
+      "goal": "",
+      "ta1explanation": "employing other parties to ensure victim does not escape and is otherwise taken care of",
+      "privateData": {
+        "@type": "resin:Events/10022/Steps_kairos:Primitives_Events_Cause_to_be_included_guards:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10023/Steps_kairos:Primitives_Events_Physical_surveillance:1",
+      "name": "Physical_surveillance",
+      "comment": "",
+      "qnode": "wd:Q334401",
+      "qlabel": "surveillance",
+      "aka": "monitor.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20068/kairos:Primitives_Events_Physical_surveillance:1:observer",
+          "roleName": "A0_pag_observer",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20069/kairos:Primitives_Events_Physical_surveillance:1:thing_looked_at",
+          "roleName": "A1_loc_thing_looked_at",
+          "entity": "resin:Entities/00094/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "monitoring of behavior, activities, or other changing information about victim",
+      "goal": "",
+      "ta1explanation": "early stage in planning to learn about victim",
+      "privateData": {
+        "@type": "resin:Events/10023/Steps_kairos:Primitives_Events_Physical_surveillance:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10024/Steps_kairos:Primitives_Events_Know_perception_active:1",
+      "name": "Know_perception_active",
+      "comment": "",
+      "qnode": "wd:Q21142755",
+      "qlabel": "recognition",
+      "aka": "perceive.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20072/kairos:Primitives_Events_Know_perception_active:1:perceiver",
+          "roleName": "A0_ppt_perceiver",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20073/kairos:Primitives_Events_Know_perception_active:1:entity_perceived",
+          "roleName": "A1_pag_entity_perceived",
+          "entity": "resin:Entities/00094/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "mental process; act of recognizing attributes of victim",
+      "goal": "",
+      "ta1explanation": "planning stage involving thinking about victim and circumstances about crime",
+      "privateData": {
+        "@type": "resin:Events/10024/Steps_kairos:Primitives_Events_Know_perception_active:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10025/Steps_kairos:Primitives_Events_Cyber_surveillance:1",
+      "name": "Cyber_surveillance",
+      "comment": "",
+      "qnode": "wd:Q165950",
+      "qlabel": "espionage",
+      "aka": "spy.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20076/kairos:Primitives_Events_Cyber_surveillance:1:agent_secret_agent",
+          "roleName": "A0_pag_agent_secret_agent",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20077/kairos:Primitives_Events_Cyber_surveillance:1:stimulus_entity_spied_seen",
+          "roleName": "A1_ppt_stimulus_entity_spied_seen",
+          "entity": "resin:Entities/00094/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "clandestine acquisition of confidential information about victim via online resources",
+      "goal": "",
+      "ta1explanation": "surveillance of victim or associates using social media and other online resources",
+      "privateData": {
+        "@type": "resin:Events/10025/Steps_kairos:Primitives_Events_Cyber_surveillance:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10026/Steps_kairos:Primitives_Events_Communication:1",
+      "name": "Communication",
+      "comment": "",
+      "qnode": "wd:Q11024",
+      "qlabel": "communication",
+      "aka": "communicate.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20080/kairos:Primitives_Events_Communication:1:agent_first_communicator",
+          "roleName": "A0_pag_agent_first_communicator",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "act of conveying intentions about kidnapping to other members of criminal network",
+      "goal": "",
+      "ta1explanation": "communication ensures criminal network works towards intended objectives",
+      "privateData": {
+        "@type": "resin:Events/10026/Steps_kairos:Primitives_Events_Communication:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10027/Steps_kairos:Primitives_Events_Motion_traveling:1",
+      "name": "Motion_traveling",
+      "comment": "",
+      "qnode": "wd:Q19279529",
+      "qlabel": "go",
+      "aka": "move.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20084/kairos:Primitives_Events_Motion_traveling:1:mover",
+          "roleName": "A0_pag_mover",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20086/kairos:Primitives_Events_Motion_traveling:1:destination",
+          "roleName": "A2_gol_destination",
+          "entity": "resin:Entities/00095/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "movement of kidnapper from a place to location where crime is planned",
+      "goal": "",
+      "ta1explanation": "kidnapper moves to location where abduction of victim is likely to be possible",
+      "privateData": {
+        "@type": "resin:Events/10027/Steps_kairos:Primitives_Events_Motion_traveling:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10028/Steps_kairos:Primitives_Events_Violence_attack:1",
+      "name": "Violence_attack",
+      "comment": "",
+      "qnode": "wd:Q252000",
+      "qlabel": "oppression",
+      "aka": "oppress.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20089/kairos:Primitives_Events_Violence_attack:1:entity_oppressing",
+          "roleName": "A0_pag_entity_oppressing",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20090/kairos:Primitives_Events_Violence_attack:1:entity_oppressed",
+          "roleName": "A1_ppt_entity_oppressed",
+          "entity": "resin:Entities/00094/"
+        },
+        {
+          "@id": "resin:Participants/20091/kairos:Primitives_Events_Violence_attack:1:location",
+          "roleName": "AM_loc",
+          "entity": "resin:Entities/00095/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "control of victim by kidnapper",
+      "goal": "",
+      "ta1explanation": "crime may involve physical or mental attack on victim",
+      "privateData": {
+        "@type": "resin:Events/10028/Steps_kairos:Primitives_Events_Violence_attack:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10029/Steps_kairos:Primitives_Events_Kidnapping:1",
+      "name": "Kidnapping",
+      "comment": "",
+      "qnode": "wd:Q318296",
+      "qlabel": "kidnapping",
+      "aka": "kidnap.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20092/kairos:Primitives_Events_Kidnapping:1:kidnapper",
+          "roleName": "A0_pag_kidnapper",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20093/kairos:Primitives_Events_Kidnapping:1:person_kidnapped",
+          "roleName": "A1_ppt_person_kidnapped",
+          "entity": "resin:Entities/00094/"
+        },
+        {
+          "@id": "resin:Participants/20094/kairos:Primitives_Events_Kidnapping:1:location",
+          "roleName": "AM_loc",
+          "entity": "resin:Entities/00095/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "taking away or transportation of a person against that person's will",
+      "goal": "",
+      "ta1explanation": "initiation of crime",
+      "privateData": {
+        "@type": "resin:Events/10029/Steps_kairos:Primitives_Events_Kidnapping:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10030/Steps_kairos:Primitives_Events_Spatial_removing_victim:1",
+      "name": "Spatial_removing_victim",
+      "comment": "",
+      "qnode": "wd:Q23009442",
+      "qlabel": "removal",
+      "aka": "eliminate.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20095/kairos:Primitives_Events_Spatial_removing_victim:1:entity_removing",
+          "roleName": "A0_pag_entity_removing",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20096/kairos:Primitives_Events_Spatial_removing_victim:1:thing_being_removed",
+          "roleName": "A1_ppt_thing_being_removed",
+          "entity": "resin:Entities/00094/"
+        },
+        {
+          "@id": "resin:Participants/20097/kairos:Primitives_Events_Spatial_removing_victim:1:removed_from",
+          "roleName": "A2_dir_removed_from",
+          "entity": "resin:Entities/00095/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "process of removing the victim from a location",
+      "goal": "",
+      "ta1explanation": "early stage in kidnapping involving removal of victim from one location",
+      "privateData": {
+        "@type": "resin:Events/10030/Steps_kairos:Primitives_Events_Spatial_removing_victim:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10031/Steps_kairos:Primitives_Events_Spatial_placing_victim:1",
+      "name": "Spatial_placing_victim",
+      "comment": "",
+      "qnode": "wd:Q909534",
+      "qlabel": "mass_transfer",
+      "aka": "transfer.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20099/kairos:Primitives_Events_Spatial_placing_victim:1:sender",
+          "roleName": "A0_pag_sender",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20100/kairos:Primitives_Events_Spatial_placing_victim:1:sent",
+          "roleName": "A1_ppt_sent",
+          "entity": "resin:Entities/00094/"
+        },
+        {
+          "@id": "resin:Participants/20101/kairos:Primitives_Events_Spatial_placing_victim:1:sent-to",
+          "roleName": "A2_gol_sent-to",
+          "entity": "resin:Entities/00102/"
+        },
+        {
+          "@id": "resin:Participants/20102/kairos:Primitives_Events_Spatial_placing_victim:1:sent-from",
+          "roleName": "A3_dir_sent-from",
+          "entity": "resin:Entities/00095/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "net movement of victim from one location to another",
+      "goal": "",
+      "ta1explanation": "movement of victim from initial location to location to restrain victim",
+      "privateData": {
+        "@type": "resin:Events/10031/Steps_kairos:Primitives_Events_Spatial_placing_victim:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10032/Steps_kairos:Primitives_Events_Communication:2",
+      "name": "Communication",
+      "comment": "",
+      "qnode": "wd:Q11024",
+      "qlabel": "communication",
+      "aka": "communicate.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20104/kairos:Primitives_Events_Communication:2:agent_first_communicator",
+          "roleName": "A0_pag_agent_first_communicator",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "act of conveying intended meanings from kidnapper to authorities or non-authorities",
+      "goal": "",
+      "ta1explanation": "initial communication between criminals and authorities to convey intentions",
+      "privateData": {
+        "@type": "resin:Events/10032/Steps_kairos:Primitives_Events_Communication:2",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10033/Steps_kairos:Primitives_Events_Request:1",
+      "name": "Request",
+      "comment": "",
+      "qnode": "wd:Q22445448",
+      "qlabel": "request",
+      "aka": "request.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20108/kairos:Primitives_Events_Request:1:agent_asker",
+          "roleName": "A0_pag_agent_asker",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "act of asking formally for something in return for safety of victim",
+      "goal": "",
+      "ta1explanation": "making clear what the kidnapper wants",
+      "privateData": {
+        "@type": "resin:Events/10033/Steps_kairos:Primitives_Events_Request:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10034/Steps_kairos:Primitives_Events_Motion_temporary_stay:1",
+      "name": "Motion_temporary_stay",
+      "comment": "",
+      "qnode": "wd:Q2641256",
+      "qlabel": "domicile",
+      "aka": "reside.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20113/kairos:Primitives_Events_Motion_temporary_stay:1:entity_residing",
+          "roleName": "A0_ppt_entity_residing",
+          "entity": "resin:Entities/00094/"
+        },
+        {
+          "@id": "resin:Participants/20114/kairos:Primitives_Events_Motion_temporary_stay:1:location",
+          "roleName": "A1_loc_location",
+          "entity": "resin:Entities/00102/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "short stay of victim in safehouse or other location",
+      "goal": "",
+      "ta1explanation": "in some cases, victim is moved to different location",
+      "privateData": {
+        "@type": "resin:Events/10034/Steps_kairos:Primitives_Events_Motion_temporary_stay:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10035/Steps_kairos:Primitives_Events_Ransom:1",
+      "name": "Ransom",
+      "comment": "",
+      "qnode": "wd:Q1414572",
+      "qlabel": "ransom",
+      "aka": "ransom.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20117/kairos:Primitives_Events_Ransom:1:the_captive",
+          "roleName": "A1_ppt_the_captive",
+          "entity": "resin:Entities/00094/"
+        },
+        {
+          "@id": "resin:Participants/20119/kairos:Primitives_Events_Ransom:1:kidnapper",
+          "roleName": "A3_dir_kidnapper",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "practice of holding a prisoner or item to extort money or property",
+      "goal": "",
+      "ta1explanation": "often kidnapper has financial motivations",
+      "privateData": {
+        "@type": "resin:Events/10035/Steps_kairos:Primitives_Events_Ransom:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10036/Steps_kairos:Primitives_Events_GiveUp:1",
+      "name": "GiveUp",
+      "comment": "",
+      "qnode": "wd:Q217901",
+      "qlabel": "capitulation",
+      "aka": "capitulate.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20122/kairos:Primitives_Events_GiveUp:1:entity_giving_in",
+          "roleName": "A0_pag_entity_giving_in",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20123/kairos:Primitives_Events_GiveUp:1:to_whom_what",
+          "roleName": "A1_ppt_to_whom_what",
+          "entity": "resin:Entities/00124/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "form of surrender when kidnapper decides to stop crime",
+      "goal": "",
+      "ta1explanation": "through negotiation or other influence the kidnapper decides to capitulate to authorities",
+      "privateData": {
+        "@type": "resin:Events/10036/Steps_kairos:Primitives_Events_GiveUp:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10037/Steps_kairos:Primitives_Events_Agree_or_refuse_to_act:1",
+      "name": "Agree_or_refuse_to_act",
+      "comment": "",
+      "qnode": "wd:Q2006324",
+      "qlabel": "agreement",
+      "aka": "agree.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20125/kairos:Primitives_Events_Agree_or_refuse_to_act:1:agreer",
+          "roleName": "A0_pag_agreer",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20127/kairos:Primitives_Events_Agree_or_refuse_to_act:1:other_entity_agreeing",
+          "roleName": "A2_com_other_entity_agreeing",
+          "entity": "resin:Entities/00124/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "understanding between entities to follow a specific course of conduct",
+      "goal": "",
+      "ta1explanation": "in negotiation, the kidnapper may agree or not with course of action",
+      "privateData": {
+        "@type": "resin:Events/10037/Steps_kairos:Primitives_Events_Agree_or_refuse_to_act:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10038/Steps_kairos:Primitives_Events_Violence_attack_killing:1",
+      "name": "Violence_attack_killing",
+      "comment": "",
+      "qnode": "wd:Q74948922",
+      "qlabel": "violent_death",
+      "aka": "kill.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20129/kairos:Primitives_Events_Violence_attack_killing:1:killer",
+          "roleName": "A0_pag_agent_killer",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20130/kairos:Primitives_Events_Violence_attack_killing:1:corpse",
+          "roleName": "A1_ppt_patient_corpse",
+          "entity": "resin:Entities/00094/"
+        },
+        {
+          "@id": "resin:Participants/20131/kairos:Primitives_Events_Violence_attack_killing:1:instrument",
+          "roleName": "A2_mnr_instrument_instrument",
+          "entity": "resin:Entities/00054/"
+        },
+        {
+          "@id": "resin:Participants/20132/kairos:Primitives_Events_Violence_attack_killing:1:location",
+          "roleName": "AM_loc",
+          "entity": "resin:Entities/00102/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "death of victim as a result of action by kidnapper",
+      "goal": "",
+      "ta1explanation": "the victim dies when negotiation does not lead to outcome kidnapper agrees with",
+      "privateData": {
+        "@type": "resin:Events/10038/Steps_kairos:Primitives_Events_Violence_attack_killing:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10039/Steps_kairos:Primitives_Events_Physical_surveillance:2",
+      "name": "Physical_surveillance",
+      "comment": "",
+      "qnode": "wd:Q334401",
+      "qlabel": "surveillance",
+      "aka": "monitor.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20133/kairos:Primitives_Events_Physical_surveillance:2:observer",
+          "roleName": "A0_pag_observer",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20134/kairos:Primitives_Events_Physical_surveillance:2:thing_looked_at",
+          "roleName": "A1_loc_thing_looked_at",
+          "entity": "resin:Entities/00102/"
+        },
+        {
+          "@id": "resin:Participants/20135/kairos:Primitives_Events_Physical_surveillance:2:looking_for_what?",
+          "roleName": "A2_ppt_looking_for_what?",
+          "entity": "resin:Entities/00094/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "monitoring of behavior, activities, or other changing information about the kidnapper",
+      "goal": "",
+      "ta1explanation": "initial stage of authority action to gather information about crime",
+      "privateData": {
+        "@type": "resin:Events/10039/Steps_kairos:Primitives_Events_Physical_surveillance:2",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10040/Steps_kairos:Primitives_Events_Motion_traveling:2",
+      "name": "Motion_traveling",
+      "comment": "",
+      "qnode": "wd:Q19279529",
+      "qlabel": "go",
+      "aka": "move.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20136/kairos:Primitives_Events_Motion_traveling:2:mover",
+          "roleName": "A0_pag_mover",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20138/kairos:Primitives_Events_Motion_traveling:2:destination",
+          "roleName": "A2_gol_destination",
+          "entity": "resin:Entities/00102/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "movement of authorities to location of kidnapper or victim",
+      "goal": "",
+      "ta1explanation": "moving to location more suitable for negotiation or prevention of additional crimes",
+      "privateData": {
+        "@type": "resin:Events/10040/Steps_kairos:Primitives_Events_Motion_traveling:2",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10041/Steps_kairos:Primitives_Events_Finding:1",
+      "name": "Finding",
+      "comment": "physical finding",
+      "qnode": "wd:Q69034079",
+      "qlabel": "find",
+      "aka": "find.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20141/kairos:Primitives_Events_Finding:1:finder",
+          "roleName": "A0_pag_finder",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20142/kairos:Primitives_Events_Finding:1:thing_found",
+          "roleName": "A1_ppt_thing_found",
+          "entity": "resin:Entities/00094/"
+        },
+        {
+          "@id": "resin:Participants/20145/kairos:Primitives_Events_Finding:1:location",
+          "roleName": "AM_loc",
+          "entity": "resin:Entities/00102/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "physical finding of location of kidnapper or victim",
+      "goal": "",
+      "ta1explanation": "locating the kidnapper or the victim",
+      "privateData": {
+        "@type": "resin:Events/10041/Steps_kairos:Primitives_Events_Finding:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10042/Steps_kairos:Primitives_Events_Communication:3",
+      "name": "Communication",
+      "comment": "",
+      "qnode": "wd:Q11024",
+      "qlabel": "communication",
+      "aka": "communicate.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20146/kairos:Primitives_Events_Communication:3:agent_first_communicator",
+          "roleName": "A0_pag_agent_first_communicator",
+          "entity": "resin:Entities/00124/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "act of conveying intended meanings between authorities",
+      "goal": "",
+      "ta1explanation": "means of beginning negotiation process",
+      "privateData": {
+        "@type": "resin:Events/10042/Steps_kairos:Primitives_Events_Communication:3",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10043/Steps_kairos:Primitives_Events_Communication_expressing_publicly:1",
+      "name": "Communication_expressing_publicly",
+      "comment": "",
+      "qnode": "wd:Q67123584",
+      "qlabel": "disclosure",
+      "aka": "reveal.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20150/kairos:Primitives_Events_Communication_expressing_publicly:1:speaker",
+          "roleName": "A0_pag_speaker",
+          "entity": "resin:Entities/00124/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "revealing of restricted information about crime to public",
+      "goal": "",
+      "ta1explanation": "public may be informed of crime through media announcement",
+      "privateData": {
+        "@type": "resin:Events/10043/Steps_kairos:Primitives_Events_Communication_expressing_publicly:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10044/Steps_kairos:Primitives_Events_Request:2",
+      "name": "Request",
+      "comment": "",
+      "qnode": "wd:Q22445448",
+      "qlabel": "request",
+      "aka": "request.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20155/kairos:Primitives_Events_Request:2:agent_asker",
+          "roleName": "A0_pag_agent_asker",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20156/kairos:Primitives_Events_Request:2:recipient_hearer",
+          "roleName": "A2_gol_recipient_hearer",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "act of asking formally for demands of kidnapper",
+      "goal": "",
+      "ta1explanation": "establishing what the kidnapper wants",
+      "privateData": {
+        "@type": "resin:Events/10044/Steps_kairos:Primitives_Events_Request:2",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10045/Steps_kairos:Primitives_Events_Suasion_negotiation:1",
+      "name": "Suasion_negotiation",
+      "comment": "",
+      "qnode": "wd:Q3400581",
+      "qlabel": "parley",
+      "aka": "negotiate.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20160/kairos:Primitives_Events_Suasion_negotiation:1:negotiator",
+          "roleName": "A0_pag_negotiator",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20161/kairos:Primitives_Events_Suasion_negotiation:1:explicit_other_party",
+          "roleName": "A1_com_explicit_other_party",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "meeting held between authorities and kidnapper",
+      "goal": "",
+      "ta1explanation": "discussion to determine how both parties can mutually benefit",
+      "privateData": {
+        "@type": "resin:Events/10045/Steps_kairos:Primitives_Events_Suasion_negotiation:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10046/Steps_kairos:Primitives_Events_Influence:1",
+      "name": "Influence",
+      "comment": "",
+      "qnode": "wd:Q1231428",
+      "qlabel": "persuasion",
+      "aka": "persuade.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20164/kairos:Primitives_Events_Influence:1:convincer",
+          "roleName": "A0_pag_convincer",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20165/kairos:Primitives_Events_Influence:1:impelled_agent",
+          "roleName": "A1_ppt_impelled_agent",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "umbrella term of influence and mode of communication",
+      "goal": "",
+      "ta1explanation": "attempts to prevent additional crimes through discussion or police action",
+      "privateData": {
+        "@type": "resin:Events/10046/Steps_kairos:Primitives_Events_Influence:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10047/Steps_kairos:Primitives_Events_Getting_ransom:1",
+      "name": "Getting_ransom",
+      "comment": "",
+      "qnode": "wd:Q25392373",
+      "qlabel": "fund",
+      "aka": "fund.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20170/kairos:Primitives_Events_Getting_ransom:1:funds",
+          "roleName": "A2_ppt_funds",
+          "entity": "resin:Entities/00199/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "money made available to secure safety of victim",
+      "goal": "",
+      "ta1explanation": "authorities may have access to financial resources to provdie to kidnapper",
+      "privateData": {
+        "@type": "resin:Events/10047/Steps_kairos:Primitives_Events_Getting_ransom:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10048/Steps_kairos:Primitives_Events_Defending:1",
+      "name": "Defending",
+      "comment": "",
+      "qnode": "wd:Q38118448",
+      "qlabel": "defending",
+      "aka": "defend.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20172/kairos:Primitives_Events_Defending:1:defender",
+          "roleName": "A0_pag_defender",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20173/kairos:Primitives_Events_Defending:1:defended",
+          "roleName": "A1_ppt_defended",
+          "entity": "resin:Entities/00094/"
+        },
+        {
+          "@id": "resin:Participants/20174/kairos:Primitives_Events_Defending:1:entity_defended_against",
+          "roleName": "A3_gol_entity_defended_against",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20175/kairos:Primitives_Events_Defending:1:location",
+          "roleName": "AM_loc",
+          "entity": "resin:Entities/00102/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "act of protecting victim from attack",
+      "goal": "",
+      "ta1explanation": "police action to ensure safety of victim and other members of the public",
+      "privateData": {
+        "@type": "resin:Events/10048/Steps_kairos:Primitives_Events_Defending:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10049/Steps_kairos:Primitives_Events_Helping:1",
+      "name": "Helping",
+      "comment": "",
+      "qnode": "wd:Q1643184",
+      "qlabel": "help",
+      "aka": "help.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20176/kairos:Primitives_Events_Helping:1:helper",
+          "roleName": "A0_pag_helper",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20178/kairos:Primitives_Events_Helping:1:benefactive",
+          "roleName": "A2_gol_benefactive",
+          "entity": "resin:Entities/00094/"
+        },
+        {
+          "@id": "resin:Participants/20179/kairos:Primitives_Events_Helping:1:location",
+          "roleName": "AM_loc",
+          "entity": "resin:Entities/00102/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "cooperation between authorities and people impacted by crime",
+      "goal": "",
+      "ta1explanation": "providing resources to community to mitigate negative effects of the crime",
+      "privateData": {
+        "@type": "resin:Events/10049/Steps_kairos:Primitives_Events_Helping:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10050/Steps_kairos:Primitives_Events_Violence_attack:2",
+      "name": "Violence_attack",
+      "comment": "",
+      "qnode": "wd:Q252000",
+      "qlabel": "oppression",
+      "aka": "oppress.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20180/kairos:Primitives_Events_Violence_attack:2:entity_oppressing",
+          "roleName": "A0_pag_entity_oppressing",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20181/kairos:Primitives_Events_Violence_attack:2:entity_oppressed",
+          "roleName": "A1_ppt_entity_oppressed",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20182/kairos:Primitives_Events_Violence_attack:2:location",
+          "roleName": "AM_loc",
+          "entity": "resin:Entities/00102/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "attempt to control situation by authorities",
+      "goal": "",
+      "ta1explanation": "police action to bring situation under control including storming location of kidnapper or victim",
+      "privateData": {
+        "@type": "resin:Events/10050/Steps_kairos:Primitives_Events_Violence_attack:2",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10051/Steps_kairos:Primitives_Events_Violence_attack_killing:2",
+      "name": "Violence_attack_killing",
+      "comment": "",
+      "qnode": "wd:Q844482",
+      "qlabel": "killing",
+      "aka": "kill.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20183/kairos:Primitives_Events_Violence_attack_killing:2:killer",
+          "roleName": "A0_pag_killer",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20184/kairos:Primitives_Events_Violence_attack_killing:2:corpse",
+          "roleName": "A1_ppt_corpse",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20185/kairos:Primitives_Events_Violence_attack_killing:2:location",
+          "roleName": "AM_loc",
+          "entity": "resin:Entities/00102/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "act of killing the kidnapper or accidental killing of victim",
+      "goal": "",
+      "ta1explanation": "physical force used to end kidnapping operation",
+      "privateData": {
+        "@type": "resin:Events/10051/Steps_kairos:Primitives_Events_Violence_attack_killing:2",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10052/Steps_kairos:Primitives_Events_Exchange_victim:1",
+      "name": "Exchange_victim",
+      "comment": "",
+      "qnode": "wd:Q766238",
+      "qlabel": "mutual_aid",
+      "aka": "exchange.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20186/kairos:Primitives_Events_Exchange_victim:1:agent",
+          "roleName": "A0_pag_agent",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20187/kairos:Primitives_Events_Exchange_victim:1:thing_being_traded",
+          "roleName": "A1_ppt_thing_being_traded",
+          "entity": "resin:Entities/00094/"
+        },
+        {
+          "@id": "resin:Participants/20188/kairos:Primitives_Events_Exchange_victim:1:other_exchanger",
+          "roleName": "A2_com_other_exchanger",
+          "entity": "resin:Entities/00093/"
+        },
+        {
+          "@id": "resin:Participants/20191/kairos:Primitives_Events_Exchange_victim:1:location",
+          "roleName": "AM_loc",
+          "entity": "resin:Entities/00102/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "voluntary exchange of victim for other person or resource",
+      "goal": "",
+      "ta1explanation": "in hostage taking situations, kidnapper often wants the release of another person from authority control",
+      "privateData": {
+        "@type": "resin:Events/10052/Steps_kairos:Primitives_Events_Exchange_victim:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10053/Steps_kairos:Primitives_Events_Suasion_negotiation:2",
+      "name": "Suasion_negotiation",
+      "comment": "",
+      "qnode": "wd:Q3400581",
+      "qlabel": "parley",
+      "aka": "negotiate.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20192/kairos:Primitives_Events_Suasion_negotiation:2:negotiator",
+          "roleName": "A0_pag_negotiator",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20193/kairos:Primitives_Events_Suasion_negotiation:2:explicit_other_party",
+          "roleName": "A1_com_explicit_other_party",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "meeting held between non-authorities and kidnapper",
+      "goal": "",
+      "ta1explanation": "informal negotiations to secure release of victim",
+      "privateData": {
+        "@type": "resin:Events/10053/Steps_kairos:Primitives_Events_Suasion_negotiation:2",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10054/Steps_kairos:Primitives_Events_Getting_ransom:2",
+      "name": "Getting_ransom",
+      "comment": "",
+      "qnode": "wd:Q25392373",
+      "qlabel": "fund",
+      "aka": "fund.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20198/kairos:Primitives_Events_Getting_ransom:2:funds",
+          "roleName": "A2_ppt_funds",
+          "entity": "resin:Entities/00199/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "procuring money to secure safety of victim",
+      "goal": "",
+      "ta1explanation": "non authorities may have personal savings to secure release of victim",
+      "privateData": {
+        "@type": "resin:Events/10054/Steps_kairos:Primitives_Events_Getting_ransom:2",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10055/Steps_kairos:Primitives_Events_Giving_ransom:1",
+      "name": "Giving_ransom",
+      "comment": "",
+      "qnode": "wd:Q1414572",
+      "qlabel": "ransom",
+      "aka": "ransom.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20200/kairos:Primitives_Events_Giving_ransom:1:entity_paying_for_the_release_of_the_captive",
+          "roleName": "A0_pag_entity_paying_for_the_release_of_the_captive",
+          "entity": "resin:Entities/00201/"
+        },
+        {
+          "@id": "resin:Participants/20201/kairos:Primitives_Events_Giving_ransom:1:the_captive",
+          "roleName": "A1_ppt_the_captive",
+          "entity": "resin:Entities/00094/"
+        },
+        {
+          "@id": "resin:Participants/20202/kairos:Primitives_Events_Giving_ransom:1:money_demanded_paid",
+          "roleName": "A2_vsp_money_demanded_paid",
+          "entity": "resin:Entities/00199/"
+        },
+        {
+          "@id": "resin:Participants/20197/kairos:Primitives_Events_Giving_ransom:1:kidnapper",
+          "roleName": "A3_dir_kidnapper",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "handing over ransom to kidnapper",
+      "goal": "",
+      "ta1explanation": "providing money to kidnapper directly to secure release of victim",
+      "privateData": {
+        "@type": "resin:Events/10055/Steps_kairos:Primitives_Events_Giving_ransom:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10056/Steps_kairos:Primitives_Events_Motion_traveling:3",
+      "name": "Motion_traveling",
+      "comment": "",
+      "qnode": "wd:Q19279529",
+      "qlabel": "go",
+      "aka": "move.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20204/kairos:Primitives_Events_Motion_traveling:3:mover",
+          "roleName": "A0_pag_mover",
+          "entity": "resin:Entities/00201/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "movement of non-authorities to location for delivery of ransom",
+      "goal": "",
+      "ta1explanation": "movement to agreed upon location for exchange of resources",
+      "privateData": {
+        "@type": "resin:Events/10056/Steps_kairos:Primitives_Events_Motion_traveling:3",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10057/Steps_kairos:Primitives_Events_Communication:4",
+      "name": "Communication",
+      "comment": "",
+      "qnode": "wd:Q11024",
+      "qlabel": "communication",
+      "aka": "communicate.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20209/kairos:Primitives_Events_Communication:4:agent_first_communicator",
+          "roleName": "A0_pag_agent_first_communicator",
+          "entity": "resin:Entities/00201/"
+        },
+        {
+          "@id": "resin:Participants/20210/kairos:Primitives_Events_Communication:4:co_agent_other_communicators",
+          "roleName": "A2_com_co_agent_other_communicators",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "act of conveying intended meanings between non-authorities and kidnapper",
+      "goal": "",
+      "ta1explanation": "establishing what, how, when, and where non authorities should act to secure release of victim",
+      "privateData": {
+        "@type": "resin:Events/10057/Steps_kairos:Primitives_Events_Communication:4",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10058/Steps_kairos:Primitives_Events_Legality_investigation:1",
+      "name": "Investigation",
+      "comment": "",
+      "qnode": "wd:Q12407601",
+      "qlabel": "police_investigation",
+      "aka": "investigate.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20213/kairos:Primitives_Events_Legality_investigation:1:examiner",
+          "roleName": "A0_pag_examiner",
+          "entity": "resin:Entities/00124/"
+        },
+        {
+          "@id": "resin:Participants/20216/kairos:Primitives_Events_Legality_investigation:1:location",
+          "roleName": "AM_loc",
+          "entity": "resin:Entities/00102/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "investigation of crimes by police",
+      "goal": "",
+      "ta1explanation": "formal inquiry into and gathering of data about crime",
+      "privateData": {
+        "@type": "resin:Events/10058/Steps_kairos:Primitives_Events_Legality_investigation:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10059/Steps_kairos:Primitives_Events_Legality_legal_rulings:1",
+      "name": "Legal_rulings",
+      "comment": "",
+      "qnode": "wd:Q1301203",
+      "qlabel": "legal_proceeding",
+      "aka": "try.02",
+      "participants": [
+        {
+          "@id": "resin:Participants/20218/kairos:Primitives_Events_Legality_legal_rulings:1:entity_tried",
+          "roleName": "A1_ppt_entity_tried",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "proceedings in any civil lawsuit or criminal prosecution",
+      "goal": "",
+      "ta1explanation": "criminal prosecution to establish innocence or guilt of kidnapper",
+      "privateData": {
+        "@type": "resin:Events/10059/Steps_kairos:Primitives_Events_Legality_legal_rulings:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10060/Steps_kairos:Primitives_Events_Legality_judgment_communication:1",
+      "name": "Judgment_communication",
+      "comment": "",
+      "qnode": "wd:Q567696",
+      "qlabel": "order",
+      "aka": "order.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20223/kairos:Primitives_Events_Legality_judgment_communication:1:impelled_agent",
+          "roleName": "A1_gol_impelled_agent",
+          "entity": "resin:Entities/00093/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "instruction directed by law, judgment or administrative act to defendant or litigant to obey a certain behavior",
+      "goal": "",
+      "ta1explanation": "often a prison sentence or in some countries death penalty",
+      "privateData": {
+        "@type": "resin:Events/10060/Steps_kairos:Primitives_Events_Legality_judgment_communication:1",
+        "template": "",
+        "repeatable": false
+      }
+    }
+  ],
+  "entities": [
+    {
+      "@id": "resin:Entities/00054/",
+      "name": "A1_ppt_thing_bought in event Getting_weapons",
+      "qnode": "wd:Q728",
+      "qlabel": "weapon"
+    },
+    {
+      "@id": "resin:Entities/00060/",
+      "name": "A1_ppt_thing_bought in event Getting_place_to_keep_victim",
+      "qnode": "wd:Q64576680",
+      "qlabel": "accommodation"
+    },
+    {
+      "@id": "resin:Entities/00092/",
+      "name": "AM_loc in event Violence_attack",
+      "qnode": "wd:Q1360677",
+      "qlabel": "crime scene"
+    },
+    {
+      "@id": "resin:Entities/00093/",
+      "name": "A0_pag_kidnapper in event Kidnapping",
+      "qnode": "wd:Q65622885",
+      "qlabel": "kidnapper"
+    },
+    {
+      "@id": "resin:Entities/00094/",
+      "name": "A1_ppt_person_kidnapped in event Kidnapping",
+      "qnode": "wd:Q1851760",
+      "qlabel": "victim"
+    },
+    {
+      "@id": "resin:Entities/00095/",
+      "name": "AM_loc in event Kidnapping",
+      "qnode": "wd:Q1360677",
+      "qlabel": "crime scene"
+    },
+    {
+      "@id": "resin:Entities/00102/",
+      "name": "A2_gol_sent-to in event Spatial_placing_victim",
+      "qnode": "wd:Q1360677",
+      "qlabel": "crime scene"
+    },
+    {
+      "@id": "resin:Entities/00124/",
+      "name": "A1_ppt_to_whom_what in event GiveUp",
+      "qnode": "wd:Q35535",
+      "qlabel": "police"
+    },
+    {
+      "@id": "resin:Entities/00199/",
+      "name": "A2_ppt_funds in event Getting_ransom",
+      "qnode": "wd:Q6055890",
+      "qlabel": "funding"
+    },
+    {
+      "@id": "resin:Entities/00201/",
+      "name": "A0_pag_entity_paying_for_the_release_of_the_captive in event Giving_ransom",
+      "qnode": "wd:Q106905641",
+      "qlabel": "funder"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,1037 @@
+{
+  "@context": [
+    "https://kairos-sdf.s3.amazonaws.com/context/kairos-v1.4.1.jsonld",
+    {
+      "caci": "https://caci.com/kairos/",
+      "my_key": "caci:my_key",
+      "giant_bitstring": "caci:giant_bitstring",
+      "resin": "https://blender.cs.illinois.edu/kairos/"
+    }
+  ],
+  "@id": "resin:Submissions/TA1/schemas_quizlet9",
+  "sdfVersion": "1.4.1",
+  "version": "resin:disease-outbreak/quizlet9",
+  "events": [
+    {
+      "@id": "resin:Events/10000/resin:Events_civil-unrest",
+      "name": "Civil Unrest",
+      "description": "schema topic",
+      "goal": "",
+      "privateData": {},
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/10017/resin:Events_civil-unrest",
+          "comment": "Trigger",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10018/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10018/resin:Events_civil-unrest",
+          "comment": "Peaceful Protest",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10002/resin:Events_civil-unrest",
+            "resin:Events/10020/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10002/resin:Events_civil-unrest",
+          "comment": "Riot",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10019/resin:Events_civil-unrest",
+            "resin:Events/10020/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10019/resin:Events_civil-unrest",
+          "comment": "Justice",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10020/resin:Events_civil-unrest",
+          "comment": "Response",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10001/resin:Events_civil-unrest",
+      "name": "arson",
+      "ta1explanation": "acrime of willfully and maliciously setting fire to property",
+      "qnode": "wd:Q327541",
+      "qlabel": "arson",
+      "participants": [
+        {
+          "@id": "resin:Participants/20000/resin:Events_civil-unrest_setter",
+          "roleName": "A0_pag__fire_setter",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20001/resin:Events_civil-unrest_location",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003/"
+        }
+      ],
+      "description": "Violence erupted in the city today as protesters clashed with police. Hundreds of people took to the streets to march and rally against what they see as police brutality, but the demonstration turned violent when some of the protesters began throwing rocks and bottles at the officers. Police responded by using tear gas and pepper spray to disperse the crowd, and several people were arrested. The mayor condemned the violence and called for calm, but the protesters say they will not be deterred."
+    },
+    {
+      "@id": "resin:Events/10002/resin:Events_civil-unrest",
+      "name": "Riot",
+      "ta1explanation": "a violent disturbance of the peace by a crowd",
+      "qnode": "wd:Q371462",
+      "qlabel": "riot",
+      "participants": [],
+      "description": "",
+      "goal": "",
+      "privateData": {},
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/10006/resin:Events_civil-unrest",
+          "comment": "attack",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10008/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10005/resin:Events_civil-unrest",
+          "comment": "clash",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10009/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10009/resin:Events_civil-unrest",
+          "comment": "disperse",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10014/resin:Events_civil-unrest",
+          "comment": "robbery",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10008/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10001/resin:Events_civil-unrest",
+          "comment": "arson",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10008/resin:Events_civil-unrest",
+            "resin:Events/10015/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10016/resin:Events_civil-unrest",
+          "comment": "destruction",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10008/resin:Events_civil-unrest",
+            "resin:Events/10015/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10015/resin:Events_civil-unrest",
+          "comment": "emergency_evacuation",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10008/resin:Events_civil-unrest",
+          "comment": "shoot",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10004/resin:Events_civil-unrest",
+            "resin:Events/10013/resin:Events_civil-unrest",
+            "resin:Events/10006/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10013/resin:Events_civil-unrest",
+          "comment": "death",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10004/resin:Events_civil-unrest",
+          "comment": "injury",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10003/resin:Events_civil-unrest",
+      "name": "arrest",
+      "ta1explanation": "detention of a person and taking it into custody, usually because it has been suspected of committing or planning a crime",
+      "qnode": "wd:Q1403016",
+      "qlabel": "arrest",
+      "participants": [
+        {
+          "@id": "resin:Participants/20005/resin:Events_civil-unrest_police",
+          "roleName": "A0_pag__police",
+          "entity": "resin:Entities/00000/"
+        },
+        {
+          "@id": "resin:Participants/20006/resin:Events_civil-unrest_criminal",
+          "roleName": "A1_ppt__criminal",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20007/resin:Events_civil-unrest_crime",
+          "roleName": "A2_cau__crime",
+          "entity": "resin:Entities/00009/"
+        }
+      ],
+      "description": "several people were arrested"
+    },
+    {
+      "@id": "resin:Events/10004/resin:Events_civil-unrest",
+      "name": "injury",
+      "ta1explanation": "physiological wound caused by an external source",
+      "qnode": "wd:Q193078",
+      "qlabel": "injury",
+      "participants": [
+        {
+          "@id": "resin:Participants/20008/resin:Events_civil-unrest_stimulus",
+          "roleName": "A0_pag_stimulus_stimulus_of_injury",
+          "entity": "resin:Entities/00000/"
+        },
+        {
+          "@id": "resin:Participants/20009/resin:Events_civil-unrest_party",
+          "roleName": "A1_ppt_experiencer_injured_party",
+          "entity": "resin:Entities/00004/"
+        }
+      ],
+      "description": "Baltimore erupted in violence for a second night as protesters took to the streets to demonstrate against the death of Freddie Gray while in police custody. Video footage from the scene shows rioters throwing bricks and other objects at police officers, who responded with pepper spray and tear gas. At least one person was shot and several others were injured, and businesses and cars were damaged. The protests continued on Tuesday morning, with the National Guard called in to help keep the peace."
+    },
+    {
+      "@id": "resin:Events/10005/resin:Events_civil-unrest",
+      "name": "clash",
+      "ta1explanation": "a violent confrontation between police and protesters",
+      "qnode": "wd:Q425178",
+      "qlabel": "Clash",
+      "participants": [
+        {
+          "@id": "resin:Participants/20010/resin:Events_civil-unrest_clasher",
+          "roleName": "A0_pag__clasher",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20011/resin:Events_civil-unrest_against_who",
+          "roleName": "A1_cau__who/what_the_clash_is_against",
+          "entity": "resin:Entities/00000/"
+        },
+        {
+          "@id": "resin:Participants/20012/resin:Events_civil-unrest_against_location",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003/"
+        }
+      ],
+      "description": "Unrest in city as police clash with protesters"
+    },
+    {
+      "@id": "resin:Events/10006/resin:Events_civil-unrest",
+      "name": "attack",
+      "ta1explanation": "violent actions to kill one or more people or to damage objects",
+      "qnode": "wd:Q343634",
+      "qlabel": "Attack",
+      "participants": [
+        {
+          "@id": "resin:Participants/20014/resin:Events_civil-unrest_attacker",
+          "roleName": "A0_pag_attacker",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20015/resin:Events_civil-unrest_gol",
+          "roleName": "A1_gol_been_attacked",
+          "entity": "resin:Entities/00000/"
+        },
+        {
+          "@id": "resin:Participants/20016/resin:Events_civil-unrest_weapon",
+          "roleName": "A2_ppt_weapon",
+          "entity": "resin:Entities/00005/"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "@id": "resin:Events/10007/resin:Events_civil-unrest",
+      "name": "demonstration",
+      "ta1explanation": "collective action by people in favor of a cause",
+      "qnode": "wd:Q175331",
+      "qlabel": "demonstration",
+      "participants": [
+        {
+          "@id": "resin:Participants/20017/resin:Events_civil-unrest_protester",
+          "roleName": "A0_pag_agent_protester",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20018/resin:Events_civil-unrest_thing",
+          "roleName": "A1_ppt_theme_objectionable_thing",
+          "entity": "resin:Entities/00010/"
+        },
+        {
+          "@id": "resin:Participants/20020/resin:Events_civil-unrest_location",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003/"
+        }
+      ],
+      "description": "demonstration turned violent when some of the protesters began throwing rocks"
+    },
+    {
+      "@id": "resin:Events/10008/resin:Events_civil-unrest",
+      "name": "shoot",
+      "ta1explanation": "act or process of firing firearms or other projectile weapons",
+      "qnode": "wd:Q2252077",
+      "qlabel": "shooting",
+      "participants": [
+        {
+          "@id": "resin:Participants/20021/resin:Events_civil-unrest_shooter",
+          "roleName": "A0_pag_agent_shooter",
+          "entity": "resin:Entities/00000/"
+        },
+        {
+          "@id": "resin:Participants/20022/resin:Events_civil-unrest_corpse",
+          "roleName": "A1_ppt_patient_corpse",
+          "entity": "resin:Entities/00002/"
+        }
+      ],
+      "description": "Baltimore erupted in violence for a second night as protesters took to the streets to demonstrate against the death of Freddie Gray while in police custody. Video footage from the scene shows rioters throwing bricks and other objects at police officers, who responded with pepper spray and tear gas. At least one person was shot and several others were injured, and businesses and cars were damaged. The protests continued on Tuesday morning, with the National Guard called in to help keep the peace."
+    },
+    {
+      "@id": "resin:Events/10009/resin:Events_civil-unrest",
+      "name": "disperse",
+      "ta1explanation": "somebody uses a tool for a purpose",
+      "qnode": "wd:Q1724915",
+      "qlabel": "disperse",
+      "participants": [
+        {
+          "@id": "resin:Participants/20023/resin:Events_civil-unrest_user",
+          "roleName": "A0_pag_User",
+          "entity": "resin:Entities/00000/"
+        },
+        {
+          "@id": "resin:Participants/20123/resin:Events_civil-unrest_gol",
+          "roleName": "A1_gol_been_dispersed",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20024/resin:Events_civil-unrest_thing",
+          "roleName": "A2_ppt_thing_used",
+          "entity": "resin:Entities/00001/"
+        }
+      ],
+      "description": "Violence erupted in the city today as protesters clashed with police. Hundreds of people took to the streets to march and rally against what they see as police brutality, but the demonstration turned violent when some of the protesters began throwing rocks and bottles at the officers. Police responded by using tear gas and pepper spray to disperse the crowd, and several people were arrested. The mayor condemned the violence and called for calm, but the protesters say they will not be deterred."
+    },
+    {
+      "@id": "resin:Events/10011/resin:Events_civil-unrest",
+      "name": "public_statement",
+      "ta1explanation": "statement made for a public audience",
+      "qnode": "wd:Q52947181",
+      "qlabel": "public_statement",
+      "participants": [
+        {
+          "@id": "resin:Participants/20027/resin:Events_civil-unrest_announcer",
+          "roleName": "A0_pag_agent_announcer",
+          "entity": "resin:Entities/00007/"
+        },
+        {
+          "@id": "resin:Participants/20028/resin:Events_civil-unrest_hearer",
+          "roleName": "A2_gol_recipient_hearer",
+          "entity": "resin:Entities/00004/"
+        }
+      ],
+      "description": "call for calm"
+    },
+    {
+      "@id": "resin:Events/10012/resin:Events_civil-unrest",
+      "name": "sentence",
+      "ta1explanation": "decree of punishment in law",
+      "qnode": "wd:Q1763090",
+      "qlabel": "sentence",
+      "participants": [
+        {
+          "@id": "resin:Participants/20029/resin:Events_civil-unrest_judge",
+          "roleName": "A0_pag__judge/jury",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20030/resin:Events_civil-unrest_criminal",
+          "roleName": "A1_ppt__criminal",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20131/resin:Events_civil-unrest_reason",
+          "roleName": "A2_ppt__reason",
+          "entity": "resin:Entities/00009/"
+        },
+        {
+          "@id": "resin:Participants/20132/resin:Events_civil-unrest_place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "@id": "resin:Events/10013/resin:Events_civil-unrest",
+      "name": "death",
+      "ta1explanation": "death caused by violence",
+      "qnode": "wd:Q74948922",
+      "qlabel": "violent_death",
+      "participants": [
+        {
+          "@id": "resin:Participants/20931/resin:Events_civil-unrest_killer",
+          "roleName": "A0_pag_agent_killer",
+          "entity": "resin:Entities/00000/"
+        },
+        {
+          "@id": "resin:Participants/20932/resin:Events_civil-unrest_corpse",
+          "roleName": "A1_ppt_patient_corpse",
+          "entity": "resin:Entities/00004/"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "@id": "resin:Events/10014/resin:Events_civil-unrest",
+      "name": "robbery",
+      "ta1explanation": "taking or attempting to take something of value by force or threat of force or by putting the victim in fear",
+      "qnode": "wd:Q53706",
+      "qlabel": "robbery",
+      "participants": [
+        {
+          "@id": "resin:Participants/20031/resin:Events_civil-unrest_robber",
+          "roleName": "A0_pag_agent_robber",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20032/resin:Events_civil-unrest_robbed",
+          "roleName": "A1_dir_source_person_robbed",
+          "entity": "resin:Entities/00004/"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "@id": "resin:Events/10015/resin:Events_civil-unrest",
+      "name": "emergency_evacuation",
+      "ta1explanation": "urgent movement of people away from the threat or actual occurrence of a hazard",
+      "qnode": "wd:Q606332",
+      "qlabel": "emergency_evacuation",
+      "participants": [
+        {
+          "@id": "resin:Participants/20033/resin:Events_civil-unrest_transporter",
+          "roleName": "A0_pag_agent_transporter",
+          "entity": "resin:Entities/00000/"
+        },
+        {
+          "@id": "resin:Participants/20034/resin:Events_civil-unrest_transported",
+          "roleName": "A1_ppt_thing_transported",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20135/resin:Events_civil-unrest_from_loc",
+          "roleName": "A2_ppt_from_loc",
+          "entity": "resin:Entities/00011/"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "@id": "resin:Events/10016/resin:Events_civil-unrest",
+      "name": "destruction",
+      "ta1explanation": "concept of damage to an object, system or an idea",
+      "qnode": "wd:Q17781833",
+      "qlabel": "destruction",
+      "participants": [
+        {
+          "@id": "resin:Participants/20035/resin:Events_civil-unrest_destroyer",
+          "roleName": "A0_pag_agent_destroyer",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20036/resin:Events_civil-unrest_thing",
+          "roleName": "A1_ppt_patient_thing_destroyed",
+          "entity": "resin:Entities/00003/"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "@id": "resin:Events/10017/resin:Events_civil-unrest",
+      "name": "Trigger",
+      "ta1explanation": "the trigger or cause of the incident",
+      "qnode": "wd:Q336751",
+      "qlabel": "trigger",
+      "participants": [],
+      "description": "",
+      "goal": "",
+      "privateData": {},
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/10021/resin:Events_civil-unrest",
+          "comment": "legislation",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10022/resin:Events_civil-unrest",
+          "comment": "crime",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10023/resin:Events_civil-unrest",
+          "comment": "war",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10024/resin:Events_civil-unrest",
+          "comment": "trial",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10025/resin:Events_civil-unrest",
+          "comment": "election",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10018/resin:Events_civil-unrest",
+      "name": "Peaceful Protest",
+      "ta1explanation": "Protesters take peaceful and legal way to express dissatisfaction",
+      "qnode": "wd:Q273120",
+      "qlabel": "protest",
+      "participants": [],
+      "description": "",
+      "goal": "",
+      "privateData": {},
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/10029/resin:Events_civil-unrest",
+          "comment": "inquiry",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10028/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10030/resin:Events_civil-unrest",
+          "comment": "investigation",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10028/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10028/resin:Events_civil-unrest",
+          "comment": "negotiation",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10007/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10007/resin:Events_civil-unrest",
+          "comment": "demonstration",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10026/resin:Events_civil-unrest",
+            "resin:Events/10027/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10027/resin:Events_civil-unrest",
+          "comment": "occupation",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10026/resin:Events_civil-unrest",
+          "comment": "strike",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10019/resin:Events_civil-unrest",
+      "name": "Justice",
+      "ta1explanation": "a judge or magistrate",
+      "qnode": "wd:Q5167661",
+      "qlabel": "justice",
+      "participants": [],
+      "description": "",
+      "goal": "",
+      "privateData": {},
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/10003/resin:Events_civil-unrest",
+          "comment": "arrest",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10034/resin:Events_civil-unrest",
+            "resin:Events/10033/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10034/resin:Events_civil-unrest",
+          "comment": "conviction",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10012/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10033/resin:Events_civil-unrest",
+          "comment": "release",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10012/resin:Events_civil-unrest",
+          "comment": "sentence",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10020/resin:Events_civil-unrest",
+      "name": "Response",
+      "ta1explanation": "Government response to civil unrest",
+      "qnode": "wd:Q1920566",
+      "qlabel": "answer",
+      "participants": [],
+      "description": "",
+      "goal": "",
+      "privateData": {},
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/10011/resin:Events_civil-unrest",
+          "comment": "public_statement",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10032/resin:Events_civil-unrest"
+          ]
+        },
+        {
+          "child": "resin:Events/10031/resin:Events_civil-unrest",
+          "comment": "resignation",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10032/resin:Events_civil-unrest",
+          "comment": "investigation",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10021/resin:Events_civil-unrest",
+      "name": "legislation",
+      "ta1explanation": "formal process leading to the approval of a law",
+      "qnode": "wd:Q3406566",
+      "qlabel": "legislative_process",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20037/resin:Events_civil-unrest_body",
+          "roleName": "A0_pag_agent_legislative_body",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20038/resin:Events_civil-unrest_thing_enacted",
+          "roleName": "A1_ppt_thing_enacted",
+          "entity": "resin:Entities/00004/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10022/resin:Events_civil-unrest",
+      "name": "crime",
+      "ta1explanation": "unlawful act forbidden and punishable by criminal law",
+      "qnode": "wd:Q83267",
+      "qlabel": "crime",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20039/resin:Events_civil-unrest_perp",
+          "roleName": "A0_pag__perp",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20040/resin:Events_civil-unrest_victim",
+          "roleName": "A2_gol__victim",
+          "entity": "resin:Entities/00004/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10023/resin:Events_civil-unrest",
+      "name": "war",
+      "ta1explanation": "a state of armed conflict between different nations",
+      "qnode": "wd:Q198",
+      "qlabel": "war",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20041/resin:Events_civil-unrest_initiator",
+          "roleName": "A0_pag__initiator",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20042/resin:Events_civil-unrest_victim",
+          "roleName": "A2_gol__victim",
+          "entity": "resin:Entities/00004/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10024/resin:Events_civil-unrest",
+      "name": "trial",
+      "ta1explanation": "coming together of parties to a dispute, to present information in a tribunal",
+      "qnode": "wd:Q8016240",
+      "qlabel": "trial",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20943/resin:Events_civil-unrest_litigant",
+          "roleName": "A0_pag__litigant",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20944/resin:Events_civil-unrest_entity",
+          "roleName": "A1_ppt__entity_tried",
+          "entity": "resin:Entities/00004/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10025/resin:Events_civil-unrest",
+      "name": "election",
+      "ta1explanation": "key event in election",
+      "qnode": "wd:Q20826785",
+      "qlabel": "elected",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20043/resin:Events_civil-unrest_voters",
+          "roleName": "A0_pag_agent_voters",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20044/resin:Events_civil-unrest_candidate",
+          "roleName": "A1_ppt_theme_candidate",
+          "entity": "resin:Entities/00004/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10026/resin:Events_civil-unrest",
+      "name": "strike",
+      "ta1explanation": "work stoppage caused by the mass refusal of employees to work",
+      "qnode": "wd:Q49776",
+      "qlabel": "strike",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20045/resin:Events_civil-unrest_striker",
+          "roleName": "A0_pag_agent_striker",
+          "entity": "resin:Entities/00002/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10027/resin:Events_civil-unrest",
+      "name": "occupation",
+      "ta1explanation": "form of protest",
+      "qnode": "wd:Q528892",
+      "qlabel": "occupation",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20046/resin:Events_civil-unrest_occupant",
+          "roleName": "A0_pag_occupant",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20047/resin:Events_civil-unrest_place",
+          "roleName": "A0_pag_place_occupied",
+          "entity": "resin:Entities/00011/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10028/resin:Events_civil-unrest",
+      "name": "negotiation",
+      "ta1explanation": "dialogue between two or more people or parties intended to reach a beneficial outcome",
+      "qnode": "wd:Q202875",
+      "qlabel": "negotiation",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20050/resin:Events_civil-unrest_occupant",
+          "roleName": "A0_pag_agent_negotiator",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20051/resin:Events_civil-unrest_place",
+          "roleName": "A1_com_co_agent_explicit_other_party",
+          "entity": "resin:Entities/00010/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10029/resin:Events_civil-unrest",
+      "name": "inquiry",
+      "ta1explanation": "process that has the aim of augmenting knowledge, resolving doubt, or solving a problem",
+      "qnode": "wd:Q21004260",
+      "qlabel": "inquiry",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20052/resin:Events_civil-unrest_examiner",
+          "roleName": "A0_pag_agent_examiner",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20053/resin:Events_civil-unrest_examined",
+          "roleName": "A1_ppt_location_examined",
+          "entity": "resin:Entities/00010/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10030/resin:Events_civil-unrest",
+      "name": "investigation",
+      "ta1explanation": "process that attempts to determine the facts of a crime and circumstances",
+      "qnode": "wd:Q1964968",
+      "qlabel": "criminal_investigation",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20054/resin:Events_civil-unrest_examiner",
+          "roleName": "A0_pag_agent_examiner",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20055/resin:Events_civil-unrest_examined",
+          "roleName": "A1_ppt_location_examined",
+          "entity": "resin:Entities/00010/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10031/resin:Events_civil-unrest",
+      "name": "resignation",
+      "ta1explanation": "act of giving up or quitting an office or position",
+      "qnode": "wd:Q796919",
+      "qlabel": "resignation",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20056/resin:Events_civil-unrest_quitter",
+          "roleName": "A0_pag_agent_quitter",
+          "entity": "resin:Entities/00000/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10032/resin:Events_civil-unrest",
+      "name": "investigation",
+      "ta1explanation": "process that attempts to determine the facts of a crime and circumstances",
+      "qnode": "wd:Q1964968",
+      "qlabel": "criminal_investigation",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20057/resin:Events_civil-unrest_examiner",
+          "roleName": "A0_pag_agent_examiner",
+          "entity": "resin:Entities/00000/"
+        },
+        {
+          "@id": "resin:Participants/20058/resin:Events_civil-unrest_examined",
+          "roleName": "A1_ppt_location_examined",
+          "entity": "resin:Entities/00010/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10033/resin:Events_civil-unrest",
+      "name": "release",
+      "ta1explanation": "process of releasing an inmate from prison",
+      "qnode": "wd:Q3237993",
+      "qlabel": "release_from_prison",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20059/resin:Events_civil-unrest_releaser",
+          "roleName": "A0_cau_cause_releaser",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20060/resin:Events_civil-unrest_released",
+          "roleName": "A1_ppt_theme_thing_released",
+          "entity": "resin:Entities/00000/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10034/resin:Events_civil-unrest",
+      "name": "conviction",
+      "ta1explanation": "verdict that results when a court of law finds a defendant guilty of a crime",
+      "qnode": "wd:Q2916183",
+      "qlabel": "conviction",
+      "description": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20061/resin:Events_civil-unrest_judge",
+          "roleName": "A0_pag__judge",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20062/resin:Events_civil-unrest_person",
+          "roleName": "A1_ppt__person_convicted",
+          "entity": "resin:Entities/00002/"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "@id": "resin:Entities/00000/",
+      "qnode": "wd:Q35535",
+      "qlabel": "police",
+      "centrality": 1,
+      "name": "police"
+    },
+    {
+      "@id": "resin:Entities/00001/",
+      "qnode": "wd:Q190512",
+      "qlabel": "tear gas",
+      "centrality": 1,
+      "name": "tear gas"
+    },
+    {
+      "@id": "resin:Entities/00002/",
+      "qnode": "wd:Q37975479",
+      "qlabel": "Protesters as \"passionate economists\": a dynamic dual pathway model of approach coping with collective disadvantage.",
+      "centrality": 1,
+      "name": "Protesters"
+    },
+    {
+      "@id": "resin:Entities/00003/",
+      "qnode": "wd:Q515",
+      "qlabel": "city",
+      "centrality": 1,
+      "name": "city"
+    },
+    {
+      "@id": "resin:Entities/00004/",
+      "qnode": "wd:Q5",
+      "qlabel": "human",
+      "centrality": 1,
+      "name": "people"
+    },
+    {
+      "@id": "resin:Entities/00005/",
+      "qnode": "wd:Q8063",
+      "qlabel": "rock",
+      "centrality": 1,
+      "name": "rocks"
+    },
+    {
+      "@id": "resin:Entities/00007/",
+      "qnode": "wd:Q30185",
+      "qlabel": "mayor",
+      "centrality": 1,
+      "name": "mayor"
+    },
+    {
+      "@id": "resin:Entities/00008/",
+      "qnode": "wd:Q41487",
+      "qlabel": "court",
+      "centrality": 1,
+      "name": "court"
+    },
+    {
+      "@id": "resin:Entities/00009/",
+      "qnode": "wd:Q329525",
+      "qlabel": "criminal charge",
+      "centrality": 1,
+      "name": "charge"
+    },
+    {
+      "@id": "resin:Entities/00010/",
+      "qnode": "wd:Q26256810",
+      "qlabel": "matter",
+      "centrality": 1,
+      "name": "topic"
+    },
+    {
+      "@id": "resin:Entities/00011/",
+      "qnode": "wd:Q41176",
+      "qlabel": "building",
+      "centrality": 1,
+      "name": "building"
+    }
+  ],
+  "relations": []
+}

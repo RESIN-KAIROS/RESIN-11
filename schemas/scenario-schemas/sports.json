@@ -1,0 +1,583 @@
+{
+  "@context": [
+    "https://kairos-sdf.s3.amazonaws.com/context/kairos-v1.4.1.jsonld",
+    {
+      "caci": "https://caci.com/kairos/",
+      "my_key": "caci:my_key",
+      "giant_bitstring": "caci:giant_bitstring",
+      "resin": "https://blender.cs.illinois.edu/kairos/"
+    }
+  ],
+  "@id": "resin:Submissions/TA1/schemas_quizlet9",
+  "sdfVersion": "1.4.1",
+  "version": "resin:disease-outbreak/quizlet9",
+  "ta2": false,
+  "comment": [
+    "zero shot schema",
+    "this schema was induced using non-real documents (generated from GPT3)"
+  ],
+  "events": [
+    {
+      "@id": "resin:Events/00000/",
+      "name": "Sports Games",
+      "description": "schema topic",
+      "goal": "",
+      "privateData": {},
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/00001/",
+          "outlinks": [
+            "resin:Events/00002/"
+          ],
+          "comment": "Preparation"
+        },
+        {
+          "child": "resin:Events/00002/",
+          "outlinks": [
+            "resin:Events/00002/",
+            "resin:Events/00003/"
+          ],
+          "comment": "Sports Event"
+        },
+        {
+          "child": "resin:Events/00003/",
+          "outlinks": [],
+          "comment": "Social Response"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00001/",
+      "name": "Preparation",
+      "ta1explanation": "All the processes neede for preparing/arranging sports events",
+      "qnode": "wd:Q19833559",
+      "qlabel": "preparation",
+      "participants": [],
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/00016/",
+          "outlinks": [
+            "resin:Events/00004/"
+          ],
+          "comment": "bids"
+        },
+        {
+          "child": "resin:Events/00004/",
+          "outlinks": [
+            "resin:Events/00015/",
+            "resin:Events/00005/"
+          ],
+          "comment": "announcement"
+        },
+        {
+          "child": "resin:Events/00015/",
+          "outlinks": [],
+          "optional": true,
+          "comment": "boycott"
+        },
+        {
+          "child": "resin:Events/00005/",
+          "outlinks": [],
+          "comment": "arrangement"
+        },
+        {
+          "child": "resin:Events/00006/",
+          "outlinks": [],
+          "comment": "sports training"
+        }
+      ],
+      "description": false
+    },
+    {
+      "@id": "resin:Events/00015/",
+      "name": "boycott the event",
+      "ta1explanation": "act of voluntarily abstaining from using, buying, or dealing with a person, organization, or country",
+      "qnode": "wd:Q175331",
+      "qlabel": "demonstration",
+      "participants": [
+        {
+          "@id": "resin:Participants/00025/",
+          "roleName": "A0_pag_agent_protester",
+          "entity": "resin:Entities/00014/"
+        },
+        {
+          "@id": "resin:Participants/00026/",
+          "roleName": "A1_ppt_theme_objectionable_thing",
+          "entity": "resin:Entities/00015/"
+        }
+      ],
+      "description": "",
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/00016/",
+      "name": "bids for hosting the event",
+      "ta1explanation": "proposal to host a sporting event",
+      "qnode": "wd:Q51081147",
+      "qlabel": "bid",
+      "participants": [
+        {
+          "@id": "resin:Participants/00027/",
+          "roleName": "bidder",
+          "entity": "resin:Entities/00016/"
+        }
+      ],
+      "description": "",
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/00004/",
+      "name": "announcement of the event",
+      "ta1explanation": "printed, spoken, or published statement or notice of an event or other news",
+      "qnode": "wd:Q567303",
+      "qlabel": "announcement",
+      "participants": [
+        {
+          "@id": "resin:Participants/00000/",
+          "roleName": "A0_pag_agent_announcer",
+          "entity": "resin:Entities/00000/"
+        },
+        {
+          "@id": "resin:Participants/00001/",
+          "roleName": "A2_gol_recipient_hearer",
+          "entity": "resin:Entities/00001/"
+        }
+      ],
+      "description": "Online Sports Games Announced!",
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/00005/",
+      "name": "competition scheduling",
+      "ta1explanation": "scheduling the specific sport events, such as the matching, grouping, settling down time and place.",
+      "qnode": "wd:Q379755",
+      "qlabel": "arrangement",
+      "participants": [
+        {
+          "@id": "resin:Participants/00002/",
+          "roleName": "arranger",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/00003/",
+          "roleName": "participant",
+          "entity": "resin:Entities/00003/"
+        },
+        {
+          "@id": "resin:Participants/00004/",
+          "roleName": "place",
+          "entity": "resin:Entities/00004/"
+        }
+      ],
+      "description": "",
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/00006/",
+      "name": "training of participating athletes",
+      "ta1explanation": "training activity of sportspeople before sports competition",
+      "qnode": "wd:Q3055155",
+      "qlabel": "sports training",
+      "participants": [
+        {
+          "@id": "resin:Participants/00005/",
+          "roleName": "Coach",
+          "entity": "resin:Entities/00005/"
+        },
+        {
+          "@id": "resin:Participants/00006/",
+          "roleName": "Trainee",
+          "entity": "resin:Entities/00006/"
+        },
+        {
+          "@id": "resin:Participants/00007/",
+          "roleName": "TrainingPlace",
+          "entity": "resin:Entities/00007/"
+        }
+      ],
+      "description": "",
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/00002/",
+      "name": "Sports Event",
+      "ta1explanation": "a specific sports game event",
+      "qnode": "wd:Q3177945",
+      "qlabel": "sports game",
+      "participants": [],
+      "description": "Three games in a row for the home team!",
+      "children": [
+        {
+          "child": "resin:Events/00007/",
+          "outlinks": [
+            "resin:Events/00008/"
+          ],
+          "comment": "opening ceremony"
+        },
+        {
+          "child": "resin:Events/00008/",
+          "outlinks": [
+            "resin:Events/00010/",
+            "resin:Events/00017/",
+            "resin:Events/00011/"
+          ],
+          "comment": "compete"
+        },
+        {
+          "child": "resin:Events/00017/",
+          "outlinks": [],
+          "optional": true,
+          "comment": "riot"
+        },
+        {
+          "child": "resin:Events/00010/",
+          "outlinks": [
+            "resin:Events/00011/"
+          ],
+          "optional": true,
+          "comment": "overtime"
+        },
+        {
+          "child": "resin:Events/00011/",
+          "outlinks": [],
+          "comment": "closing ceremony"
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/00007/",
+      "name": "opening ceremony",
+      "ta1explanation": "opening ceremony before major sports competitions",
+      "qnode": "wd:Q3010369",
+      "qlabel": "opening ceremony",
+      "participants": [
+        {
+          "@id": "resin:Participants/00009/",
+          "roleName": "ARG0",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/00028/",
+          "roleName": "ARGM-LOC",
+          "entity": "resin:Entities/00010/"
+        }
+      ],
+      "children_gate": "or",
+      "description": false
+    },
+    {
+      "@id": "resin:Events/00008/",
+      "name": "sports competition",
+      "ta1explanation": "the sports competition during a game",
+      "qnode": "wd:Q13406554",
+      "qlabel": "sports competition",
+      "participants": [
+        {
+          "@id": "resin:Participants/00012/",
+          "roleName": "ARG0",
+          "entity": "resin:Entities/00011/"
+        },
+        {
+          "@id": "resin:Participants/00013/",
+          "roleName": "ARG1",
+          "entity": "resin:Entities/00012/"
+        },
+        {
+          "@id": "resin:Participants/00014/",
+          "roleName": "ARGM-LOC",
+          "entity": "resin:Entities/00013/"
+        }
+      ],
+      "children_gate": "or",
+      "description": false
+    },
+    {
+      "@id": "resin:Events/00010/",
+      "name": "overtime (extra time)",
+      "ta1explanation": "additional period of play to bring a game to a decision",
+      "qnode": "wd:Q186982",
+      "qlabel": "overtime",
+      "participants": [
+        {
+          "@id": "resin:Participants/00029/",
+          "roleName": "ARG0",
+          "entity": "resin:Entities/00011/"
+        },
+        {
+          "@id": "resin:Participants/00032/",
+          "roleName": "ARG1",
+          "entity": "resin:Entities/00012/"
+        },
+        {
+          "@id": "resin:Participants/00033/",
+          "roleName": "ARGM-LOC",
+          "entity": "resin:Entities/00013/"
+        }
+      ],
+      "children_gate": "or",
+      "description": false
+    },
+    {
+      "@id": "resin:Events/00017/",
+      "name": "violence in sports",
+      "ta1explanation": "Violence in sports usually refers to violent and often unnecessarily harmful intentional physical acts committed during, or motivated by, a sports game.",
+      "qnode": "wd:Q124757",
+      "qlabel": "riot",
+      "participants": [
+        {
+          "@id": "resin:Participants/00020/",
+          "roleName": "A0_pag__rioter",
+          "entity": "resin:Entities/00017/"
+        }
+      ],
+      "children_gate": "or",
+      "description": false
+    },
+    {
+      "@id": "resin:Events/00011/",
+      "name": "closing ceremony",
+      "ta1explanation": "official closing of the sports event, often including medal presentation",
+      "qnode": "wd:Q186982",
+      "qlabel": "overtime",
+      "participants": [
+        {
+          "@id": "resin:Participants/00031/",
+          "roleName": "winner",
+          "entity": "resin:Entities/00014/"
+        },
+        {
+          "@id": "resin:Participants/00011/",
+          "roleName": "ARGM-LOC",
+          "entity": "resin:Entities/00010/"
+        }
+      ],
+      "children_gate": "or",
+      "description": false
+    },
+    {
+      "@id": "resin:Events/00003/",
+      "name": "Social Response",
+      "ta1explanation": "the public's and participants' response to the event",
+      "qnode": "wd:Q107340055",
+      "qlabel": "social impact",
+      "participants": [],
+      "description": "",
+      "children": [
+        {
+          "child": "resin:Events/00013/",
+          "outlinks": [],
+          "comment": "press release"
+        },
+        {
+          "child": "resin:Events/00018/",
+          "outlinks": [],
+          "optional": true,
+          "comment": "soccer war"
+        },
+        {
+          "child": "resin:Events/00014/",
+          "outlinks": [],
+          "comment": "cheer"
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/00018/",
+      "name": "war triggered by a sports event",
+      "ta1explanation": "Sometimes riots during a sports event can escalate to wars between nations participating the game",
+      "qnode": "wd:Q467011",
+      "qlabel": "invasion",
+      "participants": [
+        {
+          "@id": "resin:Participants/00034/",
+          "roleName": "A0_pag_agent_invader",
+          "entity": "resin:Entities/00018/"
+        },
+        {
+          "@id": "resin:Participants/00030/",
+          "roleName": "A1_ppt_patient_place_invaded",
+          "entity": "resin:Entities/00019/"
+        }
+      ],
+      "description": "",
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/00013/",
+      "name": "fans cheering",
+      "ta1explanation": "cheering of fans after winning a game",
+      "qnode": "wd:Q15729215",
+      "qlabel": "cheering",
+      "participants": [
+        {
+          "@id": "resin:Participants/00022/",
+          "roleName": "ARG0",
+          "entity": "resin:Entities/00011/"
+        },
+        {
+          "@id": "resin:Participants/00023/",
+          "roleName": "ARGM-LOC",
+          "entity": "resin:Entities/00012/"
+        }
+      ],
+      "description": "Three games in a row and the home team is on a roll! The latest victory was a close one against the visiting team, but the home team pulled through in the end. This brings their record to an impressive 9-2. The fans are cheering and the players are feeling confident. The next game is a big one - the team is going up against their biggest rival. But the home team is ready for the challenge.",
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/00014/",
+      "name": "post-match press conference",
+      "ta1explanation": "electronic media outlets whose primary mission is public service",
+      "qnode": "wd:Q26398",
+      "qlabel": "public_broadcasting",
+      "participants": [
+        {
+          "@id": "resin:Participants/00024/",
+          "roleName": "A0_pag_agent_trasmitter",
+          "entity": "resin:Entities/00013/"
+        }
+      ],
+      "description": false,
+      "children_gate": "or"
+    }
+  ],
+  "entities": [
+    {
+      "@id": "resin:Entities/00000/",
+      "qnode": "wd:Q43229",
+      "qlabel": "organization",
+      "centrality": 1,
+      "name": false
+    },
+    {
+      "@id": "resin:Entities/00001/",
+      "qnode": "wd:Q7239",
+      "qlabel": "organism",
+      "centrality": 1,
+      "name": "Online"
+    },
+    {
+      "@id": "resin:Entities/00002/",
+      "qnode": "wd:P664",
+      "qlabel": "organizer",
+      "centrality": 1,
+      "name": "team!"
+    },
+    {
+      "@id": "resin:Entities/00003/",
+      "qnode": "wd:Q56512863",
+      "qlabel": "participant",
+      "centrality": 1,
+      "name": "Online"
+    },
+    {
+      "@id": "resin:Entities/00004/",
+      "qnode": "wd:Q18635222",
+      "qlabel": "location of an event",
+      "centrality": 1,
+      "name": false
+    },
+    {
+      "@id": "resin:Entities/00005/",
+      "qnode": "wd:Q41583",
+      "qlabel": "coach",
+      "centrality": 1,
+      "name": false
+    },
+    {
+      "@id": "resin:Entities/00006/",
+      "qnode": "wd:Q2066131",
+      "qlabel": "athlete",
+      "centrality": 1,
+      "name": "Online"
+    },
+    {
+      "@id": "resin:Entities/00007/",
+      "qnode": "wd:Q17334923",
+      "qlabel": "location",
+      "centrality": 1,
+      "name": false
+    },
+    {
+      "@id": "resin:Entities/00008/",
+      "qnode": "wd:Q56512863",
+      "qlabel": "participant",
+      "centrality": 1,
+      "name": false
+    },
+    {
+      "@id": "resin:Entities/00010/",
+      "qnode": "wd:Q483110",
+      "qlabel": "stadium",
+      "centrality": 1,
+      "name": "never"
+    },
+    {
+      "@id": "resin:Entities/00011/",
+      "qnode": "wd:Q2066131",
+      "qlabel": "athlete",
+      "centrality": 1,
+      "name": false
+    },
+    {
+      "@id": "resin:Entities/00012/",
+      "qnode": "wd:Q2066131",
+      "qlabel": "athlete",
+      "centrality": 1,
+      "name": "Fans"
+    },
+    {
+      "@id": "resin:Entities/00013/",
+      "qnode": "wd:Q483110",
+      "qlabel": "stadium",
+      "centrality": 1,
+      "name": false
+    },
+    {
+      "@id": "resin:Entities/00014/",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group_of_humans",
+      "centrality": 1,
+      "name": false
+    },
+    {
+      "@id": "resin:Entities/00015/",
+      "qnode": "wd:Q16510064",
+      "qlabel": "sporting event",
+      "centrality": 1,
+      "name": false
+    },
+    {
+      "@id": "resin:Entities/00016/",
+      "qnode": "wd:Q2743689",
+      "qlabel": "auctioneer",
+      "centrality": 1,
+      "name": false
+    },
+    {
+      "@id": "resin:Entities/00017/",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group_of_humans",
+      "centrality": 1,
+      "name": false
+    },
+    {
+      "@id": "resin:Entities/00018/",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group_of_humans",
+      "centrality": 1,
+      "name": false
+    },
+    {
+      "@id": "resin:Entities/00019/",
+      "qnode": "wd:Q27096213",
+      "qlabel": "geographic_entity",
+      "centrality": 1,
+      "name": false
+    }
+  ],
+  "relations": []
+}

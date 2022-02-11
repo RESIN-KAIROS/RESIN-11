@@ -1,0 +1,991 @@
+{
+  "@context": [
+    "https://kairos-sdf.s3.amazonaws.com/context/kairos-v1.4.1.jsonld",
+    {
+      "caci": "https://caci.com/kairos/",
+      "my_key": "caci:my_key",
+      "giant_bitstring": "caci:giant_bitstring",
+      "resin": "https://blender.cs.illinois.edu/kairos/"
+    }
+  ],
+  "@id": "resin:Submissions/TA1/schemas_election",
+  "sdfVersion": "1.4.1",
+  "version": "resin:election/quizlet9",
+  "ta2": false,
+  "comment": "",
+  "events": [
+    {
+      "@id": "resin:Events/20000",
+      "name": "Election",
+      "description": "election schema",
+      "ta1explanation": "process by which a population chooses an individual to hold public office or some other position, such as in an organization or society",
+      "qnode": "wd:Q40231",
+      "qlabel": "election",
+      "privateData": {},
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/21001/Steps_kairos:Container:1",
+          "outlinks": [
+            "resin:Events/21002/Steps_kairos:Container:2"
+          ],
+          "optional": false,
+          "comment": "nomination"
+        },
+        {
+          "child": "resin:Events/21002/Steps_kairos:Container:2",
+          "outlinks": [
+            "resin:Events/21003/Steps_kairos:Container:3"
+          ],
+          "optional": false,
+          "comment": "campaign"
+        },
+        {
+          "child": "resin:Events/21003/Steps_kairos:Container:3",
+          "outlinks": [
+            "resin:Events/21008/Steps_kairos:Container:8"
+          ],
+          "optional": false,
+          "comment": "voting"
+        },
+        {
+          "child": "resin:Events/21006/Steps_kairos:Container:6",
+          "outlinks": [],
+          "optional": false,
+          "comment": "candidate continues"
+        },
+        {
+          "child": "resin:Events/21008/Steps_kairos:Container:8",
+          "outlinks": [],
+          "optional": false,
+          "comment": "conclude"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/21001/Steps_kairos:Container:1",
+      "name": "nomination",
+      "participants": [],
+      "comment": "container node",
+      "description": "",
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/20001",
+          "comment": "declare candidacy",
+          "optional": false,
+          "outlinks": [
+            "resin:Events/20003"
+          ]
+        },
+        {
+          "child": "resin:Events/20002",
+          "comment": "debate",
+          "optional": true,
+          "outlinks": [
+            "resin:Events/20003"
+          ]
+        },
+        {
+          "child": "resin:Events/20003",
+          "comment": "campaign",
+          "optional": true,
+          "outlinks": [
+            "resin:Events/20002",
+            "resin:Events/20007",
+            "resin:Events/20009"
+          ]
+        },
+        {
+          "child": "resin:Events/20007",
+          "comment": "drop out",
+          "optional": true,
+          "outlinks": [
+            "resin:Events/20008"
+          ]
+        },
+        {
+          "child": "resin:Events/20008",
+          "comment": "endorse candidate",
+          "optional": true,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/20009",
+          "comment": "unofficially nominated",
+          "optional": true,
+          "outlinks": [
+            "resin:Events/20010"
+          ]
+        },
+        {
+          "child": "resin:Events/20010",
+          "comment": "announce running mate",
+          "optional": true,
+          "outlinks": [
+            "resin:Events/20011"
+          ]
+        },
+        {
+          "child": "resin:Events/20011",
+          "comment": "party convention",
+          "optional": true,
+          "outlinks": [
+            "resin:Events/20012"
+          ]
+        },
+        {
+          "child": "resin:Events/20012",
+          "comment": "officially nominated",
+          "optional": true,
+          "outlinks": [
+            "resin:Events/21002/Steps_kairos:Container:2"
+          ]
+        }
+      ],
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/21002/Steps_kairos:Container:2",
+      "name": "campaign",
+      "participants": [],
+      "comment": "container node",
+      "description": "",
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/20013",
+          "comment": "campaign",
+          "optional": false,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/20025/Speech",
+          "comment": "speech",
+          "optional": false,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/20026",
+          "comment": "fundraising",
+          "optional": true,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/20027",
+          "comment": "advertising",
+          "optional": false,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/20028",
+          "comment": "media appearance",
+          "optional": false,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/20014",
+          "comment": "debate",
+          "optional": false,
+          "outlinks": []
+        }
+      ],
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/21003/Steps_kairos:Container:3",
+      "name": "voting",
+      "participants": [],
+      "comment": "container node",
+      "description": "",
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/21007/Steps_kairos:Container:7",
+          "comment": "vote",
+          "optional": false,
+          "outlinks": [
+            "resin:Events/20019"
+          ]
+        },
+        {
+          "child": "resin:Events/20019",
+          "comment": "votes verified",
+          "optional": false,
+          "outlinks": [
+            "resin:Events/20023"
+          ]
+        },
+        {
+          "child": "resin:Events/20023",
+          "comment": "winner declared",
+          "optional": false,
+          "outlinks": [
+            "resin:Events/21008/Steps_kairos:Container:8"
+          ]
+        }
+      ],
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/21006/Steps_kairos:Container:6",
+      "name": "candidate continues",
+      "participants": [],
+      "comment": "container node",
+      "description": "",
+      "children_gate": "xor",
+      "children": [
+        {
+          "child": "resin:Events/20006",
+          "comment": "continue campaign",
+          "optional": false,
+          "outlinks": [
+            "resin:Events/20003"
+          ]
+        },
+        {
+          "child": "resin:Events/20007",
+          "comment": "drop out",
+          "optional": false,
+          "outlinks": [
+            "resin:Events/20008"
+          ]
+        }
+      ],
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/21007/Steps_kairos:Container:7",
+      "name": "vote",
+      "participants": [],
+      "comment": "container node",
+      "description": "",
+      "children_gate": "xor",
+      "children": [
+        {
+          "child": "resin:Events/20016",
+          "comment": "go to polling site",
+          "optional": false,
+          "outlinks": [
+            "resin:Events/20019"
+          ]
+        },
+        {
+          "child": "resin:Events/20017",
+          "comment": "mail in ballot",
+          "optional": false,
+          "outlinks": [
+            "resin:Events/20019"
+          ]
+        },
+        {
+          "child": "resin:Events/20018",
+          "comment": "vote early",
+          "optional": false,
+          "outlinks": [
+            "resin:Events/20019"
+          ]
+        }
+      ],
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/21008/Steps_kairos:Container:8",
+      "name": "conclude",
+      "participants": [],
+      "comment": "container node",
+      "description": "",
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/20024",
+          "comment": "inauguration",
+          "optional": false,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/20030",
+          "comment": "deny result",
+          "optional": false,
+          "outlinks": [
+            "resin:Events/20031",
+            "resin:Events/20032"
+          ]
+        },
+        {
+          "child": "resin:Events/20031",
+          "comment": "incite violence",
+          "optional": false,
+          "outlinks": [
+            "resin:Events/20033"
+          ]
+        },
+        {
+          "child": "resin:Events/20032",
+          "comment": "lawsuit",
+          "optional": false,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/20033",
+          "comment": "attempt coup d'etat",
+          "optional": false,
+          "outlinks": []
+        }
+      ],
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20001",
+      "name": "declare candidacy",
+      "description": "",
+      "comment": "Not in xpo",
+      "ta1explanation": "a candidate declares candidacy to begin their run for office",
+      "qnode": "wd:Q567303",
+      "qlabel": "announcement",
+      "participants": [
+        {
+          "@id": "resin:Participants/10001/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10002/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        }
+      ],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20002",
+      "name": "debate",
+      "description": "",
+      "comment": "Not in xpo",
+      "ta1explanation": "candidates looking to secure their party's nomination will attend debates against other candidates from their party",
+      "qnode": "wd:Q179875",
+      "qlabel": "debate",
+      "participants": [
+        {
+          "@id": "resin:Participants/10003/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10004/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        },
+        {
+          "@id": "resin:Participants/10041/Debate",
+          "roleName": "debate",
+          "entity": "resin:Entities/00002/Debate"
+        }
+      ],
+      "privateData": {
+        "repeatable": true
+      }
+    },
+    {
+      "@id": "resin:Events/20003",
+      "name": "campaign",
+      "description": "attempt to influence the decision making process within a specific group",
+      "comment": "Not in xpo",
+      "ta1explanation": "a candidate, after seeing the results of a contest, will decide whether to stay in the race or concede",
+      "qnode": "wd:Q847301",
+      "qlabel": "political campaign",
+      "participants": [
+        {
+          "@id": "resin:Participants/10005/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10006/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        }
+      ],
+      "privateData": {
+        "repeatable": true
+      }
+    },
+    {
+      "@id": "resin:Events/20006",
+      "name": "continue campaign",
+      "description": "attempt to influence the decision making process within a specific group",
+      "comment": "Not in xpo",
+      "ta1explanation": "a candidate, after seeing the results of a contest, will decide whether to stay in the race or concede",
+      "qnode": "wd:Q847301",
+      "qlabel": "political campaign",
+      "participants": [
+        {
+          "@id": "resin:Participants/10007/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10008/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        }
+      ],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20007",
+      "name": "drop out",
+      "description": "",
+      "comment": "Not in xpo",
+      "ta1explanation": "a candidate, after seeing the results of a contest, may decide to drop out of the race",
+      "qnode": "wd:Q5158595",
+      "qlabel": "concession",
+      "participants": [
+        {
+          "@id": "resin:Participants/10009/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10010/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        }
+      ],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20008",
+      "name": "endorse candidate",
+      "description": "statement extolling the virtue of a product, service, position, or person's qualifications",
+      "comment": "Not in xpo",
+      "ta1explanation": "after dropping out of the race, a candidate will typically endorse a candidate that they believe their supports should support",
+      "qnode": "wd:Q265871",
+      "qlabel": "endorsement",
+      "participants": [
+        {
+          "@id": "resin:Participants/10011/Endorser",
+          "roleName": "endorser",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10012/Endorsee",
+          "roleName": "endorsee",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10013/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        }
+      ],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20009",
+      "name": "unofficially nominated",
+      "description": "part of the process of selecting a candidate",
+      "comment": "Not in xpo",
+      "ta1explanation": "eventually, a candidate is usually unofficially nominated because they have won a majority of pledged delegates",
+      "qnode": "wd:Q1156895",
+      "qlabel": "nomination",
+      "participants": [
+        {
+          "@id": "resin:Participants/10014/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10015/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        },
+        {
+          "@id": "resin:Participants/10016/PoliticalParty",
+          "roleName": "party",
+          "entity": "resin:Entities/00008/PoliticalParty"
+        }
+      ],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20010",
+      "name": "announce running mate",
+      "description": "",
+      "comment": "Not in xpo",
+      "ta1explanation": "before a candidate is officially nominated, they will select a running mate to generate further media coverage",
+      "qnode": "wd:Q567303",
+      "qlabel": "announcement",
+      "participants": [
+        {
+          "@id": "resin:Participants/10017/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10018/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        },
+        {
+          "@id": "resin:Participants/10019/RunningMate",
+          "roleName": "runningMate",
+          "entity": "resin:Entities/00005/RunningMate"
+        }
+      ],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20011",
+      "name": "party convention",
+      "description": "general meeting of a political party",
+      "comment": "Not in xpo",
+      "ta1explanation": "at the convention, a candidate is officially nominated and the platform is generally discussed",
+      "qnode": "wd:Q2288051",
+      "qlabel": "party conference",
+      "participants": [
+        {
+          "@id": "resin:Participants/10020/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        },
+        {
+          "@id": "resin:Participants/10021/PoliticalParty",
+          "roleName": "politicalParty",
+          "entity": "resin:Entities/00008/PoliticalParty"
+        }
+      ],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20012",
+      "name": "officially nominated",
+      "description": "part of the process of selecting a candidate",
+      "comment": "Not in xpo",
+      "ta1explanation": "after delegates vote, a candidate is officially nominated as a political party's nominee",
+      "qnode": "wd:Q1156895",
+      "qlabel": "nomination",
+      "participants": [
+        {
+          "@id": "resin:Participants/10022/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10023/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        },
+        {
+          "@id": "resin:Participants/10024/PoliticalParty",
+          "roleName": "politicalParty",
+          "entity": "resin:Entities/00008/PoliticalParty"
+        }
+      ],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20013",
+      "name": "campaign",
+      "description": "campaign",
+      "comment": "Not in xpo",
+      "ta1explanation": "a presidential candidate will begin campaigning to try to gain votes",
+      "qnode": "wd:Q847301",
+      "qlabel": "political campaign",
+      "participants": [
+        {
+          "@id": "resin:Participants/10025/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10026/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        }
+      ],
+      "privateData": {
+        "repeatable": true
+      }
+    },
+    {
+      "@id": "resin:Events/20014",
+      "name": "debate",
+      "description": "Debates between the presidential candidates during an election cycle",
+      "comment": "Not in xpo",
+      "ta1explanation": "a presidential candidate will attend debates with other eligible candidates from other parties to clarify their platform",
+      "qnode": "wd:Q179875",
+      "qlabel": "debate",
+      "participants": [
+        {
+          "@id": "resin:Participants/10027/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10028/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        },
+        {
+          "@id": "resin:Participants/10043/Debate",
+          "roleName": "debate",
+          "entity": "resin:Entities/00002/Debate"
+        }
+      ],
+      "privateData": {
+        "repeatable": true
+      }
+    },
+    {
+      "@id": "resin:Events/20016",
+      "name": "go to polling site",
+      "description": "Vote in person on election day at polling site",
+      "ta1explanation": "method for a group such as a meeting or an electorate to make a decision or express an opinion",
+      "qnode": "wd:Q189760",
+      "qlabel": "voting",
+      "participants": [],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20017",
+      "name": "mail in ballot",
+      "description": "voting in an election whereby ballot papers are distributed or returned by post",
+      "ta1explanation": "some citizens will cast their votes by mailing their ballots",
+      "qnode": "wd:Q15044040",
+      "qlabel": "postal voting",
+      "participants": [],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20018",
+      "name": "vote early",
+      "description": "process by which electors can vote prior to the scheduled election day",
+      "ta1explanation": "some citizens will cast their votes early",
+      "qnode": "wd:Q708369",
+      "qlabel": "early voting",
+      "participants": [],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20019",
+      "name": "votes verified",
+      "description": "Votes are verified by each county/state",
+      "comment": "Not in xpo",
+      "ta1explanation": "votes are counted/verified to ensure that the process remains as legitimate and 'democratic' as possible",
+      "qnode": "wd:Q2672742",
+      "qlabel": "vote counting",
+      "participants": [
+        {
+          "@id": "resin:Participants/10029/VotingResult",
+          "roleName": "result",
+          "entity": "resin:Entities/00006/VotingResult"
+        }
+      ],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20023",
+      "name": "winner declared",
+      "description": "The winner of the presidential race is declared",
+      "ta1explanation": "key event in election",
+      "qnode": "wd:Q20826785",
+      "qlabel": "elected",
+      "participants": [
+        {
+          "@id": "resin:Participants/10030/Winner",
+          "roleName": "winner",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10031/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        }
+      ],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20024",
+      "name": "inauguration",
+      "description": "ceremony for the swearing-in of the newly elected leader",
+      "comment": "Not in xpo",
+      "ta1explanation": "The new president is sworn into office",
+      "qnode": "wd:Q1417098",
+      "qlabel": "inauguration",
+      "participants": [
+        {
+          "@id": "resin:Participants/10032/President",
+          "roleName": "president",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10033/VicePresident",
+          "roleName": "vice-president",
+          "entity": "resin:Entities/00005/RunningMate"
+        }
+      ],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20025/Speech",
+      "name": "speech",
+      "description": "address delivered to an audience",
+      "comment": "Not in xpo",
+      "ta1explanation": "address delivered to an audience",
+      "qnode": "wd:Q861911",
+      "qlabel": "speech",
+      "participants": [
+        {
+          "@id": "resin:Participants/10034/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10035/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        }
+      ],
+      "privateData": {
+        "repeatable": true
+      }
+    },
+    {
+      "@id": "resin:Events/20026",
+      "name": "fundraising",
+      "description": "process of gathering voluntary contributions of money or other resources",
+      "comment": "Not in xpo",
+      "ta1explanation": "process of gathering voluntary contributions of money or other resources",
+      "qnode": "wd:Q1161355",
+      "qlabel": "fundraising",
+      "participants": [
+        {
+          "@id": "resin:Participants/10036/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10037/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        }
+      ],
+      "privateData": {
+        "repeatable": true
+      }
+    },
+    {
+      "@id": "resin:Events/20027",
+      "name": "advertising",
+      "description": "form of communication for marketing, typically paid for",
+      "comment": "Not in xpo",
+      "ta1explanation": "form of communication for marketing, typically paid for",
+      "qnode": "wd:Q37038",
+      "qlabel": "advertising",
+      "participants": [
+        {
+          "@id": "resin:Participants/10038/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10039/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        }
+      ],
+      "privateData": {
+        "repeatable": true
+      }
+    },
+    {
+      "@id": "resin:Events/20028",
+      "name": "media appearance",
+      "description": "act of conveying intended meanings from one entity or group to another through the use of mutually understood signs and rules",
+      "comment": "In xpo but not fine grained enough",
+      "ta1explanation": "act of conveying intended meanings from one entity or group to another through the use of mutually understood signs and rules",
+      "qnode": "wd:Q11024",
+      "qlabel": "communication",
+      "participants": [
+        {
+          "@id": "resin:Participants/10040/Candidate",
+          "roleName": "candidate",
+          "entity": "resin:Entities/00001/Candidate"
+        },
+        {
+          "@id": "resin:Participants/10051/Election",
+          "roleName": "election",
+          "entity": "resin:Entities/00007/Election"
+        }
+      ],
+      "privateData": {
+        "repeatable": true
+      }
+    },
+    {
+      "@id": "resin:Events/20030",
+      "name": "deny result",
+      "description": "act of declining to accept an item for approval, consideration, marking etc.",
+      "comment": "Not in xpo",
+      "ta1explanation": "act of declining to accept an item for approval, consideration, marking etc.",
+      "qnode": "wd:Q98398200",
+      "qlabel": "rejection",
+      "participants": [],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20031",
+      "name": "incite violence",
+      "description": "an incitement to commit an act of violence",
+      "comment": "Not in xpo",
+      "ta1explanation": "an incitement to commit an act of violence",
+      "qnode": "wd:Q104951136",
+      "qlabel": "call to violence",
+      "participants": [],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20032",
+      "name": "lawsuit",
+      "description": "civil action brought in a court of law",
+      "comment": "Not in xpo",
+      "ta1explanation": "civil action brought in a court of law",
+      "qnode": "wd:Q697327",
+      "qlabel": "lawsuit",
+      "participants": [],
+      "privateData": {
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/20033",
+      "name": "coup_d'\u00e9tat",
+      "description": "attempt coup",
+      "ta1explanation": "sudden deposition of a government; illegal and overt seizure of a state by the military or other elites within the state apparatus",
+      "qnode": "wd:Q45382",
+      "qlabel": "coup_d'\u00e9tat",
+      "participants": [],
+      "privateData": {
+        "repeatable": false
+      }
+    }
+  ],
+  "entities": [
+    {
+      "@id": "resin:Entities/00001/Candidate",
+      "name": "candidate",
+      "qnode": "wd:Q19772737",
+      "qlabel": "political candidate"
+    },
+    {
+      "@id": "resin:Entities/00002/Debate",
+      "name": "debate",
+      "qnode": "wd:Q179875",
+      "qlabel": "debate"
+    },
+    {
+      "@id": "resin:Entities/00005/RunningMate",
+      "name": "running mate",
+      "qnode": "wd:Q1339406",
+      "qlabel": "running mate"
+    },
+    {
+      "@id": "resin:Entities/00006/VotingResult",
+      "name": "electoral result",
+      "qnode": "wd:Q19571328",
+      "qlabel": "electoral result"
+    },
+    {
+      "@id": "resin:Entities/00007/Election",
+      "name": "election",
+      "qnode": "wd:Q40231",
+      "qlabel": "election"
+    },
+    {
+      "@id": "resin:Entities/00008/PoliticalParty",
+      "name": "political party",
+      "qnode": "wd:Q7278",
+      "qlabel": "political party"
+    }
+  ],
+  "relations": [
+    {
+      "name": "candidacy in election",
+      "relationSubject": "resin:Entities/00001/Candidate",
+      "relationPredicate": "wd:P3602",
+      "relationObject": "resin:Entities/00007/Election",
+      "@id": "resin:Relations/30001/CandidacyIn"
+    },
+    {
+      "name": "running mate",
+      "relationSubject": "resin:Entities/00005/RunningMate",
+      "relationPredicate": "wd:P6149",
+      "relationObject": "resin:Entities/00001/Candidate",
+      "@id": "resin:Relations/30002/RunningMateOf"
+    },
+    {
+      "name": "endorsed by",
+      "relationSubject": "resin:Entities/00001/Candidate",
+      "relationPredicate": "wd:P8001",
+      "relationObject": "resin:Entities/00001/Candidate",
+      "@id": "resin:Relations/30003/EndorsedBy"
+    }
+  ]
+}

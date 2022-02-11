@@ -1,0 +1,2194 @@
+{
+  "@context": [
+    "https://kairos-sdf.s3.amazonaws.com/context/kairos-v1.4.1.jsonld",
+    {
+      "caci": "https://caci.com/kairos/",
+      "my_key": "caci:my_key",
+      "giant_bitstring": "caci:giant_bitstring",
+      "resin": "https://blender.cs.illinois.edu/kairos/"
+    }
+  ],
+  "@id": "resin:Schemas/drone-strikes-IED",
+  "sdfVersion": "1.4.1",
+  "version": "caci-10.14.2020",
+  "ta2": false,
+  "comment": [],
+  "events": [
+    {
+      "@id": "resin:Events/00002/Cognitive-TeachingTrainingLearning-Unspecified",
+      "name": "Learn bomb making",
+      "description": "Someone learned about how to manufacture or use a bomb.",
+      "ta1explanation": "Someone learned about how to manufacture or use a bomb.",
+      "qnode": "wd:Q8434",
+      "qlabel": "education",
+      "participants": [
+        {
+          "@id": "resin:Participants/00001/teacher-trainer",
+          "roleName": "A0_pag_agent_teacher",
+          "entity": "resin:Entities/00001/teacher-trainer"
+        },
+        {
+          "@id": "resin:Participants/00002/field-of-knowledge",
+          "roleName": "A1_ppt_topic_subject",
+          "entity": "resin:Entities/00002/field-of-knowledge"
+        },
+        {
+          "@id": "resin:Participants/00003/learner",
+          "roleName": "A2_gol_recipient_student",
+          "entity": "resin:Entities/00003/learner"
+        },
+        {
+          "@id": "resin:Participants/00004/means",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00004/means"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00003/Conflict-Attack-Unspecified",
+      "name": "Potential aftermath conflict",
+      "description": "",
+      "ta1explanation": "Potential aftermath conflict",
+      "qnode": "wd:Q1174599",
+      "qlabel": "attack",
+      "participants": [
+        {
+          "@id": "resin:Participants/00006/attacker",
+          "roleName": "A0_pag_agent_assaulter",
+          "entity": "resin:Entities/00006/attacker"
+        },
+        {
+          "@id": "resin:Participants/00007/target",
+          "roleName": "A1_ppt_theme_entity_assaulted",
+          "entity": "resin:Entities/00007/target"
+        },
+        {
+          "@id": "resin:Participants/00008/instrument",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00008/instrument"
+        },
+        {
+          "@id": "resin:Participants/00009/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00009/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00004/Conflict-Attack-Unspecified",
+      "name": "Motivating attack",
+      "description": "",
+      "ta1explanation": "Motivating attack",
+      "qnode": "wd:Q1174599",
+      "qlabel": "attack",
+      "participants": [
+        {
+          "@id": "resin:Participants/00010/attacker",
+          "roleName": "A0_pag_agent_assaulter",
+          "entity": "resin:Entities/00010/attacker"
+        },
+        {
+          "@id": "resin:Participants/00011/target",
+          "roleName": "A1_ppt_theme_entity_assaulted",
+          "entity": "resin:Entities/00011/target"
+        },
+        {
+          "@id": "resin:Participants/00012/instrument",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00012/instrument"
+        },
+        {
+          "@id": "resin:Participants/00013/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00013/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00005/Movement-Transportation-Evacuation",
+      "name": "Evacuation",
+      "description": "",
+      "ta1explanation": "Evacuation",
+      "qnode": "wd:Q606332",
+      "qlabel": "emergency_evacuation",
+      "participants": [
+        {
+          "@id": "resin:Participants/00014/transporter",
+          "roleName": "A0_pag_agent_transporter",
+          "entity": "resin:Entities/00014/transporter"
+        },
+        {
+          "@id": "resin:Participants/00015/passengerartifact",
+          "roleName": "A1_ppt_thing_transported",
+          "entity": "resin:Entities/00015/passengerartifact"
+        },
+        {
+          "@id": "resin:Participants/00016/vehicle",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00016/vehicle"
+        },
+        {
+          "@id": "resin:Participants/00017/origin",
+          "roleName": "A2_dir_initial_location_source",
+          "entity": "resin:Entities/00017/origin"
+        },
+        {
+          "@id": "resin:Participants/00018/destination",
+          "roleName": "A3_gol_destination_destination",
+          "entity": "resin:Entities/00018/destination"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00006/Contact-Contact-Unspecified",
+      "name": "witness_contact",
+      "description": "",
+      "ta1explanation": "witness contact",
+      "qnode": "wd:Q11024",
+      "qlabel": "communication",
+      "participants": [
+        {
+          "@id": "resin:Participants/00019/participant",
+          "roleName": "A0_pag_agent_first_communicator",
+          "entity": "resin:Entities/00019/participant"
+        },
+        {
+          "@id": "resin:Participants/00020/participant",
+          "roleName": "A0_pag_agent_first_communicator",
+          "entity": "resin:Entities/00020/participant"
+        },
+        {
+          "@id": "resin:Participants/00021/topic",
+          "roleName": "A1_ppt_topic_utterance",
+          "entity": "resin:Entities/00021/topic"
+        },
+        {
+          "@id": "resin:Participants/00022/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00022/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00007/Justice-ArrestJailDetain-Unspecified",
+      "name": "Detain suspect(s)",
+      "description": "Some arrested or jailed man for some crime at site place.",
+      "ta1explanation": "Some arrested or jailed man for some crime at site place.",
+      "qnode": "wd:Q1403016",
+      "qlabel": "arrest",
+      "participants": [
+        {
+          "@id": "resin:Participants/00023/jailer",
+          "roleName": "A0_pag__police",
+          "entity": "resin:Entities/00023/jailer"
+        },
+        {
+          "@id": "resin:Participants/00024/detainee",
+          "roleName": "A1_ppt__criminal",
+          "entity": "resin:Entities/00024/detainee"
+        },
+        {
+          "@id": "resin:Participants/00025/crime",
+          "roleName": "A2_cau__crime",
+          "entity": "resin:Entities/00025/crime"
+        },
+        {
+          "@id": "resin:Participants/00026/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00026/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00008/Transaction-ExchangeBuySell-Unspecified",
+      "name": "Buy drone or drone parts",
+      "description": "Military bought, sold, or traded drones to forces in exchange for some for the benefit of some at some place.",
+      "ta1explanation": "Military bought, sold, or traded drones to forces in exchange for some for the benefit of some at some place.",
+      "qnode": "wd:Q21651837",
+      "qlabel": "exchange_of_goods",
+      "participants": [
+        {
+          "@id": "resin:Participants/00027/giver",
+          "roleName": "A0_pag_agent_agent",
+          "entity": "resin:Entities/00027/giver"
+        },
+        {
+          "@id": "resin:Participants/00028/recipient",
+          "roleName": "A2_com_co_agent_other_exchanger",
+          "entity": "resin:Entities/00028/recipient"
+        },
+        {
+          "@id": "resin:Participants/00029/acquired-entity",
+          "roleName": "A1_ppt_theme_thing_being_traded",
+          "entity": "resin:Entities/00029/acquired-entity"
+        },
+        {
+          "@id": "resin:Participants/00030/payment-barter",
+          "roleName": "A3_ppt_co_theme_other_item_in_exchange_price_or_premium",
+          "entity": "resin:Entities/00030/payment-barter"
+        },
+        {
+          "@id": "resin:Participants/00031/beneficiary",
+          "roleName": "A4_gol__benefactive",
+          "entity": "resin:Entities/00031/beneficiary"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00009/ArtifactExistence-ManufactureAssemble-Unspecified",
+      "name": "Make or assemble IED",
+      "description": "Someone manufactured or produced explosives from some components using some at some place.",
+      "ta1explanation": "Someone manufactured or produced explosives from some components using some at some place.",
+      "qnode": "wd:Q187939",
+      "qlabel": "manufacturing",
+      "participants": [
+        {
+          "@id": "resin:Participants/00032/manufacturer-assembler",
+          "roleName": "A0_pag_agent_creator",
+          "entity": "resin:Entities/00032/manufacturer-assembler"
+        },
+        {
+          "@id": "resin:Participants/00033/artifact",
+          "roleName": "A1_prd_result_creation",
+          "entity": "resin:Entities/00033/artifact"
+        },
+        {
+          "@id": "resin:Participants/00034/components",
+          "roleName": "A2_vsp_material_created_from_thing_changed",
+          "entity": "resin:Entities/00034/components"
+        },
+        {
+          "@id": "resin:Participants/00035/instrument",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00035/instrument"
+        },
+        {
+          "@id": "resin:Participants/00036/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00036/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00010/Transaction-ExchangeBuySell-Unspecified",
+      "name": "Buy explosive parts",
+      "description": "buy stuff to make ied.",
+      "ta1explanation": "buy stuff to make ied.",
+      "qnode": "wd:Q21651837",
+      "qlabel": "exchange_of_goods",
+      "participants": [
+        {
+          "@id": "resin:Participants/00037/giver",
+          "roleName": "A0_pag_agent_agent",
+          "entity": "resin:Entities/00037/giver"
+        },
+        {
+          "@id": "resin:Participants/00038/recipient",
+          "roleName": "A2_com_co_agent_other_exchanger",
+          "entity": "resin:Entities/00038/recipient"
+        },
+        {
+          "@id": "resin:Participants/00039/acquired-entity",
+          "roleName": "A1_ppt_theme_thing_being_traded",
+          "entity": "resin:Entities/00039/acquired-entity"
+        },
+        {
+          "@id": "resin:Participants/00040/payment-barter",
+          "roleName": "A3_ppt_co_theme_other_item_in_exchange_price_or_premium",
+          "entity": "resin:Entities/00040/payment-barter"
+        },
+        {
+          "@id": "resin:Participants/00041/beneficiary",
+          "roleName": "A4_gol__benefactive",
+          "entity": "resin:Entities/00041/beneficiary"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00011/Movement-Transportation-Unspecified",
+      "name": "Move explosive parts",
+      "description": "transportation of explosive stuff to the place of assembly",
+      "ta1explanation": "transportation of explosive stuff to the place of assembly",
+      "qnode": "wd:Q7590",
+      "qlabel": "transport",
+      "participants": [
+        {
+          "@id": "resin:Participants/00042/transporter",
+          "roleName": "A0_pag_agent_transporter",
+          "entity": "resin:Entities/00042/transporter"
+        },
+        {
+          "@id": "resin:Participants/00043/passenger-artifact",
+          "roleName": "A1_ppt_theme_thing_transported",
+          "entity": "resin:Entities/00043/passenger-artifact"
+        },
+        {
+          "@id": "resin:Participants/00044/vehicle",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00044/vehicle"
+        },
+        {
+          "@id": "resin:Participants/00045/origin",
+          "roleName": "A2_dir_source_initial_location",
+          "entity": "resin:Entities/00045/origin"
+        },
+        {
+          "@id": "resin:Participants/00046/destination",
+          "roleName": "A3_gol_destination_destination",
+          "entity": "resin:Entities/00046/destination"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00012/Movement-Transportation-Unspecified",
+      "name": "Move drone or drone parts",
+      "description": "transportation of drone to the place of assembly",
+      "ta1explanation": "transportation of drone to the place of assembly",
+      "qnode": "wd:Q7590",
+      "qlabel": "transport",
+      "participants": [
+        {
+          "@id": "resin:Participants/00047/transporter",
+          "roleName": "A0_pag_agent_transporter",
+          "entity": "resin:Entities/00047/transporter"
+        },
+        {
+          "@id": "resin:Participants/00048/passenger-artifact",
+          "roleName": "A1_ppt_theme_thing_transported",
+          "entity": "resin:Entities/00048/passenger-artifact"
+        },
+        {
+          "@id": "resin:Participants/00049/vehicle",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00049/vehicle"
+        },
+        {
+          "@id": "resin:Participants/00050/origin",
+          "roleName": "A2_dir_source_initial_location",
+          "entity": "resin:Entities/00050/origin"
+        },
+        {
+          "@id": "resin:Participants/00051/destination",
+          "roleName": "A3_gol_destination_destination",
+          "entity": "resin:Entities/00051/destination"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00013/Movement-Transportation-Unspecified",
+      "name": "Move drone IED",
+      "description": "transportation of drone-strikes-IED to the place of launch",
+      "ta1explanation": "transportation of drone-strikes-IED to the place of launch",
+      "qnode": "wd:Q7590",
+      "qlabel": "transport",
+      "participants": [
+        {
+          "@id": "resin:Participants/00052/transporter",
+          "roleName": "A0_pag_agent_transporter",
+          "entity": "resin:Entities/00052/transporter"
+        },
+        {
+          "@id": "resin:Participants/00053/passenger-artifact",
+          "roleName": "A1_ppt_theme_thing_transported",
+          "entity": "resin:Entities/00053/passenger-artifact"
+        },
+        {
+          "@id": "resin:Participants/00054/vehicle",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00054/vehicle"
+        },
+        {
+          "@id": "resin:Participants/00055/origin",
+          "roleName": "A2_dir_source_initial_location",
+          "entity": "resin:Entities/00055/origin"
+        },
+        {
+          "@id": "resin:Participants/00056/destination",
+          "roleName": "A3_gol_destination_destination",
+          "entity": "resin:Entities/00056/destination"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00014/Movement-Transportation-Unspecified",
+      "name": "Move medics to attack location",
+      "description": "Medical staff or troops arrived on scene.",
+      "ta1explanation": "Medical staff or troops arrived on scene.",
+      "qnode": "wd:Q7590",
+      "qlabel": "transport",
+      "participants": [
+        {
+          "@id": "resin:Participants/00057/transporter",
+          "roleName": "A0_pag_agent_transporter",
+          "entity": "resin:Entities/00057/transporter"
+        },
+        {
+          "@id": "resin:Participants/00058/passenger-artifact",
+          "roleName": "A1_ppt_theme_thing_transported",
+          "entity": "resin:Entities/00058/passenger-artifact"
+        },
+        {
+          "@id": "resin:Participants/00059/vehicle",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00059/vehicle"
+        },
+        {
+          "@id": "resin:Participants/00060/origin",
+          "roleName": "A2_dir_source_initial_location",
+          "entity": "resin:Entities/00060/origin"
+        },
+        {
+          "@id": "resin:Participants/00061/destination",
+          "roleName": "A3_gol_destination_destination",
+          "entity": "resin:Entities/00061/destination"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00015/Disaster-Crash-Unspecified",
+      "name": "Drone crashed",
+      "description": "Some person in drone vehicle crashed into some at location place.",
+      "ta1explanation": "Some person in drone vehicle crashed into some at location place.",
+      "qnode": "wd:Q11822042",
+      "qlabel": "transport_accident",
+      "participants": [
+        {
+          "@id": "resin:Participants/00062/driver-passenger",
+          "roleName": "A0_pag__agent_causer_of_damage",
+          "entity": "resin:Entities/00062/driver-passenger"
+        },
+        {
+          "@id": "resin:Participants/00063/vehicle",
+          "roleName": "A1_ppt_patient_entity_crashed",
+          "entity": "resin:Entities/00063/vehicle"
+        },
+        {
+          "@id": "resin:Participants/00064/crash-object",
+          "roleName": "AM_gol__goal",
+          "entity": "resin:Entities/00064/crash-object"
+        },
+        {
+          "@id": "resin:Participants/00065/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00065/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00016/Conflict-Demonstrate-Unspecified",
+      "name": "Demonstration",
+      "description": "A demonstration event happening independently and possibly being the precursor to the detonation event.",
+      "ta1explanation": "A demonstration event happening independently and possibly being the precursor to the detonation event.",
+      "qnode": "wd:Q175331",
+      "qlabel": "demonstration",
+      "participants": [
+        {
+          "@id": "resin:Participants/00066/demonstrator",
+          "roleName": "A0_pag_agent_protester",
+          "entity": "resin:Entities/00066/demonstrator"
+        },
+        {
+          "@id": "resin:Participants/00069/topic",
+          "roleName": "A1_ppt_theme_objectionable_thing",
+          "entity": "resin:Entities/00069/topic"
+        },
+        {
+          "@id": "resin:Participants/00071/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00071/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00017/Conflict-Demonstrate-Unspecified",
+      "name": "Post-Attack Demonstration",
+      "description": "A demonstration event happening after the detonation event.",
+      "ta1explanation": "A demonstration event happening after the detonation event.",
+      "qnode": "wd:Q175331",
+      "qlabel": "demonstration",
+      "participants": [
+        {
+          "@id": "resin:Participants/00072/demonstrator",
+          "roleName": "A0_pag_agent_protester",
+          "entity": "resin:Entities/00072/demonstrator"
+        },
+        {
+          "@id": "resin:Participants/00075/topic",
+          "roleName": "A1_ppt_theme_objectionable_thing",
+          "entity": "resin:Entities/00075/topic"
+        },
+        {
+          "@id": "resin:Participants/00077/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00077/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00018/Conflict-Attack-DetonateExplode",
+      "name": "Detonate",
+      "description": "Some detonated or exploded charges explosive device using some to attack some target at platform place.",
+      "ta1explanation": "Some detonated or exploded charges explosive device using some to attack some target at platform place.",
+      "qnode": "wd:Q891854",
+      "qlabel": "bomb_attack",
+      "participants": [
+        {
+          "@id": "resin:Participants/00078/attacker",
+          "roleName": "A0_pag_agent_attacker",
+          "entity": "resin:Entities/00078/attacker"
+        },
+        {
+          "@id": "resin:Participants/00079/target",
+          "roleName": "A1_ppt_patient_entity_bombed",
+          "entity": "resin:Entities/00079/target"
+        },
+        {
+          "@id": "resin:Participants/00080/instrument",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00080/instrument"
+        },
+        {
+          "@id": "resin:Participants/00082/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00082/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00019/Life-Injure-Unspecified",
+      "name": "Injury",
+      "description": "People was injured by cia using drone in some body part with some medical issue at some place.",
+      "ta1explanation": "People was injured by cia using drone in some body part with some medical issue at some place.",
+      "qnode": "wd:Q193078",
+      "qlabel": "injury",
+      "participants": [
+        {
+          "@id": "resin:Participants/00083/victim",
+          "roleName": "A1_ppt_experiencer_injured_party",
+          "entity": "resin:Entities/00083/victim"
+        },
+        {
+          "@id": "resin:Participants/00084/injurer",
+          "roleName": "A0_pag_stimulus_stimulus_of_injury",
+          "entity": "resin:Entities/00084/injurer"
+        },
+        {
+          "@id": "resin:Participants/00085/instrument",
+          "roleName": "A2_mnr__instrument",
+          "entity": "resin:Entities/00085/instrument"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00020/ArtifactExistence-DamageDestroyDisableDismantle-Damage",
+      "name": "Damage artifacts",
+      "description": "Some damaged infrastructure using some instrument in buqyaq place.",
+      "ta1explanation": "Some damaged infrastructure using some instrument in buqyaq place.",
+      "qnode": "wd:Q481609",
+      "qlabel": "damage",
+      "participants": [
+        {
+          "@id": "resin:Participants/00088/damager",
+          "roleName": "A0_pag_agent_agent_causer",
+          "entity": "resin:Entities/00088/damager"
+        },
+        {
+          "@id": "resin:Participants/00089/artifact",
+          "roleName": "A1_ppt_patient_entity_damaged",
+          "entity": "resin:Entities/00089/artifact"
+        },
+        {
+          "@id": "resin:Participants/00090/instrument",
+          "roleName": "A2_mnr_instrument_instrument",
+          "entity": "resin:Entities/00090/instrument"
+        },
+        {
+          "@id": "resin:Participants/00091/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00091/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00021/ArtifactExistence-DamageDestroyDisableDismantle-Unspecified",
+      "name": "Damage or Destroy things",
+      "description": "Some damaged or destroyed uavs using some instrument in elsewhere place.",
+      "ta1explanation": "Some damaged or destroyed uavs using some instrument in elsewhere place.",
+      "qnode": "wd:Q52161698",
+      "qlabel": "disassembly",
+      "participants": [
+        {
+          "@id": "resin:Participants/00092/damager-destroyer",
+          "roleName": "A0_pag_agent_agent",
+          "entity": "resin:Entities/00092/damager-destroyer"
+        },
+        {
+          "@id": "resin:Participants/00093/artifact",
+          "roleName": "A1_ppt_patient_thing_disassembled",
+          "entity": "resin:Entities/00093/artifact"
+        },
+        {
+          "@id": "resin:Participants/00094/instrument",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00094/instrument"
+        },
+        {
+          "@id": "resin:Participants/00095/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00095/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00022/ArtifactExistence-DamageDestroyDisableDismantle-Destroy",
+      "name": "Destroy property",
+      "description": "Some destroyed towers using some instrument in abqaiq place.",
+      "ta1explanation": "Some destroyed towers using some instrument in abqaiq place.",
+      "qnode": "wd:Q17781833",
+      "qlabel": "destruction",
+      "participants": [
+        {
+          "@id": "resin:Participants/00096/destroyer",
+          "roleName": "A0_pag_agent_destroyer",
+          "entity": "resin:Entities/00096/destroyer"
+        },
+        {
+          "@id": "resin:Participants/00097/artifact",
+          "roleName": "A1_ppt_patient_thing_destroyed",
+          "entity": "resin:Entities/00097/artifact"
+        },
+        {
+          "@id": "resin:Participants/00098/instrument",
+          "roleName": "A2_mnr_instrument_instrument_of_destruction",
+          "entity": "resin:Entities/00098/instrument"
+        },
+        {
+          "@id": "resin:Participants/00099/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00099/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00023/Life-Die-Unspecified",
+      "name": "Death",
+      "description": "Child died at base place from some medical issue, killed by us killer.",
+      "ta1explanation": "Child died at base place from some medical issue, killed by us killer.",
+      "qnode": "wd:Q4",
+      "qlabel": "death",
+      "participants": [
+        {
+          "@id": "resin:Participants/00100/victim",
+          "roleName": "A1_ppt_the_deceased",
+          "entity": "resin:Entities/00100/victim"
+        },
+        {
+          "@id": "resin:Participants/00101/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00101/place"
+        },
+        {
+          "@id": "resin:Participants/00103/medical-issue",
+          "roleName": "AM_cau__cause",
+          "entity": "resin:Entities/00103/medical-issue"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00024/Medical-Intervention-Unspecified",
+      "name": "Emergency treatment",
+      "description": "",
+      "ta1explanation": "Emergency treatment",
+      "qnode": "wd:Q179661",
+      "qlabel": "treatment",
+      "participants": [
+        {
+          "@id": "resin:Participants/00104/treater",
+          "roleName": "A0_pag__doctor",
+          "entity": "resin:Entities/00104/treater"
+        },
+        {
+          "@id": "resin:Participants/00105/patient",
+          "roleName": "A1_ppt__patient",
+          "entity": "resin:Entities/00105/patient"
+        },
+        {
+          "@id": "resin:Participants/00106/medical-issue",
+          "roleName": "A2_ppt__illness_or_injury",
+          "entity": "resin:Entities/00106/medical-issue"
+        },
+        {
+          "@id": "resin:Participants/00107/instrument",
+          "roleName": "A3_mnr__instrument",
+          "entity": "resin:Entities/00107/instrument"
+        },
+        {
+          "@id": "resin:Participants/00108/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00108/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00025/Justice-TrialHearing-Unspecified",
+      "name": "Try accused in the court",
+      "description": "",
+      "ta1explanation": "Try accused in the court",
+      "qnode": "wd:Q545861",
+      "qlabel": "legal_hearing",
+      "participants": [
+        {
+          "@id": "resin:Participants/00109/prosecutor",
+          "roleName": "A0_pag__judge",
+          "entity": "resin:Entities/00109/prosecutor"
+        },
+        {
+          "@id": "resin:Participants/00110/defendant",
+          "roleName": "A1_ppt__person_on_trial",
+          "entity": "resin:Entities/00110/defendant"
+        },
+        {
+          "@id": "resin:Participants/00111/judge-court",
+          "roleName": "A2_cau_type_or_point_of_meeting",
+          "entity": "resin:Entities/00111/judge-court"
+        },
+        {
+          "@id": "resin:Participants/00112/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00112/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00026/Contact-Contact-Meet",
+      "name": "Officials' meet",
+      "description": "Officials meet on the event.",
+      "ta1explanation": "Officials meet on the event.",
+      "qnode": "wd:Q21170798",
+      "qlabel": "meeting",
+      "participants": [
+        {
+          "@id": "resin:Participants/00113/participant",
+          "roleName": "A0_pag_agent_one_party",
+          "entity": "resin:Entities/00113/participant"
+        },
+        {
+          "@id": "resin:Participants/00115/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00115/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00027/Cognitive-IdentifyCategorize-Unspecified",
+      "name": "Identify suspect(s)",
+      "description": "Officers identified suspects at some place.",
+      "ta1explanation": "Officers identified suspects at some place.",
+      "qnode": "wd:Q3265221",
+      "qlabel": "identification",
+      "participants": [
+        {
+          "@id": "resin:Participants/00116/identifier",
+          "roleName": "A0_pag_agent_caller",
+          "entity": "resin:Entities/00116/identifier"
+        },
+        {
+          "@id": "resin:Participants/00117/identified-object",
+          "roleName": "A1_ppt_theme_item_being_labelled",
+          "entity": "resin:Entities/00117/identified-object"
+        },
+        {
+          "@id": "resin:Participants/00118/identified-role",
+          "roleName": "A2_prd_attribute_attribute",
+          "entity": "resin:Entities/00118/identified-role"
+        },
+        {
+          "@id": "resin:Participants/00119/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00119/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00028/Justice-InvestigateCrime-Unspecified",
+      "name": "Investigate",
+      "description": "",
+      "ta1explanation": "Investigate",
+      "qnode": "wd:Q1964968",
+      "qlabel": "criminal_investigation",
+      "participants": [
+        {
+          "@id": "resin:Participants/00120/investigator",
+          "roleName": "A0_pag_agent_examiner",
+          "entity": "resin:Entities/00120/investigator"
+        },
+        {
+          "@id": "resin:Participants/00121/defendant",
+          "roleName": "A1_ppt_location_examined",
+          "entity": "resin:Entities/00121/defendant"
+        },
+        {
+          "@id": "resin:Participants/00122/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00122/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00029/Justice-ChargeIndict-Unspecified",
+      "name": "Indict suspect(s)",
+      "description": "",
+      "ta1explanation": "Indict suspect(s)",
+      "qnode": "wd:Q19357312",
+      "qlabel": "accusation",
+      "participants": [
+        {
+          "@id": "resin:Participants/00123/prosecutor",
+          "roleName": "A0_pag_agent_accuser",
+          "entity": "resin:Entities/00123/prosecutor"
+        },
+        {
+          "@id": "resin:Participants/00124/defendant",
+          "roleName": "A1_ppt_theme_accused",
+          "entity": "resin:Entities/00124/defendant"
+        },
+        {
+          "@id": "resin:Participants/00126/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00126/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00030/Contact-Contact-Correspondence",
+      "name": "Formal filing at court",
+      "description": "",
+      "ta1explanation": "Formal filing at court",
+      "qnode": "wd:Q1472062",
+      "qlabel": "remote_communication",
+      "participants": [
+        {
+          "@id": "resin:Participants/00127/participant",
+          "roleName": "A0_pag_agent_first_communicator",
+          "entity": "resin:Entities/00127/participant"
+        },
+        {
+          "@id": "resin:Participants/00128/instrument",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00128/instrument"
+        },
+        {
+          "@id": "resin:Participants/00129/topic",
+          "roleName": "A1_ppt_topic_message",
+          "entity": "resin:Entities/00129/topic"
+        },
+        {
+          "@id": "resin:Participants/00130/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00130/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00031/Justice-Convict-Unspecified",
+      "name": "Convict defendant(s)",
+      "description": "",
+      "ta1explanation": "Convict defendant(s)",
+      "qnode": "wd:Q2916183",
+      "qlabel": "conviction",
+      "participants": [
+        {
+          "@id": "resin:Participants/00131/judge-court",
+          "roleName": "A0_pag__judge",
+          "entity": "resin:Entities/00131/judge-court"
+        },
+        {
+          "@id": "resin:Participants/00132/defendant",
+          "roleName": "A1_ppt__person_convicted",
+          "entity": "resin:Entities/00132/defendant"
+        },
+        {
+          "@id": "resin:Participants/00133/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00133/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00032/Contact-Contact-Broadcast",
+      "name": "Broadcast verdict",
+      "description": "",
+      "ta1explanation": "Broadcast verdict",
+      "qnode": "wd:Q567303",
+      "qlabel": "announcement",
+      "participants": [
+        {
+          "@id": "resin:Participants/00134/communicator",
+          "roleName": "A0_pag_agent_announcer",
+          "entity": "resin:Entities/00134/communicator"
+        },
+        {
+          "@id": "resin:Participants/00135/recipient",
+          "roleName": "A2_gol_recipient_hearer",
+          "entity": "resin:Entities/00135/recipient"
+        },
+        {
+          "@id": "resin:Participants/00136/instrument",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00136/instrument"
+        },
+        {
+          "@id": "resin:Participants/00137/topic",
+          "roleName": "A1_ppt_topic_utterance",
+          "entity": "resin:Entities/00137/topic"
+        },
+        {
+          "@id": "resin:Participants/00138/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00138/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00033/Justice-Sentence-Unspecified",
+      "name": "Issue sentence",
+      "description": "",
+      "ta1explanation": "Issue sentence",
+      "qnode": "wd:Q1763090",
+      "qlabel": "sentence",
+      "participants": [
+        {
+          "@id": "resin:Participants/00139/judge-court",
+          "roleName": "A0_pag__judge/jury",
+          "entity": "resin:Entities/00139/judge-court"
+        },
+        {
+          "@id": "resin:Participants/00140/defendant",
+          "roleName": "A1_ppt__criminal",
+          "entity": "resin:Entities/00140/defendant"
+        },
+        {
+          "@id": "resin:Participants/00141/sentence",
+          "roleName": "A2_ppt__punishment",
+          "entity": "resin:Entities/00141/sentence"
+        },
+        {
+          "@id": "resin:Participants/00142/place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00142/place"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/00001/General-IED",
+      "name": "General IED",
+      "description": "",
+      "ta1explanation": "",
+      "children_gate": "and",
+      "children": [
+        {
+          "child": "resin:Events/00002/Cognitive-TeachingTrainingLearning-Unspecified",
+          "outlinks": [
+            "resin:Events/00010/Transaction-ExchangeBuySell-Unspecified",
+            "resin:Events/00009/ArtifactExistence-ManufactureAssemble-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00004/Conflict-Attack-Unspecified",
+          "outlinks": [
+            "resin:Events/00008/Transaction-ExchangeBuySell-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00010/Transaction-ExchangeBuySell-Unspecified",
+          "outlinks": [
+            "resin:Events/00011/Movement-Transportation-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00008/Transaction-ExchangeBuySell-Unspecified",
+          "outlinks": [
+            "resin:Events/00012/Movement-Transportation-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00011/Movement-Transportation-Unspecified",
+          "outlinks": [
+            "resin:Events/00009/ArtifactExistence-ManufactureAssemble-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00012/Movement-Transportation-Unspecified",
+          "outlinks": [
+            "resin:Events/00009/ArtifactExistence-ManufactureAssemble-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00009/ArtifactExistence-ManufactureAssemble-Unspecified",
+          "outlinks": [
+            "resin:Events/00013/Movement-Transportation-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00013/Movement-Transportation-Unspecified",
+          "outlinks": [
+            "resin:Events/00015/Disaster-Crash-Unspecified",
+            "resin:Events/00018/Conflict-Attack-DetonateExplode"
+          ]
+        },
+        {
+          "child": "resin:Events/00015/Disaster-Crash-Unspecified",
+          "outlinks": [
+            "resin:Events/00019/Life-Injure-Unspecified",
+            "resin:Events/00020/ArtifactExistence-DamageDestroyDisableDismantle-Damage",
+            "resin:Events/00021/ArtifactExistence-DamageDestroyDisableDismantle-Unspecified",
+            "resin:Events/00022/ArtifactExistence-DamageDestroyDisableDismantle-Destroy",
+            "resin:Events/00023/Life-Die-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00018/Conflict-Attack-DetonateExplode",
+          "outlinks": [
+            "resin:Events/00019/Life-Injure-Unspecified",
+            "resin:Events/00020/ArtifactExistence-DamageDestroyDisableDismantle-Damage",
+            "resin:Events/00021/ArtifactExistence-DamageDestroyDisableDismantle-Unspecified",
+            "resin:Events/00022/ArtifactExistence-DamageDestroyDisableDismantle-Destroy",
+            "resin:Events/00023/Life-Die-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00019/Life-Injure-Unspecified",
+          "outlinks": [
+            "resin:Events/00027/Cognitive-IdentifyCategorize-Unspecified",
+            "resin:Events/00014/Movement-Transportation-Unspecified",
+            "resin:Events/00005/Movement-Transportation-Evacuation"
+          ]
+        },
+        {
+          "child": "resin:Events/00020/ArtifactExistence-DamageDestroyDisableDismantle-Damage",
+          "outlinks": [
+            "resin:Events/00027/Cognitive-IdentifyCategorize-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00021/ArtifactExistence-DamageDestroyDisableDismantle-Unspecified",
+          "outlinks": [
+            "resin:Events/00027/Cognitive-IdentifyCategorize-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00022/ArtifactExistence-DamageDestroyDisableDismantle-Destroy",
+          "outlinks": [
+            "resin:Events/00027/Cognitive-IdentifyCategorize-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00023/Life-Die-Unspecified",
+          "outlinks": [
+            "resin:Events/00027/Cognitive-IdentifyCategorize-Unspecified",
+            "resin:Events/00014/Movement-Transportation-Unspecified",
+            "resin:Events/00005/Movement-Transportation-Evacuation"
+          ]
+        },
+        {
+          "child": "resin:Events/00014/Movement-Transportation-Unspecified",
+          "outlinks": [
+            "resin:Events/00024/Medical-Intervention-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00024/Medical-Intervention-Unspecified",
+          "outlinks": [
+            "resin:Events/00026/Contact-Contact-Meet"
+          ]
+        },
+        {
+          "child": "resin:Events/00026/Contact-Contact-Meet",
+          "outlinks": [
+            "resin:Events/00028/Justice-InvestigateCrime-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00027/Cognitive-IdentifyCategorize-Unspecified",
+          "outlinks": [
+            "resin:Events/00028/Justice-InvestigateCrime-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00028/Justice-InvestigateCrime-Unspecified",
+          "outlinks": [
+            "resin:Events/00029/Justice-ChargeIndict-Unspecified",
+            "resin:Events/00007/Justice-ArrestJailDetain-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00030/Contact-Contact-Correspondence",
+          "outlinks": [
+            "resin:Events/00025/Justice-TrialHearing-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00029/Justice-ChargeIndict-Unspecified",
+          "outlinks": [
+            "resin:Events/00030/Contact-Contact-Correspondence"
+          ]
+        },
+        {
+          "child": "resin:Events/00025/Justice-TrialHearing-Unspecified",
+          "outlinks": [
+            "resin:Events/00031/Justice-Convict-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00031/Justice-Convict-Unspecified",
+          "outlinks": [
+            "resin:Events/00033/Justice-Sentence-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00033/Justice-Sentence-Unspecified",
+          "outlinks": [
+            "resin:Events/00032/Contact-Contact-Broadcast"
+          ]
+        },
+        {
+          "child": "resin:Events/00016/Conflict-Demonstrate-Unspecified",
+          "outlinks": [
+            "resin:Events/00018/Conflict-Attack-DetonateExplode"
+          ]
+        },
+        {
+          "child": "resin:Events/00005/Movement-Transportation-Evacuation",
+          "outlinks": [
+            "resin:Events/00006/Contact-Contact-Unspecified",
+            "resin:Events/00024/Medical-Intervention-Unspecified",
+            "resin:Events/00017/Conflict-Demonstrate-Unspecified",
+            "resin:Events/00027/Cognitive-IdentifyCategorize-Unspecified",
+            "resin:Events/00003/Conflict-Attack-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00007/Justice-ArrestJailDetain-Unspecified",
+          "outlinks": [
+            "resin:Events/00029/Justice-ChargeIndict-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00003/Conflict-Attack-Unspecified",
+          "outlinks": [
+            "resin:Events/00017/Conflict-Demonstrate-Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/00032/Contact-Contact-Broadcast",
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/00017/Conflict-Demonstrate-Unspecified",
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/00006/Contact-Contact-Unspecified",
+          "outlinks": []
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "name": "teacher_trainer",
+      "@id": "resin:Entities/00001/teacher-trainer",
+      "qnode": "wd:Q37226",
+      "qlabel": "teacher",
+      "centrality": 0.8
+    },
+    {
+      "name": "field_of_knowledge",
+      "@id": "resin:Entities/00002/field-of-knowledge",
+      "qnode": "wd:Q11862829",
+      "qlabel": "academic discipline",
+      "centrality": 0.8
+    },
+    {
+      "name": "learner",
+      "@id": "resin:Entities/00003/learner",
+      "qnode": "wd:Q48282",
+      "qlabel": "student",
+      "centrality": 1.0
+    },
+    {
+      "name": "means",
+      "@id": "resin:Entities/00004/means",
+      "qnode": "wd:Q12894677",
+      "qlabel": "means",
+      "centrality": 0.8
+    },
+    {
+      "name": "institution",
+      "@id": "resin:Entities/00005/institution",
+      "qnode": "wd:Q43229",
+      "qlabel": "organization",
+      "centrality": 0.8
+    },
+    {
+      "name": "attacker",
+      "@id": "resin:Entities/00006/attacker",
+      "qnode": "wd:Q31924059",
+      "qlabel": "attacker",
+      "centrality": 1.0
+    },
+    {
+      "name": "target",
+      "@id": "resin:Entities/00007/target",
+      "qnode": "wd:Q230479",
+      "qlabel": "Target",
+      "centrality": 0.8
+    },
+    {
+      "name": "instrument",
+      "@id": "resin:Entities/00008/instrument",
+      "qnode": "wd:Q39546",
+      "qlabel": "tool",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00009/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "attacker",
+      "@id": "resin:Entities/00010/attacker",
+      "qnode": "wd:Q31924059",
+      "qlabel": "attacker",
+      "centrality": 1.0
+    },
+    {
+      "name": "target",
+      "@id": "resin:Entities/00011/target",
+      "qnode": "wd:Q230479",
+      "qlabel": "Target",
+      "centrality": 0.8
+    },
+    {
+      "name": "instrument",
+      "@id": "resin:Entities/00012/instrument",
+      "qnode": "wd:Q39546",
+      "qlabel": "tool",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00013/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "transporter",
+      "@id": "resin:Entities/00014/transporter",
+      "qnode": "wd:Q35120",
+      "qlabel": "entity",
+      "centrality": 0.8
+    },
+    {
+      "name": "passengerartifact",
+      "@id": "resin:Entities/00015/passengerartifact",
+      "qnode": "wd:Q8205328",
+      "qlabel": "artificial physical object",
+      "centrality": 0.8
+    },
+    {
+      "name": "vehicle",
+      "@id": "resin:Entities/00016/vehicle",
+      "qnode": "wd:Q42889",
+      "qlabel": "vehicle",
+      "centrality": 0.8
+    },
+    {
+      "name": "origin",
+      "@id": "resin:Entities/00017/origin",
+      "qnode": "wd:Q31464082",
+      "qlabel": "source",
+      "centrality": 0.8
+    },
+    {
+      "name": "destination",
+      "@id": "resin:Entities/00018/destination",
+      "qnode": "wd:Q27134986",
+      "qlabel": "place of destination",
+      "centrality": 0.8
+    },
+    {
+      "name": "participant",
+      "@id": "resin:Entities/00019/participant",
+      "qnode": "wd:Q56512863",
+      "qlabel": "participant",
+      "centrality": 0.8
+    },
+    {
+      "name": "participant",
+      "@id": "resin:Entities/00020/participant",
+      "qnode": "wd:Q56512863",
+      "qlabel": "participant",
+      "centrality": 0.8
+    },
+    {
+      "name": "topic",
+      "@id": "resin:Entities/00021/topic",
+      "qnode": "wd:Q26256810",
+      "qlabel": "matter",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00022/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "jailer",
+      "@id": "resin:Entities/00023/jailer",
+      "qnode": "wd:Q311396",
+      "qlabel": "prison officer",
+      "centrality": 0.8
+    },
+    {
+      "name": "detainee",
+      "@id": "resin:Entities/00024/detainee",
+      "qnode": "wd:Q1862087",
+      "qlabel": "prisoner",
+      "centrality": 0.8
+    },
+    {
+      "name": "crime",
+      "@id": "resin:Entities/00025/crime",
+      "qnode": "wd:Q83267",
+      "qlabel": "crime",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00026/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "giver",
+      "@id": "resin:Entities/00027/giver",
+      "qnode": "wd:Q28838403",
+      "qlabel": "Giver",
+      "centrality": 0.8
+    },
+    {
+      "name": "recipient",
+      "@id": "resin:Entities/00028/recipient",
+      "qnode": "wd:Q13400890",
+      "qlabel": "Recipient",
+      "centrality": 0.8
+    },
+    {
+      "name": "acquired_entity",
+      "@id": "resin:Entities/00029/acquired-entity",
+      "qnode": "wd:Q35120",
+      "qlabel": "entity",
+      "centrality": 0.8
+    },
+    {
+      "name": "payment_barter",
+      "@id": "resin:Entities/00030/payment-barter",
+      "qnode": "wd:Q484830",
+      "qlabel": "barter",
+      "centrality": 0.8
+    },
+    {
+      "name": "beneficiary",
+      "@id": "resin:Entities/00031/beneficiary",
+      "qnode": "wd:Q2596417",
+      "qlabel": "beneficiary",
+      "centrality": 0.8
+    },
+    {
+      "name": "manufacturer_assembler",
+      "@id": "resin:Entities/00032/manufacturer-assembler",
+      "qnode": "wd:P176",
+      "qlabel": "manufacturer",
+      "centrality": 1.0
+    },
+    {
+      "name": "artifact",
+      "@id": "resin:Entities/00033/artifact",
+      "qnode": "wd:Q8205328",
+      "qlabel": "artificial physical object",
+      "centrality": 0.8
+    },
+    {
+      "name": "components",
+      "@id": "resin:Entities/00034/components",
+      "qnode": "wd:Q1310239",
+      "qlabel": "component",
+      "centrality": 0.8
+    },
+    {
+      "name": "instrument",
+      "@id": "resin:Entities/00035/instrument",
+      "qnode": "wd:Q39546",
+      "qlabel": "tool",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00036/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "giver",
+      "@id": "resin:Entities/00037/giver",
+      "qnode": "wd:Q28838403",
+      "qlabel": "Giver",
+      "centrality": 0.8
+    },
+    {
+      "name": "recipient",
+      "@id": "resin:Entities/00038/recipient",
+      "qnode": "wd:Q13400890",
+      "qlabel": "Recipient",
+      "centrality": 0.8
+    },
+    {
+      "name": "acquired_entity",
+      "@id": "resin:Entities/00039/acquired-entity",
+      "qnode": "wd:Q35120",
+      "qlabel": "entity",
+      "centrality": 0.8
+    },
+    {
+      "name": "payment_barter",
+      "@id": "resin:Entities/00040/payment-barter",
+      "qnode": "wd:Q484830",
+      "qlabel": "barter",
+      "centrality": 0.8
+    },
+    {
+      "name": "beneficiary",
+      "@id": "resin:Entities/00041/beneficiary",
+      "qnode": "wd:Q2596417",
+      "qlabel": "beneficiary",
+      "centrality": 0.8
+    },
+    {
+      "name": "transporter",
+      "@id": "resin:Entities/00042/transporter",
+      "qnode": "wd:Q35120",
+      "qlabel": "entity",
+      "centrality": 0.8
+    },
+    {
+      "name": "passenger_artifact",
+      "@id": "resin:Entities/00043/passenger-artifact",
+      "qnode": "wd:Q8205328",
+      "qlabel": "artificial physical object",
+      "centrality": 0.8
+    },
+    {
+      "name": "vehicle",
+      "@id": "resin:Entities/00044/vehicle",
+      "qnode": "wd:Q42889",
+      "qlabel": "vehicle",
+      "centrality": 0.8
+    },
+    {
+      "name": "origin",
+      "@id": "resin:Entities/00045/origin",
+      "qnode": "wd:Q31464082",
+      "qlabel": "source",
+      "centrality": 0.8
+    },
+    {
+      "name": "destination",
+      "@id": "resin:Entities/00046/destination",
+      "qnode": "wd:Q27134986",
+      "qlabel": "place of destination",
+      "centrality": 0.8
+    },
+    {
+      "name": "transporter",
+      "@id": "resin:Entities/00047/transporter",
+      "qnode": "wd:Q35120",
+      "qlabel": "entity",
+      "centrality": 0.8
+    },
+    {
+      "name": "passenger_artifact",
+      "@id": "resin:Entities/00048/passenger-artifact",
+      "qnode": "wd:Q8205328",
+      "qlabel": "artificial physical object",
+      "centrality": 0.8
+    },
+    {
+      "name": "vehicle",
+      "@id": "resin:Entities/00049/vehicle",
+      "qnode": "wd:Q42889",
+      "qlabel": "vehicle",
+      "centrality": 0.8
+    },
+    {
+      "name": "origin",
+      "@id": "resin:Entities/00050/origin",
+      "qnode": "wd:Q31464082",
+      "qlabel": "source",
+      "centrality": 0.8
+    },
+    {
+      "name": "destination",
+      "@id": "resin:Entities/00051/destination",
+      "qnode": "wd:Q27134986",
+      "qlabel": "place of destination",
+      "centrality": 0.8
+    },
+    {
+      "name": "transporter",
+      "@id": "resin:Entities/00052/transporter",
+      "qnode": "wd:Q35120",
+      "qlabel": "entity",
+      "centrality": 0.8
+    },
+    {
+      "name": "passenger_artifact",
+      "@id": "resin:Entities/00053/passenger-artifact",
+      "qnode": "wd:Q8205328",
+      "qlabel": "artificial physical object",
+      "centrality": 0.8
+    },
+    {
+      "name": "vehicle",
+      "@id": "resin:Entities/00054/vehicle",
+      "qnode": "wd:Q42889",
+      "qlabel": "vehicle",
+      "centrality": 0.8
+    },
+    {
+      "name": "origin",
+      "@id": "resin:Entities/00055/origin",
+      "qnode": "wd:Q31464082",
+      "qlabel": "source",
+      "centrality": 0.8
+    },
+    {
+      "name": "destination",
+      "@id": "resin:Entities/00056/destination",
+      "qnode": "wd:Q27134986",
+      "qlabel": "place of destination",
+      "centrality": 0.8
+    },
+    {
+      "name": "transporter",
+      "@id": "resin:Entities/00057/transporter",
+      "qnode": "wd:Q35120",
+      "qlabel": "entity",
+      "centrality": 0.8
+    },
+    {
+      "name": "passenger_artifact",
+      "@id": "resin:Entities/00058/passenger-artifact",
+      "qnode": "wd:Q8205328",
+      "qlabel": "artificial physical object",
+      "centrality": 0.8
+    },
+    {
+      "name": "vehicle",
+      "@id": "resin:Entities/00059/vehicle",
+      "qnode": "wd:Q42889",
+      "qlabel": "vehicle",
+      "centrality": 0.8
+    },
+    {
+      "name": "origin",
+      "@id": "resin:Entities/00060/origin",
+      "qnode": "wd:Q31464082",
+      "qlabel": "source",
+      "centrality": 0.8
+    },
+    {
+      "name": "destination",
+      "@id": "resin:Entities/00061/destination",
+      "qnode": "wd:Q27134986",
+      "qlabel": "place of destination",
+      "centrality": 0.8
+    },
+    {
+      "name": "driver_passenger",
+      "@id": "resin:Entities/00062/driver-passenger",
+      "qnode": "wd:Q352388",
+      "qlabel": "driver",
+      "centrality": 0.9
+    },
+    {
+      "name": "vehicle",
+      "@id": "resin:Entities/00063/vehicle",
+      "qnode": "wd:Q42889",
+      "qlabel": "vehicle",
+      "centrality": 0.8
+    },
+    {
+      "name": "crash_object",
+      "@id": "resin:Entities/00064/crash-object",
+      "qnode": "wd:Q42889",
+      "qlabel": "vehicle",
+      "centrality": 0.9
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00065/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "demonstrator",
+      "@id": "resin:Entities/00066/demonstrator",
+      "qnode": "wd:Q1186521",
+      "qlabel": "Demonstrator",
+      "centrality": 0.8
+    },
+    {
+      "name": "regulator",
+      "@id": "resin:Entities/00067/regulator",
+      "qnode": "wd:Q1639780",
+      "qlabel": "regulatory agency",
+      "centrality": 0.8
+    },
+    {
+      "name": "visualdisplay",
+      "@id": "resin:Entities/00068/visualdisplay",
+      "qnode": "wd:Q327065",
+      "qlabel": "display device",
+      "centrality": 0.8
+    },
+    {
+      "name": "topic",
+      "@id": "resin:Entities/00069/topic",
+      "qnode": "wd:Q26256810",
+      "qlabel": "matter",
+      "centrality": 0.8
+    },
+    {
+      "name": "target",
+      "@id": "resin:Entities/00070/target",
+      "qnode": "wd:Q230479",
+      "qlabel": "Target",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00071/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "demonstrator",
+      "@id": "resin:Entities/00072/demonstrator",
+      "qnode": "wd:Q1186521",
+      "qlabel": "Demonstrator",
+      "centrality": 0.8
+    },
+    {
+      "name": "regulator",
+      "@id": "resin:Entities/00073/regulator",
+      "qnode": "wd:Q1639780",
+      "qlabel": "regulatory agency",
+      "centrality": 0.8
+    },
+    {
+      "name": "visualdisplay",
+      "@id": "resin:Entities/00074/visualdisplay",
+      "qnode": "wd:Q327065",
+      "qlabel": "display device",
+      "centrality": 0.8
+    },
+    {
+      "name": "topic",
+      "@id": "resin:Entities/00075/topic",
+      "qnode": "wd:Q26256810",
+      "qlabel": "matter",
+      "centrality": 0.8
+    },
+    {
+      "name": "target",
+      "@id": "resin:Entities/00076/target",
+      "qnode": "wd:Q230479",
+      "qlabel": "Target",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00077/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "attacker",
+      "@id": "resin:Entities/00078/attacker",
+      "qnode": "wd:Q31924059",
+      "qlabel": "attacker",
+      "centrality": 1.0
+    },
+    {
+      "name": "target",
+      "@id": "resin:Entities/00079/target",
+      "qnode": "wd:Q230479",
+      "qlabel": "Target",
+      "centrality": 0.8
+    },
+    {
+      "name": "instrument",
+      "@id": "resin:Entities/00080/instrument",
+      "qnode": "wd:Q39546",
+      "qlabel": "tool",
+      "centrality": 0.8
+    },
+    {
+      "name": "explosive_device",
+      "@id": "resin:Entities/00081/explosive-device",
+      "qnode": "wd:Q3054261",
+      "qlabel": "explosive_device",
+      "centrality": 1.0
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00082/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "victim",
+      "@id": "resin:Entities/00083/victim",
+      "qnode": "wd:Q1851760",
+      "qlabel": "victim",
+      "centrality": 0.8
+    },
+    {
+      "name": "injurer",
+      "@id": "resin:Entities/00084/injurer",
+      "qnode": "wd:Q35120",
+      "qlabel": "entity",
+      "centrality": 0.8
+    },
+    {
+      "name": "instrument",
+      "@id": "resin:Entities/00085/instrument",
+      "qnode": "wd:Q39546",
+      "qlabel": "tool",
+      "centrality": 0.8
+    },
+    {
+      "name": "body_part",
+      "@id": "resin:Entities/00086/body-part",
+      "qnode": "wd:Q4936952",
+      "qlabel": "anatomical structure",
+      "centrality": 0.8
+    },
+    {
+      "name": "medical_condition",
+      "@id": "resin:Entities/00087/medical-condition",
+      "qnode": "wd:Q6806605",
+      "qlabel": "medical state",
+      "centrality": 0.8
+    },
+    {
+      "name": "damager",
+      "@id": "resin:Entities/00088/damager",
+      "qnode": "wd:Q35120",
+      "qlabel": "entity",
+      "centrality": 0.8
+    },
+    {
+      "name": "artifact",
+      "@id": "resin:Entities/00089/artifact",
+      "qnode": "wd:Q8205328",
+      "qlabel": "artificial physical object",
+      "centrality": 0.8
+    },
+    {
+      "name": "instrument",
+      "@id": "resin:Entities/00090/instrument",
+      "qnode": "wd:Q39546",
+      "qlabel": "tool",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00091/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "damager_destroyer",
+      "@id": "resin:Entities/00092/damager-destroyer",
+      "qnode": "wd:Q24229398",
+      "qlabel": "agent",
+      "centrality": 0.8
+    },
+    {
+      "name": "artifact",
+      "@id": "resin:Entities/00093/artifact",
+      "qnode": "wd:Q8205328",
+      "qlabel": "artificial physical object",
+      "centrality": 0.8
+    },
+    {
+      "name": "instrument",
+      "@id": "resin:Entities/00094/instrument",
+      "qnode": "wd:Q39546",
+      "qlabel": "tool",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00095/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "destroyer",
+      "@id": "resin:Entities/00096/destroyer",
+      "qnode": "wd:Q347822",
+      "qlabel": "Destroyer",
+      "centrality": 0.8
+    },
+    {
+      "name": "artifact",
+      "@id": "resin:Entities/00097/artifact",
+      "qnode": "wd:Q8205328",
+      "qlabel": "artificial physical object",
+      "centrality": 0.8
+    },
+    {
+      "name": "instrument",
+      "@id": "resin:Entities/00098/instrument",
+      "qnode": "wd:Q39546",
+      "qlabel": "tool",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00099/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "victim",
+      "@id": "resin:Entities/00100/victim",
+      "qnode": "wd:Q1851760",
+      "qlabel": "victim",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00101/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "killer",
+      "@id": "resin:Entities/00102/killer",
+      "qnode": "wd:Q931260",
+      "qlabel": "murderer",
+      "centrality": 0.8
+    },
+    {
+      "name": "medical_issue",
+      "@id": "resin:Entities/00103/medical-issue",
+      "qnode": "wd:Q35120",
+      "qlabel": "entity",
+      "centrality": 0.8
+    },
+    {
+      "name": "treater",
+      "@id": "resin:Entities/00104/treater",
+      "qnode": "wd:Q11974939",
+      "qlabel": "health professional",
+      "centrality": 0.8
+    },
+    {
+      "name": "patient",
+      "@id": "resin:Entities/00105/patient",
+      "qnode": "wd:Q181600",
+      "qlabel": "patient",
+      "centrality": 0.8
+    },
+    {
+      "name": "medical_issue",
+      "@id": "resin:Entities/00106/medical-issue",
+      "qnode": "wd:Q35120",
+      "qlabel": "entity",
+      "centrality": 0.8
+    },
+    {
+      "name": "instrument",
+      "@id": "resin:Entities/00107/instrument",
+      "qnode": "wd:Q39546",
+      "qlabel": "tool",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00108/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "prosecutor",
+      "@id": "resin:Entities/00109/prosecutor",
+      "qnode": "wd:Q600751",
+      "qlabel": "prosecutor",
+      "centrality": 0.8
+    },
+    {
+      "name": "defendant",
+      "@id": "resin:Entities/00110/defendant",
+      "qnode": "wd:Q159394",
+      "qlabel": "defendant",
+      "centrality": 0.8
+    },
+    {
+      "name": "judge_court",
+      "@id": "resin:Entities/00111/judge-court",
+      "qnode": "wd:Q41487",
+      "qlabel": "court",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00112/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "participant",
+      "@id": "resin:Entities/00113/participant",
+      "qnode": "wd:Q56512863",
+      "qlabel": "participant",
+      "centrality": 0.8
+    },
+    {
+      "name": "topic",
+      "@id": "resin:Entities/00114/topic",
+      "qnode": "wd:Q26256810",
+      "qlabel": "matter",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00115/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "identifier",
+      "@id": "resin:Entities/00116/identifier",
+      "qnode": "wd:Q35120",
+      "qlabel": "entity",
+      "centrality": 0.8
+    },
+    {
+      "name": "identified_object",
+      "@id": "resin:Entities/00117/identified-object",
+      "qnode": "wd:Q488383",
+      "qlabel": "object",
+      "centrality": 0.7
+    },
+    {
+      "name": "identified_role",
+      "@id": "resin:Entities/00118/identified-role",
+      "qnode": "wd:Q214339",
+      "qlabel": "role",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00119/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "investigator",
+      "@id": "resin:Entities/00120/investigator",
+      "qnode": "wd:Q30093123",
+      "qlabel": "investigator",
+      "centrality": 0.8
+    },
+    {
+      "name": "defendant",
+      "@id": "resin:Entities/00121/defendant",
+      "qnode": "wd:Q159394",
+      "qlabel": "defendant",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00122/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "prosecutor",
+      "@id": "resin:Entities/00123/prosecutor",
+      "qnode": "wd:Q600751",
+      "qlabel": "prosecutor",
+      "centrality": 0.8
+    },
+    {
+      "name": "defendant",
+      "@id": "resin:Entities/00124/defendant",
+      "qnode": "wd:Q159394",
+      "qlabel": "defendant",
+      "centrality": 0.8
+    },
+    {
+      "name": "judge_court",
+      "@id": "resin:Entities/00125/judge-court",
+      "qnode": "wd:Q41487",
+      "qlabel": "court",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00126/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "participant",
+      "@id": "resin:Entities/00127/participant",
+      "qnode": "wd:Q56512863",
+      "qlabel": "participant",
+      "centrality": 0.8
+    },
+    {
+      "name": "instrument",
+      "@id": "resin:Entities/00128/instrument",
+      "qnode": "wd:Q39546",
+      "qlabel": "tool",
+      "centrality": 0.8
+    },
+    {
+      "name": "topic",
+      "@id": "resin:Entities/00129/topic",
+      "qnode": "wd:Q26256810",
+      "qlabel": "matter",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00130/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "judge_court",
+      "@id": "resin:Entities/00131/judge-court",
+      "qnode": "wd:Q41487",
+      "qlabel": "court",
+      "centrality": 0.8
+    },
+    {
+      "name": "defendant",
+      "@id": "resin:Entities/00132/defendant",
+      "qnode": "wd:Q159394",
+      "qlabel": "defendant",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00133/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "communicator",
+      "@id": "resin:Entities/00134/communicator",
+      "qnode": "wd:Q5780518",
+      "qlabel": "communicator",
+      "centrality": 0.8
+    },
+    {
+      "name": "recipient",
+      "@id": "resin:Entities/00135/recipient",
+      "qnode": "wd:Q13400890",
+      "qlabel": "Recipient",
+      "centrality": 0.8
+    },
+    {
+      "name": "instrument",
+      "@id": "resin:Entities/00136/instrument",
+      "qnode": "wd:Q39546",
+      "qlabel": "tool",
+      "centrality": 0.8
+    },
+    {
+      "name": "topic",
+      "@id": "resin:Entities/00137/topic",
+      "qnode": "wd:Q26256810",
+      "qlabel": "matter",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00138/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    },
+    {
+      "name": "judge_court",
+      "@id": "resin:Entities/00139/judge-court",
+      "qnode": "wd:Q41487",
+      "qlabel": "court",
+      "centrality": 0.8
+    },
+    {
+      "name": "defendant",
+      "@id": "resin:Entities/00140/defendant",
+      "qnode": "wd:Q159394",
+      "qlabel": "defendant",
+      "centrality": 0.8
+    },
+    {
+      "name": "sentence",
+      "@id": "resin:Entities/00141/sentence",
+      "qnode": "wd:Q1763090",
+      "qlabel": "sentence",
+      "centrality": 0.8
+    },
+    {
+      "name": "place",
+      "@id": "resin:Entities/00142/place",
+      "qnode": "wd:Q82794",
+      "qlabel": "geographic region",
+      "centrality": 0.8
+    }
+  ],
+  "relations": []
+}

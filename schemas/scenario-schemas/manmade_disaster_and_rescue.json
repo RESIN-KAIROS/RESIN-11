@@ -1,0 +1,1428 @@
+{
+  "@context": [
+    "https://kairos-sdf.s3.amazonaws.com/context/kairos-v1.4.1.jsonld",
+    {
+      "caci": "https://caci.com/kairos/",
+      "my_key": "caci:my_key",
+      "giant_bitstring": "caci:giant_bitstring",
+      "resin": "https://blender.cs.illinois.edu/kairos/"
+    }
+  ],
+  "@id": "resin:Submissions/TA1/schemas_quizlet9",
+  "sdfVersion": "1.4.1",
+  "version": "resin:disease-outbreak/quizlet9",
+  "events": [
+    {
+      "@id": "resin:Events/10597/resin:Events_disaster-and-rescue",
+      "name": "Manmade Disaster and Rescue",
+      "description": "A disaster caused by humans and the subsequent rescue.",
+      "goal": "",
+      "privateData": {},
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/10598/Steps_kairos:Container:1",
+          "comment": "manmade disaster",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10599/Steps_kairos:Container:2"
+          ]
+        },
+        {
+          "child": "resin:Events/10599/Steps_kairos:Container:2",
+          "comment": "rescue",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10600/Steps_kairos:Primitives_Events_Investigation"
+          ]
+        },
+        {
+          "child": "resin:Events/10600/Steps_kairos:Primitives_Events_Investigation",
+          "comment": "Investigation",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10601/Steps_kairos:Primitives_Events_Civil_Justice"
+          ]
+        },
+        {
+          "child": "resin:Events/10601/Steps_kairos:Primitives_Events_Civil_Justice",
+          "comment": "Civil Justice",
+          "optional": true,
+          "importance": 1,
+          "outlinks": []
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10598/Steps_kairos:Container:1",
+      "name": "Manmade Disaster",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10602/Steps_kairos:Primitives_Events_Collapse",
+          "comment": "collapse",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10603/Steps_kairos:Primitives_Events_ArtifactExistence.DamageDestroyDisableDismantle.Damage"
+          ]
+        },
+        {
+          "child": "resin:Events/10604/Steps_kairos:Primitives_Events_Disaster.FireExplosion.Unspecified",
+          "comment": "conflagration",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10603/Steps_kairos:Primitives_Events_ArtifactExistence.DamageDestroyDisableDismantle.Damage"
+          ]
+        },
+        {
+          "child": "resin:Events/10605/Steps_kairos:Primitives_Events_Trap",
+          "comment": "trap",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10606/Steps_kairos:Primitives_Events_Life.Injure.Unspecified",
+            "resin:Events/10607/Steps_kairos:Primitives_Events_Life.Die.Unspecified:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10603/Steps_kairos:Primitives_Events_ArtifactExistence.DamageDestroyDisableDismantle.Damage",
+          "comment": "damage",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10605/Steps_kairos:Primitives_Events_Trap"
+          ]
+        },
+        {
+          "child": "resin:Events/10606/Steps_kairos:Primitives_Events_Life.Injure.Unspecified",
+          "comment": "injury",
+          "optional": true,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10607/Steps_kairos:Primitives_Events_Life.Die.Unspecified:1",
+          "comment": "death",
+          "optional": true,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "A disaster caused by humans.",
+      "children_gate": "or",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10599/Steps_kairos:Container:2",
+      "name": "Rescue",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10608/Steps_kairos:Primitives_Events_Contact.Contact.Broadcast",
+          "comment": "announcement",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10609/Steps_kairos:Primitives_Events_Contact.RequestCommand.Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/10609/Steps_kairos:Primitives_Events_Contact.RequestCommand.Unspecified",
+          "comment": "command",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10610/Steps_kairos:Primitives_Events_Contact.Contact.Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/10610/Steps_kairos:Primitives_Events_Contact.Contact.Unspecified",
+          "comment": "communication",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10611/Steps_kairos:Primitives_Events_Movement.Transportation.Evacuation",
+            "resin:Events/10612/Steps_kairos:Primitives_Events_Contact.Collaborate.Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/10611/Steps_kairos:Primitives_Events_Movement.Transportation.Evacuation",
+          "comment": "emergency_evacuation",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10613/Steps_kairos:Primitives_Events_Movement.Transportation.Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/10612/Steps_kairos:Primitives_Events_Contact.Collaborate.Unspecified",
+          "comment": "collaboration",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10613/Steps_kairos:Primitives_Events_Movement.Transportation.Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/10613/Steps_kairos:Primitives_Events_Movement.Transportation.Unspecified",
+          "comment": "transport",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10614/Steps_kairos:Primitives_Events_Medical.Intervention.Unspecified"
+          ]
+        },
+        {
+          "child": "resin:Events/10614/Steps_kairos:Primitives_Events_Medical.Intervention.Unspecified",
+          "comment": "treatment",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10615/Steps_kairos:Container:3"
+          ]
+        },
+        {
+          "child": "resin:Events/10615/Steps_kairos:Container:3",
+          "comment": "treatment outlinks",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10633/Steps_kairos:Primitives_Events_Recover",
+          "comment": "recover",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10634/Steps_kairos:Primitives_Events_Life.Die.Unspecified:2",
+          "comment": "death",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Rescuing the victims from the disaster.",
+      "children_gate": "or",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10600/Steps_kairos:Primitives_Events_Investigation",
+      "name": "Investigation",
+      "comment": "",
+      "qnode": "wd:Q21004260",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Investigation of cause of the disaster.",
+      "qlabel": "inquiry",
+      "children": [
+        {
+          "child": "resin:Events/10616/Steps_kairos:Primitives_Events_Identifycategorize",
+          "comment": "Identifycategorize",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10617/Steps_kairos:Primitives_Events_Contact"
+          ]
+        },
+        {
+          "child": "resin:Events/10617/Steps_kairos:Primitives_Events_Contact",
+          "comment": "Contact",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10618/Steps_kairos:Primitives_Events_Arrest",
+            "resin:Events/10619/Steps_kairos:Primitives_Events_Handcuffing",
+            "resin:Events/10620/Steps_kairos:Primitives_Events_Restrain"
+          ]
+        },
+        {
+          "child": "resin:Events/10618/Steps_kairos:Primitives_Events_Arrest",
+          "comment": "Arrest",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10621/Steps_kairos:Primitives_Events_Inspect",
+            "resin:Events/10622/Steps_kairos:Primitives_Events_Interrogation"
+          ]
+        },
+        {
+          "child": "resin:Events/10621/Steps_kairos:Primitives_Events_Inspect",
+          "comment": "Inspect",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10623/Steps_kairos:Primitives_Events_File_Complaint"
+          ]
+        },
+        {
+          "child": "resin:Events/10622/Steps_kairos:Primitives_Events_Interrogation",
+          "comment": "Interrogation",
+          "optional": true,
+          "importance": 0.1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10619/Steps_kairos:Primitives_Events_Handcuffing",
+          "comment": "Handcuffing",
+          "optional": true,
+          "importance": 0.1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10620/Steps_kairos:Primitives_Events_Restrain",
+          "comment": "Restrain",
+          "optional": true,
+          "importance": 0.1,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or",
+      "privateData": {
+        "@type": "FrameNet.Scrutiny",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10601/Steps_kairos:Primitives_Events_Civil_Justice",
+      "name": "Civil Justice",
+      "comment": "",
+      "qnode": "wd:Q5167661",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Justice procedures on those responsible for the disaster. ",
+      "qlabel": "justice",
+      "children": [
+        {
+          "child": "resin:Events/10623/Steps_kairos:Primitives_Events_File_Complaint",
+          "comment": "File Complaint",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10624/Steps_kairos:Primitives_Events_Answer"
+          ]
+        },
+        {
+          "child": "resin:Events/10624/Steps_kairos:Primitives_Events_Answer",
+          "comment": "Answer",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10625/Steps_kairos:Primitives_Events_Discovery"
+          ]
+        },
+        {
+          "child": "resin:Events/10625/Steps_kairos:Primitives_Events_Discovery",
+          "comment": "Discovery",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10626/Steps_kairos:Primitives_Events_Motion"
+          ]
+        },
+        {
+          "child": "resin:Events/10626/Steps_kairos:Primitives_Events_Motion",
+          "comment": "Motion",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10627/Steps_kairos:Container:104"
+          ]
+        },
+        {
+          "child": "resin:Events/10627/Steps_kairos:Container:104",
+          "comment": "motion outlinks",
+          "optional": true,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10628/Steps_kairos:Primitives_Events_Mediation",
+          "comment": "Mediation",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10629/Steps_kairos:Primitives_Events_Settlement"
+          ]
+        },
+        {
+          "child": "resin:Events/10629/Steps_kairos:Primitives_Events_Settlement",
+          "comment": "Settlement",
+          "optional": true,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10630/Steps_kairos:Primitives_Events_Trial",
+          "comment": "Trial",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10631/Steps_kairos:Primitives_Events_Judgement"
+          ]
+        },
+        {
+          "child": "resin:Events/10631/Steps_kairos:Primitives_Events_Judgement",
+          "comment": "Judgement",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10632/Steps_kairos:Primitives_Events_Appeal"
+          ]
+        },
+        {
+          "child": "resin:Events/10632/Steps_kairos:Primitives_Events_Appeal",
+          "comment": "Appeal",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or",
+      "privateData": {
+        "@type": "FrameNet.Legal_rulings",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10602/Steps_kairos:Primitives_Events_Collapse",
+      "name": "collapse",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q1309431",
+      "participants": [
+        {
+          "@id": "resin:Participants/21345/kairos:Primitives_Events_Collapse_thing_collapsed",
+          "roleName": "A1_ppt_thing_collapsed",
+          "entity": "resin:Entities/00924"
+        },
+        {
+          "@id": "resin:Participants/21346/kairos:Primitives_Events_Collapse_place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00927"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Collapse of a building etc., in a disaster",
+      "qlabel": "structural failure",
+      "privateData": {
+        "@type": "",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10604/Steps_kairos:Primitives_Events_Disaster.FireExplosion.Unspecified",
+      "name": "conflagration",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q168983",
+      "participants": [
+        {
+          "@id": "resin:Participants/21347/kairos:Primitives_Events_Disaster.FireExplosion.Unspecified_fireexplosionobject",
+          "roleName": "A1_ppt__habitat_burned",
+          "entity": "resin:Entities/00924"
+        },
+        {
+          "@id": "resin:Participants/21348/kairos:Primitives_Events_Disaster.FireExplosion.Unspecified_place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00927"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "large and destructive fire that threatens human life, animal life, health, and/or property",
+      "qlabel": "conflagration",
+      "privateData": {
+        "@type": "Disaster.FireExplosion.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10605/Steps_kairos:Primitives_Events_Trap",
+      "name": "trap",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q34168",
+      "participants": [
+        {
+          "@id": "resin:Participants/21349/kairos:Primitives_Events_Trap_victim",
+          "roleName": "A1_ppt_experiencer_trapped_victim",
+          "entity": "resin:Entities/00926"
+        },
+        {
+          "@id": "resin:Participants/21350/kairos:Primitives_Events_Trap_place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00927"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "victims are trapped in the disaster site",
+      "qlabel": "trapping",
+      "privateData": {
+        "@type": "",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10603/Steps_kairos:Primitives_Events_ArtifactExistence.DamageDestroyDisableDismantle.Damage",
+      "name": "damage",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q481609",
+      "participants": [
+        {
+          "@id": "resin:Participants/21351/kairos:Primitives_Events_ArtifactExistence.DamageDestroyDisableDismantle.Damage_artifact",
+          "roleName": "A1_ppt_patient_entity_damaged",
+          "entity": "resin:Entities/00924"
+        },
+        {
+          "@id": "resin:Participants/21352/kairos:Primitives_Events_ArtifactExistence.DamageDestroyDisableDismantle.Damage_place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00927"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "changes introduced into a system that adversely affect its current or future performance",
+      "qlabel": "damage",
+      "privateData": {
+        "@type": "ArtifactExistence.DamageDestroyDisableDismantle.Damage",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10606/Steps_kairos:Primitives_Events_Life.Injure.Unspecified",
+      "name": "injury",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q193078",
+      "participants": [
+        {
+          "@id": "resin:Participants/21353/kairos:Primitives_Events_Life.Injure.Unspecified_victim",
+          "roleName": "A1_ppt_experiencer_injured_party",
+          "entity": "resin:Entities/00926"
+        },
+        {
+          "@id": "resin:Participants/21354/kairos:Primitives_Events_Life.Injure.Unspecified_place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00927"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "physiological wound caused by an external source",
+      "qlabel": "injury",
+      "privateData": {
+        "@type": "Life.Injure.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10607/Steps_kairos:Primitives_Events_Life.Die.Unspecified:1",
+      "name": "death",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q4",
+      "participants": [
+        {
+          "@id": "resin:Participants/21355/kairos:Primitives_Events_Life.Die.Unspecified:1_victim",
+          "roleName": "A1_ppt_the_deceased",
+          "entity": "resin:Entities/00926"
+        },
+        {
+          "@id": "resin:Participants/21356/kairos:Primitives_Events_Life.Die.Unspecified:1_place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00927"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "permanent cessation of vital functions",
+      "qlabel": "death",
+      "privateData": {
+        "@type": "Life.Die.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10608/Steps_kairos:Primitives_Events_Contact.Contact.Broadcast",
+      "name": "announcement",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q567303",
+      "participants": [
+        {
+          "@id": "resin:Participants/21357/kairos:Primitives_Events_Contact.Contact.Broadcast_communicator",
+          "roleName": "A0_pag_agent_announcer",
+          "entity": "resin:Entities/00928"
+        },
+        {
+          "@id": "resin:Participants/21358/kairos:Primitives_Events_Contact.Contact.Broadcast_recipient",
+          "roleName": "A2_gol_recipient_hearer",
+          "entity": "resin:Entities/00931"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "government announces the disaster to public",
+      "qlabel": "announcement",
+      "privateData": {
+        "@type": "Contact.Contact.Broadcast",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10609/Steps_kairos:Primitives_Events_Contact.RequestCommand.Unspecified",
+      "name": "command",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q1665268",
+      "participants": [
+        {
+          "@id": "resin:Participants/21359/kairos:Primitives_Events_Contact.RequestCommand.Unspecified_communicator",
+          "roleName": "A0_pag_agent_commander",
+          "entity": "resin:Entities/00928"
+        },
+        {
+          "@id": "resin:Participants/21360/kairos:Primitives_Events_Contact.RequestCommand.Unspecified_recipient",
+          "roleName": "A1_gol_recipient_impelled_agent",
+          "entity": "resin:Entities/00925"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "government commands rescuers to carry out rescue",
+      "qlabel": "command",
+      "privateData": {
+        "@type": "Contact.RequestCommand.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10610/Steps_kairos:Primitives_Events_Contact.Contact.Unspecified",
+      "name": "communication",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q11024",
+      "participants": [
+        {
+          "@id": "resin:Participants/21361/kairos:Primitives_Events_Contact.Contact.Unspecified_participantarg1",
+          "roleName": "A0_pag_agent_first_communicator",
+          "entity": "resin:Entities/00925"
+        },
+        {
+          "@id": "resin:Participants/21362/kairos:Primitives_Events_Contact.Contact.Unspecified_participantarg2",
+          "roleName": "A2_com_co_agent_other_communicators",
+          "entity": "resin:Entities/00926"
+        },
+        {
+          "@id": "resin:Participants/21363/kairos:Primitives_Events_Contact.Contact.Unspecified_place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00927"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "rescuers communicate with trapped victims",
+      "qlabel": "communication",
+      "privateData": {
+        "@type": "Contact.Contact.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10611/Steps_kairos:Primitives_Events_Movement.Transportation.Evacuation",
+      "name": "emergency_evacuation",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q606332",
+      "participants": [
+        {
+          "@id": "resin:Participants/21364/kairos:Primitives_Events_Movement.Transportation.Evacuation_transporter",
+          "roleName": "A0_pag_agent_transporter",
+          "entity": "resin:Entities/00925"
+        },
+        {
+          "@id": "resin:Participants/21365/kairos:Primitives_Events_Movement.Transportation.Evacuation_passengerartifact",
+          "roleName": "A1_ppt_thing_transported",
+          "entity": "resin:Entities/00926"
+        },
+        {
+          "@id": "resin:Participants/21366/kairos:Primitives_Events_Movement.Transportation.Evacuation_origin",
+          "roleName": "A2_dir_initial_location_source",
+          "entity": "resin:Entities/00927"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "rescuers evacuate trapped victims",
+      "qlabel": "emergency_evacuation",
+      "privateData": {
+        "@type": "Movement.Transportation.Evacuation",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10612/Steps_kairos:Primitives_Events_Contact.Collaborate.Unspecified",
+      "name": "collaboration",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q1145523",
+      "participants": [
+        {
+          "@id": "resin:Participants/21367/kairos:Primitives_Events_Contact.Collaborate.Unspecified_participantarg1",
+          "roleName": "A0_pag_agent_focussed_party",
+          "entity": "resin:Entities/00925"
+        },
+        {
+          "@id": "resin:Participants/21368/kairos:Primitives_Events_Contact.Collaborate.Unspecified_participantarg2",
+          "roleName": "A1_com_co_agent_second_party",
+          "entity": "resin:Entities/00925"
+        },
+        {
+          "@id": "resin:Participants/21369/kairos:Primitives_Events_Contact.Collaborate.Unspecified_place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00927"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "different parties of rescuers collaborate",
+      "qlabel": "collaboration",
+      "privateData": {
+        "@type": "Contact.Collaborate.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10613/Steps_kairos:Primitives_Events_Movement.Transportation.Unspecified",
+      "name": "transport",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q7590",
+      "participants": [
+        {
+          "@id": "resin:Participants/21370/kairos:Primitives_Events_Movement.Transportation.Unspecified_transporter",
+          "roleName": "A0_pag_agent_transporter",
+          "entity": "resin:Entities/00925"
+        },
+        {
+          "@id": "resin:Participants/21371/kairos:Primitives_Events_Movement.Transportation.Unspecified_passengerartifact",
+          "roleName": "A1_ppt_theme_thing_transported",
+          "entity": "resin:Entities/00926"
+        },
+        {
+          "@id": "resin:Participants/21372/kairos:Primitives_Events_Movement.Transportation.Unspecified_origin",
+          "roleName": "A2_dir_source_initial_location",
+          "entity": "resin:Entities/00927"
+        },
+        {
+          "@id": "resin:Participants/21373/kairos:Primitives_Events_Movement.Transportation.Unspecified_destination",
+          "roleName": "A3_gol_destination_destination",
+          "entity": "resin:Entities/00930"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "rescuers transport victims to medical sites",
+      "qlabel": "transport",
+      "privateData": {
+        "@type": "Movement.Transportation.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10614/Steps_kairos:Primitives_Events_Medical.Intervention.Unspecified",
+      "name": "treatment",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q179661",
+      "participants": [
+        {
+          "@id": "resin:Participants/21374/kairos:Primitives_Events_Medical.Intervention.Unspecified_treater",
+          "roleName": "A0_pag__doctor",
+          "entity": "resin:Entities/00929"
+        },
+        {
+          "@id": "resin:Participants/21375/kairos:Primitives_Events_Medical.Intervention.Unspecified_patient",
+          "roleName": "A1_ppt__patient",
+          "entity": "resin:Entities/00926"
+        },
+        {
+          "@id": "resin:Participants/21376/kairos:Primitives_Events_Medical.Intervention.Unspecified_place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00927"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "medical treatment of the victims",
+      "qlabel": "treatment",
+      "privateData": {
+        "@type": "Medical.Intervention.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10615/Steps_kairos:Container:3",
+      "name": "treatment outlinks",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10633/Steps_kairos:Primitives_Events_Recover",
+          "comment": "recover",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10634/Steps_kairos:Primitives_Events_Life.Die.Unspecified:2",
+          "comment": "death",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "xor",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10633/Steps_kairos:Primitives_Events_Recover",
+      "name": "recover",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q7302970",
+      "participants": [
+        {
+          "@id": "resin:Participants/21377/kairos:Primitives_Events_Recover_patient",
+          "roleName": "A1_ppt__patient",
+          "entity": "resin:Entities/00926"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "victims recover from injuries",
+      "qlabel": "recover",
+      "privateData": {
+        "@type": "",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10634/Steps_kairos:Primitives_Events_Life.Die.Unspecified:2",
+      "name": "death",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q4",
+      "participants": [
+        {
+          "@id": "resin:Participants/21378/kairos:Primitives_Events_Life.Die.Unspecified:2_victim",
+          "roleName": "A1_ppt_the_deceased",
+          "entity": "resin:Entities/00926"
+        },
+        {
+          "@id": "resin:Participants/21379/kairos:Primitives_Events_Life.Die.Unspecified:2_place",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00930"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "permanent cessation of vital functions",
+      "qlabel": "death",
+      "privateData": {
+        "@type": "Life.Die.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10616/Steps_kairos:Primitives_Events_Identifycategorize",
+      "name": "Identifycategorize",
+      "comment": "",
+      "qnode": "wd:Q912550",
+      "participants": [
+        {
+          "@id": "resin:Participants/21380/Steps_kairos:Primitives_Events_Identifycategorize_Identifier",
+          "roleName": "A0_pag_agent_caller",
+          "entity": "resin:Entities/00928"
+        },
+        {
+          "@id": "resin:Participants/21381/Steps_kairos:Primitives_Events_Identifycategorize_IdentifiedObject",
+          "roleName": "A1_ppt_theme_item_being_labelled",
+          "entity": "resin:Entities/00932"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Investigation of a manmade disaster includes identifying its initiators.",
+      "qlabel": "categorization",
+      "privateData": {
+        "@type": "cognitive.identifycategorize.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10617/Steps_kairos:Primitives_Events_Contact",
+      "name": "Contact",
+      "comment": "",
+      "qnode": "wd:Q11024",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Make contact with the suspect",
+      "qlabel": "communication",
+      "privateData": {
+        "@type": "contact.contact.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10618/Steps_kairos:Primitives_Events_Arrest",
+      "name": "Arrest",
+      "comment": "",
+      "qnode": "wd:Q1403016",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Taking the suspect who caused the disaster into custody",
+      "qlabel": "arrest",
+      "children": [
+        {
+          "child": "resin:Events/10619/Steps_kairos:Primitives_Events_Handcuffing",
+          "comment": "",
+          "optional": true,
+          "importance": 0.3,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10620/Steps_kairos:Primitives_Events_Restrain",
+          "comment": "",
+          "optional": true,
+          "importance": 0.1,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or",
+      "privateData": {
+        "@type": "arrest_Q1403016",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10619/Steps_kairos:Primitives_Events_Handcuffing",
+      "name": "Handcuffing",
+      "comment": "",
+      "qnode": "wd:Q15808",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Using handcuffs to secure a suspect who initiated the disaster.",
+      "qlabel": "handcuffs",
+      "privateData": {
+        "@type": "handcuffs_Q15808",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10622/Steps_kairos:Primitives_Events_Interrogation",
+      "name": "Interrogation",
+      "comment": "",
+      "qnode": "wd:Q327018",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Interviewing with the goal of eliciting useful information related to suspected crime",
+      "qlabel": "interrogation",
+      "privateData": {
+        "@type": "interrogation_Q327018",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10620/Steps_kairos:Primitives_Events_Restrain",
+      "name": "Restrain",
+      "comment": "",
+      "qnode": "wd:Q357003",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Physical restraint on the suspect",
+      "qlabel": "physical restraint",
+      "privateData": {
+        "@type": "physical_restraint_Q357003",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10621/Steps_kairos:Primitives_Events_Inspect",
+      "name": "Inspect",
+      "comment": "",
+      "qnode": "wd:Q1137655",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Organized examination or formal evaluation on the initiator of the disaster.",
+      "qlabel": "inspection",
+      "privateData": {
+        "@type": "cognitive.inspection.assesstestmeasure",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10623/Steps_kairos:Primitives_Events_File_Complaint",
+      "name": "File Complaint",
+      "comment": "",
+      "qnode": "wd:Q836925",
+      "participants": [
+        {
+          "@id": "resin:Participants/21382/Steps_kairos:Primitives_Events_File_Complaint_Plaintif",
+          "roleName": "A0_pag_prosecutor_plaintif",
+          "entity": "resin:Entities/00928"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Plaintiff files a complaint to initiate a lawsuit",
+      "qlabel": "complaint",
+      "privateData": {
+        "@type": "justice.initiatejudicialprocess.filecomplaint",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10624/Steps_kairos:Primitives_Events_Answer",
+      "name": "Answer",
+      "comment": "",
+      "qnode": "wd:Q33622550",
+      "participants": [
+        {
+          "@id": "resin:Participants/21383/Steps_kairos:Primitives_Events_Answer_Defendant",
+          "roleName": "A1_ppt_defendant",
+          "entity": "resin:Entities/00932"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "In law, a solemn assertion in opposition to someone or something by the defendant",
+      "qlabel": "answer",
+      "privateData": {
+        "@type": "justice.initiatejudicialprocess.answer",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10625/Steps_kairos:Primitives_Events_Discovery",
+      "name": "Discovery",
+      "comment": "",
+      "qnode": "wd:Q902342",
+      "participants": [
+        {
+          "@id": "resin:Participants/21384/Steps_kairos:Primitives_Events_Discovery_Plaintif",
+          "roleName": "A0_pag_prosecutor_plaintif",
+          "entity": "resin:Entities/00928"
+        },
+        {
+          "@id": "resin:Participants/21385/Steps_kairos:Primitives_Events_Discovery_Defendant",
+          "roleName": "A1_ppt_defendant",
+          "entity": "resin:Entities/00932"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Pre-trial procedure in common law countries for obtaining evidence",
+      "qlabel": "discovery",
+      "privateData": {
+        "@type": "justice.initiatejudicialprocess.discovery",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10626/Steps_kairos:Primitives_Events_Motion",
+      "name": "Motion",
+      "comment": "",
+      "qnode": "wd:Q6917734",
+      "participants": [
+        {
+          "@id": "resin:Participants/21386/Steps_kairos:Primitives_Events_Motion_Plaintif",
+          "roleName": "A0_pag_prosecutor_plaintif",
+          "entity": "resin:Entities/00928"
+        },
+        {
+          "@id": "resin:Participants/21387/Steps_kairos:Primitives_Events_Motion_Defendant",
+          "roleName": "A1_ppt_defendant",
+          "entity": "resin:Entities/00932"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "In US law, a procedural device to bring a limited, contested issue before a court for decision",
+      "qlabel": "motion",
+      "privateData": {
+        "@type": "justice.initiatejudicialprocess.motion",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10627/Steps_kairos:Container:104",
+      "name": "Motion outlinks",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10628/Steps_kairos:Primitives_Events_Mediation",
+          "comment": "mediation",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10630/Steps_kairos:Primitives_Events_Trial",
+          "comment": "trial",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "xor",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      },
+      "participants": []
+    },
+    {
+      "@id": "resin:Events/10628/Steps_kairos:Primitives_Events_Mediation",
+      "name": "Mediation",
+      "comment": "",
+      "qnode": "wd:Q223871",
+      "participants": [
+        {
+          "@id": "resin:Participants/21388/Steps_kairos:Primitives_Events_Mediation_Plaintif",
+          "roleName": "A0_pag_prosecutor_plaintif",
+          "entity": "resin:Entities/00928"
+        },
+        {
+          "@id": "resin:Participants/21389/Steps_kairos:Primitives_Events_Mediation_Defendant",
+          "roleName": "A1_ppt_defendant",
+          "entity": "resin:Entities/00932"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Dispute resolution with assistance of an impartial third party moderator throughthe use of communication and negotiation techniques",
+      "qlabel": "mediation",
+      "privateData": {
+        "@type": "justice.judicialconsequences.mediation",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10629/Steps_kairos:Primitives_Events_Settlement",
+      "name": "Settlement",
+      "comment": "",
+      "qnode": "wd:Q21651837",
+      "participants": [
+        {
+          "@id": "resin:Participants/21390/Steps_kairos:Primitives_Events_Settlement_Agent",
+          "roleName": "A0-pag_agent_Agent",
+          "entity": "resin:Entities/00932"
+        },
+        {
+          "@id": "resin:Participants/21391/Steps_kairos:Primitives_Events_Settlement_Receiver",
+          "roleName": "A2_com_co_agent_other_exchanger",
+          "entity": "resin:Entities/00928"
+        },
+        {
+          "@id": "resin:Participants/21392/Steps_kairos:Primitives_Events_Settlement_Judgecourt",
+          "roleName": "A0-pag_X_judge",
+          "entity": "resin:Entities/00933"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "The dispute is resolved through a payment of money.",
+      "qlabel": "exchange_of_goods",
+      "privateData": {
+        "@type": "Transaction.ExchangeBuySell.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10630/Steps_kairos:Primitives_Events_Trial",
+      "name": "Trial",
+      "comment": "",
+      "qnode": "wd:Q8016240",
+      "participants": [
+        {
+          "@id": "resin:Participants/21393/Steps_kairos:Primitives_Events_Trial_Judgecourt",
+          "roleName": "A0-pag_X_judge",
+          "entity": "resin:Entities/00933"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Coming together of parties to a dispute, to present information in a tribunal",
+      "qlabel": "trial",
+      "privateData": {
+        "@type": "justice.initiatejudicialprocess.trialhearing",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10631/Steps_kairos:Primitives_Events_Judgement",
+      "name": "Judgement",
+      "comment": "",
+      "qnode": "wd:Q3769186",
+      "participants": [
+        {
+          "@id": "resin:Participants/21394/Steps_kairos:Primitives_Events_Judgement_Judgecourt",
+          "roleName": "A0-pag_X_judge",
+          "entity": "resin:Entities/00933"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "The formal decision made by a court following a lawsuit",
+      "qlabel": "judgement",
+      "privateData": {
+        "@type": "justice.judicialconsequences.judgement",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10632/Steps_kairos:Primitives_Events_Appeal",
+      "name": "Appeal",
+      "comment": "",
+      "qnode": "wd:Q329777",
+      "participants": [
+        {
+          "@id": "resin:Participants/21395/Steps_kairos:Primitives_Events_Appeal_Defendant",
+          "roleName": "A1_ppt_defendant",
+          "entity": "resin:Entities/00932"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Resort to a superior court to review the decision of an inferior court or administrative agency",
+      "qlabel": "appeal",
+      "privateData": {
+        "@type": "justice.appeal.unspecified",
+        "template": "",
+        "repeatable": true
+      }
+    }
+  ],
+  "entities": [
+    {
+      "@id": "resin:Entities/00924",
+      "qnode": "wd:Q41176",
+      "qlabel": "building",
+      "centrality": 1,
+      "name": "building"
+    },
+    {
+      "@id": "resin:Entities/00925",
+      "qnode": "wd:Q17126809",
+      "qlabel": "rescuer",
+      "centrality": 1,
+      "name": "rescuer"
+    },
+    {
+      "@id": "resin:Entities/00926",
+      "qnode": "wd:Q1851760",
+      "qlabel": "victim",
+      "centrality": 1,
+      "name": "victim"
+    },
+    {
+      "@id": "resin:Entities/00927",
+      "qnode": "wd:Q2221906",
+      "qlabel": "geographic location",
+      "centrality": 1,
+      "name": "disaster site"
+    },
+    {
+      "@id": "resin:Entities/00928",
+      "qnode": "wd:Q7188",
+      "qlabel": "government",
+      "centrality": 1,
+      "name": "government / authorities"
+    },
+    {
+      "@id": "resin:Entities/00929",
+      "qnode": "wd:Q11974939",
+      "qlabel": "health_professional",
+      "centrality": 1,
+      "name": "medical team"
+    },
+    {
+      "@id": "resin:Entities/00930",
+      "qnode": "wd:Q2221906",
+      "qlabel": "geographic location",
+      "centrality": 1,
+      "name": "medical location / facility"
+    },
+    {
+      "@id": "resin:Entities/00931",
+      "qnode": "wd:Q28008314",
+      "qlabel": "addressee",
+      "centrality": 1,
+      "name": "general population"
+    },
+    {
+      "@id": "resin:Entities/00932",
+      "name": "initiator of the disaster",
+      "qnode": "wd:Q2159907",
+      "qlabel": "criminal"
+    },
+    {
+      "@id": "resin:Entities/00933",
+      "name": "judicial system",
+      "qnode": "wd:Q41487",
+      "qlabel": "court"
+    }
+  ],
+  "relations": []
+}

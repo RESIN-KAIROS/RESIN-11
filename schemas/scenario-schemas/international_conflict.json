@@ -1,0 +1,786 @@
+{
+  "@context": [
+    "https://kairos-sdf.s3.amazonaws.com/context/kairos-v1.4.1.jsonld",
+    {
+      "caci": "https://caci.com/kairos/",
+      "my_key": "caci:my_key",
+      "giant_bitstring": "caci:giant_bitstring",
+      "resin": "https://blender.cs.illinois.edu/kairos/"
+    }
+  ],
+  "@id": "resin:Submissions/TA1/schemas_quizlet9",
+  "sdfVersion": "1.4.1",
+  "version": "resin:disease-outbreak/quizlet9",
+  "events": [
+    {
+      "@id": "resin:Events/20000",
+      "name": "International Conflict",
+      "description": "schema topic",
+      "goal": "",
+      "privateData": {},
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/20009",
+          "outlinks": [
+            "resin:Events/20015"
+          ],
+          "comment": "battle",
+          "repeatable": "True"
+        },
+        {
+          "child": "resin:Events/20015",
+          "outlinks": [],
+          "comment": "ceasefire",
+          "repeatable": "True"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20001",
+      "name": "attack",
+      "ta1explanation": "action to injure another organism",
+      "qnode": "wd:Q1174599",
+      "qlabel": "attack",
+      "description": "The present conflict began in 1988, when the Karabakh Armenians demanded that Karabakh be transferred from Soviet Azerbaijan to Soviet Armenia. ",
+      "participants": [
+        {
+          "@id": "resin:Participants/10000",
+          "roleName": "A0_pag_agent_assaulter",
+          "entity": "resin:Entities/00000"
+        },
+        {
+          "@id": "resin:Participants/10001",
+          "roleName": "A1_ppt_theme_entity_assaulted",
+          "entity": "resin:Entities/00001"
+        },
+        {
+          "@id": "resin:Participants/10002",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00002"
+        },
+        {
+          "@id": "resin:Participants/10003",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20002",
+      "name": "death",
+      "ta1explanation": "permanent cessation of vital functions",
+      "qnode": "wd:Q4",
+      "qlabel": "death",
+      "description": "Estimates of total Paraguayan losses range from 21,000 to 200,000 people.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10004",
+          "roleName": "A1_ppt_the_deceased",
+          "entity": "resin:Entities/00001"
+        },
+        {
+          "@id": "resin:Participants/10005",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003"
+        },
+        {
+          "@id": "resin:Participants/10006",
+          "roleName": "AM_cau__cause",
+          "entity": "resin:Entities/00026"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20003",
+      "name": "injury",
+      "ta1explanation": "physiological wound caused by an external source",
+      "qnode": "wd:Q193078",
+      "qlabel": "injury",
+      "description": "They came from across the border in Afghanistan and opened fire at two border patrol check-posts, killing 28 Pakistani soldiers and wounding 12 others.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10007",
+          "roleName": "A1_ppt_experiencer_injured_party",
+          "entity": "resin:Entities/00001"
+        },
+        {
+          "@id": "resin:Participants/10008",
+          "roleName": "A0_pag_stimulus_stimulus_of_injury",
+          "entity": "resin:Entities/00000"
+        },
+        {
+          "@id": "resin:Participants/10009",
+          "roleName": "A2_mnr__instrument",
+          "entity": "resin:Entities/00002"
+        },
+        {
+          "@id": "resin:Participants/10010",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20004",
+      "name": "damage",
+      "ta1explanation": "changes introduced into a system that adversely affect its current or future performance",
+      "qnode": "wd:Q481609",
+      "qlabel": "damage",
+      "description": "All of the city's churches, cathedrals, and other monuments were heavily damaged or destroyed.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10011",
+          "roleName": "A0_pag_agent_agent_causer",
+          "entity": "resin:Entities/00000"
+        },
+        {
+          "@id": "resin:Participants/10012",
+          "roleName": "A1_ppt_patient_entity_damaged",
+          "entity": "resin:Entities/00004"
+        },
+        {
+          "@id": "resin:Participants/10013",
+          "roleName": "A2_mnr_instrument_instrument",
+          "entity": "resin:Entities/00002"
+        },
+        {
+          "@id": "resin:Participants/10014",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20005",
+      "name": "scarcity",
+      "ta1explanation": "fundamental problem of economics where there are limited resources to fulfill society's unlimited wants",
+      "qnode": "wd:Q815758",
+      "qlabel": "scarcity",
+      "description": "The battle was a blow for the French defenders of Martinique, who were isolated from France and suffering from shortages of military and food supplies.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10015",
+          "roleName": "A2_gol_recipient_",
+          "entity": "resin:Entities/00005"
+        },
+        {
+          "@id": "resin:Participants/10016",
+          "roleName": "A1_ppt_theme_",
+          "entity": "resin:Entities/00006"
+        },
+        {
+          "@id": "resin:Participants/10017",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20006",
+      "name": "transport",
+      "ta1explanation": "human-directed movement of things or people between locations",
+      "qnode": "wd:Q7590",
+      "qlabel": "transport",
+      "description": "Mass displacements and coercive migrations forced millions into refugee camps or across the border, creating a humanitarian crisis.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10018",
+          "roleName": "A0_pag_agent_transporter",
+          "entity": "resin:Entities/00007"
+        },
+        {
+          "@id": "resin:Participants/10019",
+          "roleName": "A1_ppt_theme_thing_transported",
+          "entity": "resin:Entities/00008"
+        },
+        {
+          "@id": "resin:Participants/10020",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00009"
+        },
+        {
+          "@id": "resin:Participants/10021",
+          "roleName": "A2_dir_source_initial_location",
+          "entity": "resin:Entities/00003"
+        },
+        {
+          "@id": "resin:Participants/10022",
+          "roleName": "A3_gol_destination_destination",
+          "entity": "resin:Entities/00010"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20007",
+      "name": "demonstration",
+      "ta1explanation": "collective action by people in favor of a cause",
+      "qnode": "wd:Q175331",
+      "qlabel": "demonstration",
+      "description": "The Pakistani public reacted with protests all over the country and the government took measures adversely affecting the US exit strategy from Afghanistan, including the evacuation of Shamsi Airfield and closure of the NATO supply line.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10023",
+          "roleName": "A0_pag_agent_protester",
+          "entity": "resin:Entities/00011"
+        },
+        {
+          "@id": "resin:Participants/10024",
+          "roleName": "A1_ppt_theme_objectionable_thing",
+          "entity": "resin:Entities/00012"
+        },
+        {
+          "@id": "resin:Participants/10025",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20008",
+      "name": "arrest",
+      "ta1explanation": "detention of a person and taking it into custody, usually because it has been suspected of committing or planning a crime",
+      "qnode": "wd:Q1403016",
+      "qlabel": "arrest",
+      "description": "Operation Summer Rains ( Mivtza Gishmey Kayitz) refers to the series of battles between Palestinian militants and the Israel Defense Forces (IDF) during summer 2006, prompted by Palestinian operations which resulted in the capture of Israeli soldier Gilad Shalit.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10026",
+          "roleName": "A0_pag__police",
+          "entity": "resin:Entities/00013"
+        },
+        {
+          "@id": "resin:Participants/10027",
+          "roleName": "A1_ppt__criminal",
+          "entity": "resin:Entities/00014"
+        },
+        {
+          "@id": "resin:Participants/10028",
+          "roleName": "A2_cau__crime",
+          "entity": "resin:Entities/00015"
+        },
+        {
+          "@id": "resin:Participants/10029",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00016"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20009",
+      "name": "battle",
+      "ta1explanation": "part of a war which is well defined in duration, area and force commitment",
+      "qnode": "wd:Q178561",
+      "qlabel": "battle",
+      "description": "The conflict escalated into a full-scale war in the early 1990s.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10030",
+          "roleName": "A0_pag_agent_combatant",
+          "entity": "resin:Entities/00000"
+        },
+        {
+          "@id": "resin:Participants/10031",
+          "roleName": "A1_com_co_agent_fight_or_other_combatant",
+          "entity": "resin:Entities/00001"
+        },
+        {
+          "@id": "resin:Participants/10032",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00002"
+        },
+        {
+          "@id": "resin:Participants/10033",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003"
+        }
+      ],
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/20001",
+          "outlinks": [
+            "resin:Events/20002",
+            "resin:Events/20003",
+            "resin:Events/20004",
+            "resin:Events/20005",
+            "resin:Events/20006",
+            "resin:Events/20007",
+            "resin:Events/20008"
+          ],
+          "comment": "attack"
+        },
+        {
+          "child": "resin:Events/20002",
+          "outlinks": [],
+          "comment": "death"
+        },
+        {
+          "child": "resin:Events/20003",
+          "outlinks": [
+            "resin:Events/20002"
+          ],
+          "comment": "injury"
+        },
+        {
+          "child": "resin:Events/20004",
+          "outlinks": [
+            "resin:Events/20006"
+          ],
+          "comment": "damage"
+        },
+        {
+          "child": "resin:Events/20005",
+          "outlinks": [],
+          "comment": "scarcity"
+        },
+        {
+          "child": "resin:Events/20006",
+          "outlinks": [],
+          "comment": "transport"
+        },
+        {
+          "child": "resin:Events/20007",
+          "outlinks": [],
+          "comment": "demonstration"
+        },
+        {
+          "child": "resin:Events/20008",
+          "outlinks": [],
+          "comment": "arrest"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20010",
+      "name": "remote_communication",
+      "ta1explanation": "communication between two parties in remote locations, either concurrent or non-concurrent; correspondence and telecommunication",
+      "qnode": "wd:Q1472062",
+      "qlabel": "remote_communication",
+      "description": "The UN General Assembly adopted the 'Question of Oman' resolution in 1965, 1966 and again in 1967 that called upon the British government to cease all repressive action against the locals, end British control over Oman and reaffirmed the inalienable right of the Omani people to self-determination and independence.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10034",
+          "roleName": "A0_pag_agent_first_communicator",
+          "entity": "resin:Entities/00017"
+        },
+        {
+          "@id": "resin:Participants/10035",
+          "roleName": "A2_com_co_agent_other_communicator",
+          "entity": "resin:Entities/00000"
+        },
+        {
+          "@id": "resin:Participants/10036",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00018"
+        },
+        {
+          "@id": "resin:Participants/10037",
+          "roleName": "A1_ppt_topic_message",
+          "entity": "resin:Entities/00019"
+        },
+        {
+          "@id": "resin:Participants/10038",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00020"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20011",
+      "name": "negotiation",
+      "ta1explanation": "dialogue between two or more people or parties intended to reach a beneficial outcome",
+      "qnode": "wd:Q202875",
+      "qlabel": "negotiation",
+      "description": "Negotiations between the government and Zapatistas led to agreements being signed, but were often not complied with in the following years as the peace process stagnated.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10039",
+          "roleName": "A0_pag_agent_negotiator",
+          "entity": "resin:Entities/00000"
+        },
+        {
+          "@id": "resin:Participants/10040",
+          "roleName": "A1_com_co_agent_explicit_other_party",
+          "entity": "resin:Entities/00001"
+        },
+        {
+          "@id": "resin:Participants/10041",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003"
+        },
+        {
+          "@id": "resin:Participants/10042",
+          "roleName": "A2_ppt_theme_agreement",
+          "entity": "resin:Entities/00019"
+        },
+        {
+          "@id": "resin:Participants/10043",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00021"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20012",
+      "name": "negotiation_result",
+      "ta1explanation": "",
+      "description": "constainer for negotiation result",
+      "children_gate": "xor",
+      "children": [
+        {
+          "child": "resin:Events/20013",
+          "outlinks": [
+            "resin:Events/20009"
+          ],
+          "comment": "rejection"
+        },
+        {
+          "child": "resin:Events/20014",
+          "outlinks": [
+            "resin:Events/20016",
+            "resin:Events/20017"
+          ],
+          "comment": "agreement"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20013",
+      "name": "rejection",
+      "ta1explanation": "act of declining to accept an item for approval, consideration, marking etc.",
+      "qnode": "wd:Q98398200",
+      "qlabel": "rejection",
+      "description": "However, talks were disrupted by accusations that the Sudanese army launched raids and air strikes against a village, violating the Tolu agreement.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10044",
+          "roleName": "A0_pag_agent_entity_refusing",
+          "entity": "resin:Entities/00000"
+        },
+        {
+          "@id": "resin:Participants/10045",
+          "roleName": "A2_gol_theme_anti_benefactive",
+          "entity": "resin:Entities/00001"
+        },
+        {
+          "@id": "resin:Participants/10046",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20014",
+      "name": "agreement",
+      "ta1explanation": "understanding, agreement between two or more contracting persons, parties or entities",
+      "qnode": "wd:Q321839",
+      "qlabel": "agreement",
+      "description": "The Sudanese government and the JEM signed a ceasefire agreement in February 2010, with a tentative agreement to pursue peace.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10047",
+          "roleName": "A0_pag_agent_agreer",
+          "entity": "resin:Entities/00000"
+        },
+        {
+          "@id": "resin:Participants/10048",
+          "roleName": "A2_com_co_agent_other_entity_agreeing",
+          "entity": "resin:Entities/00001"
+        },
+        {
+          "@id": "resin:Participants/10049",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20015",
+      "name": "ceasefire",
+      "ta1explanation": "",
+      "qnode": "wd:Q208383",
+      "qlabel": "ceasefire",
+      "description": "The Sudanese government and the JEM signed a ceasefire agreement in February 2010, with a tentative agreement to pursue peace.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10050",
+          "roleName": "A0_pag__implementer_of_cease-fire",
+          "entity": "resin:Entities/00000"
+        },
+        {
+          "@id": "resin:Participants/10051",
+          "roleName": "A1_ppt__cease-fire_with_or_between_who",
+          "entity": "resin:Entities/00001"
+        },
+        {
+          "@id": "resin:Participants/10052",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003"
+        }
+      ],
+      "children_gate": "or",
+      "children": [
+        {
+          "child": "resin:Events/20010",
+          "outlinks": [
+            "resin:Events/20011"
+          ],
+          "comment": "remote_communication"
+        },
+        {
+          "child": "resin:Events/20011",
+          "outlinks": [
+            "resin:Events/20012"
+          ],
+          "comment": "negotiation"
+        },
+        {
+          "child": "resin:Events/20012",
+          "outlinks": [
+            "resin:Events/20013",
+            "resin:Events/20014"
+          ],
+          "comment": "negotiation_result"
+        },
+        {
+          "child": "resin:Events/20016",
+          "outlinks": [
+            "resin:Events/20017"
+          ],
+          "comment": "announcement"
+        },
+        {
+          "child": "resin:Events/20017",
+          "outlinks": [],
+          "comment": "withdrawal"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20016",
+      "name": "announcement",
+      "ta1explanation": "printed, spoken, or published statement or notice of an event or other news",
+      "qnode": "wd:Q567303",
+      "qlabel": "announcement",
+      "description": "A ceasefire was announced, and as of 1 April the violence had stopped.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10053",
+          "roleName": "A0_pag_agent_announcer",
+          "entity": "resin:Entities/00022"
+        },
+        {
+          "@id": "resin:Participants/10054",
+          "roleName": "A2_gol_recipient_hearer",
+          "entity": "resin:Entities/00023"
+        },
+        {
+          "@id": "resin:Participants/10055",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00024"
+        },
+        {
+          "@id": "resin:Participants/10056",
+          "roleName": "A1_ppt_topic_utterance",
+          "entity": "resin:Entities/00019"
+        },
+        {
+          "@id": "resin:Participants/10057",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00025"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/20017",
+      "name": "withdrawal",
+      "ta1explanation": "military operation",
+      "qnode": "wd:Q1760704",
+      "qlabel": "withdrawal",
+      "description": "Finally, on 10 March, the German withdrawal ended and the last bridges were destroyed.",
+      "participants": [
+        {
+          "@id": "resin:Participants/10058",
+          "roleName": "A0_pag_agent_thing_giving_way",
+          "entity": "resin:Entities/00000"
+        },
+        {
+          "@id": "resin:Participants/10059",
+          "roleName": "A2_gol_goal_recipient",
+          "entity": "resin:Entities/00001"
+        },
+        {
+          "@id": "resin:Participants/10060",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00003"
+        }
+      ]
+    }
+  ],
+  "entities": [
+    {
+      "@id": "resin:Entities/00000",
+      "name": "group_of_humans",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group_of_humans"
+    },
+    {
+      "@id": "resin:Entities/00001",
+      "name": "group_of_humans",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group_of_humans"
+    },
+    {
+      "@id": "resin:Entities/00002",
+      "name": "concrete_object",
+      "qnode": "wd:Q4406616",
+      "qlabel": "concrete_object"
+    },
+    {
+      "@id": "resin:Entities/00003",
+      "name": "location",
+      "qnode": "wd:Q17334923",
+      "qlabel": "location"
+    },
+    {
+      "@id": "resin:Entities/00004",
+      "name": "concrete_object",
+      "qnode": "wd:Q4406616",
+      "qlabel": "concrete_object"
+    },
+    {
+      "@id": "resin:Entities/00005",
+      "name": "group_of_humans",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group_of_humans"
+    },
+    {
+      "@id": "resin:Entities/00006",
+      "name": "concrete_object",
+      "qnode": "wd:Q4406616",
+      "qlabel": "concrete_object"
+    },
+    {
+      "@id": "resin:Entities/00007",
+      "name": "group_of_humans",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group_of_humans"
+    },
+    {
+      "@id": "resin:Entities/00008",
+      "name": "group_of_humans",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group_of_humans"
+    },
+    {
+      "@id": "resin:Entities/00009",
+      "name": "vehicle",
+      "qnode": "wd:Q42889",
+      "qlabel": "vehicle"
+    },
+    {
+      "@id": "resin:Entities/00010",
+      "name": "location",
+      "qnode": "wd:Q17334923",
+      "qlabel": "location"
+    },
+    {
+      "@id": "resin:Entities/00011",
+      "name": "group_of_humans",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group_of_humans"
+    },
+    {
+      "@id": "resin:Entities/00012",
+      "name": "abstract_object",
+      "qnode": "wd:Q7184903",
+      "qlabel": "abstract_object"
+    },
+    {
+      "@id": "resin:Entities/00013",
+      "name": "person",
+      "qnode": "wd:Q215627",
+      "qlabel": "person"
+    },
+    {
+      "@id": "resin:Entities/00014",
+      "name": "person",
+      "qnode": "wd:Q215627",
+      "qlabel": "person"
+    },
+    {
+      "@id": "resin:Entities/00015",
+      "name": "abstract_object",
+      "qnode": "wd:Q7184903",
+      "qlabel": "abstract_object"
+    },
+    {
+      "@id": "resin:Entities/00016",
+      "name": "location",
+      "qnode": "wd:Q17334923",
+      "qlabel": "location"
+    },
+    {
+      "@id": "resin:Entities/00017",
+      "name": "group_of_humans",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group_of_humans"
+    },
+    {
+      "@id": "resin:Entities/00018",
+      "name": "communication_medium",
+      "qnode": "wd:Q340169",
+      "qlabel": "communication_medium"
+    },
+    {
+      "@id": "resin:Entities/00019",
+      "name": "information",
+      "qnode": "wd:Q11028",
+      "qlabel": "information"
+    },
+    {
+      "@id": "resin:Entities/00020",
+      "name": "location",
+      "qnode": "wd:Q17334923",
+      "qlabel": "location"
+    },
+    {
+      "@id": "resin:Entities/00021",
+      "name": "communication_medium",
+      "qnode": "wd:Q340169",
+      "qlabel": "communication_medium"
+    },
+    {
+      "@id": "resin:Entities/00022",
+      "name": "group_of_humans",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group_of_humans"
+    },
+    {
+      "@id": "resin:Entities/00023",
+      "name": "group_of_humans",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group_of_humans"
+    },
+    {
+      "@id": "resin:Entities/00024",
+      "name": "communication_medium",
+      "qnode": "wd:Q340169",
+      "qlabel": "communication_medium"
+    },
+    {
+      "@id": "resin:Entities/00025",
+      "name": "location",
+      "qnode": "wd:Q17334923",
+      "qlabel": "location"
+    },
+    {
+      "@id": "resin:Entities/00026",
+      "name": "abstract_object",
+      "qnode": "wd:Q7184903",
+      "qlabel": "abstract_object"
+    }
+  ],
+  "relations": []
+}

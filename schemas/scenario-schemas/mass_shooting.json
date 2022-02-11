@@ -1,0 +1,1526 @@
+{
+  "@context": [
+    "https://kairos-sdf.s3.amazonaws.com/context/kairos-v1.4.1.jsonld",
+    {
+      "caci": "https://caci.com/kairos/",
+      "my_key": "caci:my_key",
+      "giant_bitstring": "caci:giant_bitstring",
+      "resin": "https://blender.cs.illinois.edu/kairos/"
+    }
+  ],
+  "@id": "resin:Submissions/TA1/schemas_quizlet9",
+  "sdfVersion": "1.4.1",
+  "version": "resin:mass_shooting/quizlet9",
+  "events": [
+    {
+      "@id": "resin:Events/10000/resin:Events_mass_shooting",
+      "name": "Mass Shooting",
+      "description": "Event complex for Resin:events_mass_shooting",
+      "qnode": "wd:Q21480300",
+      "qlabel": "mass_shooting",
+      "minDuration": "",
+      "maxDuration": "",
+      "goal": "",
+      "ta1explanation": "",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "children": [
+        {
+          "child": "resin:Events/10001/Steps_kairos:Container:1",
+          "comment": "Motive",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10002/Steps_kairos:Container:2",
+            "resin:Events/10003/Steps_kairos:Container:3"
+          ]
+        },
+        {
+          "child": "resin:Events/10002/Steps_kairos:Container:2",
+          "comment": "Planning",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10003/Steps_kairos:Container:3"
+          ]
+        },
+        {
+          "child": "resin:Events/10003/Steps_kairos:Container:3",
+          "comment": "Attack",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10004/Steps_kairos:Container:4",
+            "resin:Events/10005/Steps_kairos:Container:5"
+          ]
+        },
+        {
+          "child": "resin:Events/10004/Steps_kairos:Container:4",
+          "comment": "Medical response",
+          "optional": false,
+          "importance": 0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10005/Steps_kairos:Container:5",
+          "comment": "Criminal investigation",
+          "optional": false,
+          "importance": 0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10001/Steps_kairos:Container:1",
+      "name": "Motive",
+      "qnode": "wd:Q4583280",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "Episode for Steps_kairos:container:1",
+      "goal": "",
+      "ta1explanation": "",
+      "qlabel": "motive",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "children": [
+        {
+          "child": "resin:Events/10010/Steps_kairos:Primitives_Events_social_conflict:1",
+          "comment": "social_conflict:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10011/Steps_kairos:Primitives_Events_revenge:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10011/Steps_kairos:Primitives_Events_revenge:1",
+          "comment": "revenge:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10012/Steps_kairos:Primitives_Events_failure:1",
+          "comment": "failure:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10002/Steps_kairos:Container:2",
+      "name": "Planning",
+      "qnode": "wd:Q309100",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "Episode for Steps_kairos:container:2",
+      "goal": "",
+      "ta1explanation": "",
+      "qlabel": "planning",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "children": [
+        {
+          "child": "resin:Events/10013/Steps_kairos:Primitives_Events_intentional_human_activity:1",
+          "comment": "intentional_human_activity:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10014/Steps_kairos:Primitives_Events_decision:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10014/Steps_kairos:Primitives_Events_decision:1",
+          "comment": "decision:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10015/Steps_kairos:Primitives_Events_buy:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10015/Steps_kairos:Primitives_Events_buy:1",
+          "comment": "buy:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10016/Steps_kairos:Primitives_Events_announcement:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10016/Steps_kairos:Primitives_Events_announcement:1",
+          "comment": "announcement:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10003/Steps_kairos:Container:3",
+      "name": "Attack",
+      "qnode": "wd:Q1174599",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "Episode for Steps_kairos:container:3",
+      "goal": "",
+      "ta1explanation": "",
+      "qlabel": "attack",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "children": [
+        {
+          "child": "resin:Events/10017/Steps_kairos:Primitives_Events_motion:1",
+          "comment": "motion:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10019/Steps_kairos:Primitives_Events_gun_violence:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10019/Steps_kairos:Primitives_Events_gun_violence:1",
+          "comment": "gun_violence:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10021/Steps_kairos:Primitives_Events_killing:1",
+            "resin:Events/10022/Steps_kairos:Primitives_Events_injury:1",
+            "resin:Events/10023/Steps_kairos:Primitives_Events_survival:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10020/Steps_kairos:Primitives_Events_violent_death:1",
+          "comment": "violent_death:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10021/Steps_kairos:Primitives_Events_killing:1",
+          "comment": "killing:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10020/Steps_kairos:Primitives_Events_violent_death:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10022/Steps_kairos:Primitives_Events_injury:1",
+          "comment": "injury:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10041/Steps_kairos:Container:100"
+          ]
+        },
+        {
+          "child": "resin:Events/10041/Steps_kairos:Container:100",
+          "comment": "injury outlinks",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10023/Steps_kairos:Primitives_Events_survival:1",
+          "comment": "survival:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10004/Steps_kairos:Container:4",
+      "name": "Medical response",
+      "qnode": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "Episode for Steps_kairos:container:4",
+      "goal": "",
+      "ta1explanation": "",
+      "qlabel": "",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "children": [
+        {
+          "child": "resin:Events/10024/Steps_kairos:Primitives_Events_emergency_call:1",
+          "comment": "emergency_call:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10025/Steps_kairos:Primitives_Events_driving:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10025/Steps_kairos:Primitives_Events_driving:1",
+          "comment": "driving:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10027/Steps_kairos:Primitives_Events_first_aid:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10027/Steps_kairos:Primitives_Events_first_aid:1",
+          "comment": "first_aid:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10028/Steps_kairos:Primitives_Events_rescue:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10028/Steps_kairos:Primitives_Events_rescue:1",
+          "comment": "rescue:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10005/Steps_kairos:Container:5",
+      "name": "Criminal investigation",
+      "qnode": "wd:Q1415338",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "Episode for Steps_kairos:container:5",
+      "goal": "",
+      "ta1explanation": "",
+      "qlabel": "criminal_investigation",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "children": [
+        {
+          "child": "resin:Events/10029/Steps_kairos:Primitives_Events_accusation:1",
+          "comment": "accusation:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10030/Steps_kairos:Primitives_Events_arrest:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10030/Steps_kairos:Primitives_Events_arrest:1",
+          "comment": "arrest:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10031/Steps_kairos:Primitives_Events_detention:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10031/Steps_kairos:Primitives_Events_detention:1",
+          "comment": "detention:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10032/Steps_kairos:Primitives_Events_conviction:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10032/Steps_kairos:Primitives_Events_conviction:1",
+          "comment": "conviction:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10033/Steps_kairos:Primitives_Events_plea:1",
+            "resin:Events/10034/Steps_kairos:Primitives_Events_trial:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10033/Steps_kairos:Primitives_Events_plea:1",
+          "comment": "plea:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10034/Steps_kairos:Primitives_Events_trial:1",
+          "comment": "trial:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10035/Steps_kairos:Primitives_Events_legal_hearing:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10035/Steps_kairos:Primitives_Events_legal_hearing:1",
+          "comment": "legal_hearing:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10036/Steps_kairos:Primitives_Events_court_decision:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10036/Steps_kairos:Primitives_Events_court_decision:1",
+          "comment": "court_decision:1",
+          "optional": false,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10042/Steps_kairos:Container:101"
+          ]
+        },
+        {
+          "child": "resin:Events/10042/Steps_kairos:Container:101",
+          "comment": "court decision outcome",
+          "optional": false,
+          "importance": 0.5,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10037/Steps_kairos:Primitives_Events_sentence:1",
+          "comment": "sentence:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10039/Steps_kairos:Primitives_Events_imprisonment:1",
+            "resin:Events/10040/Steps_kairos:Primitives_Events_execution:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10038/Steps_kairos:Primitives_Events_acquittal:1",
+          "comment": "acquittal:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10039/Steps_kairos:Primitives_Events_imprisonment:1",
+          "comment": "imprisonment:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": [
+            "resin:Events/10040/Steps_kairos:Primitives_Events_execution:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10040/Steps_kairos:Primitives_Events_execution:1",
+          "comment": "execution:1",
+          "optional": true,
+          "importance": 0,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10010/Steps_kairos:Primitives_Events_social_conflict:1",
+      "name": "social_conflict",
+      "comment": "",
+      "qnode": "wd:Q2672648",
+      "aka": "conflict.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20000/kairos:Primitives_Events_social_conflict:1:clasher",
+          "roleName": "A0_pag_agentive_clasher",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20001/kairos:Primitives_Events_social_conflict:1:entity_clashed_with",
+          "roleName": "A1_com_entity_clashed_with",
+          "entity": "resin:Entities/00002/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "struggle for agency or power in society, when two or more actors oppose each other in social interaction",
+      "qlabel": "social_conflict",
+      "privateData": {
+        "@type": "resin:Events/10010/Steps_kairos:Primitives_Events_social_conflict:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10011/Steps_kairos:Primitives_Events_revenge:1",
+      "name": "revenge",
+      "comment": "",
+      "qnode": "wd:Q1712140",
+      "aka": "retribute.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20004/kairos:Primitives_Events_revenge:1:vengeant_one",
+          "roleName": "A0_pag_vengeant_one",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20005/kairos:Primitives_Events_revenge:1:one_paid_back",
+          "roleName": "A1_gol_one_paid_back",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20006/kairos:Primitives_Events_revenge:1:for_what_offense",
+          "roleName": "A2_cau_for_what_offense",
+          "entity": "resin:Entities/00005/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "harmful action in response to a grievance",
+      "qlabel": "revenge",
+      "privateData": {
+        "@type": "resin:Events/10011/Steps_kairos:Primitives_Events_revenge:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10012/Steps_kairos:Primitives_Events_failure:1",
+      "name": "failure",
+      "comment": "",
+      "qnode": "wd:Q1121708",
+      "aka": "fail.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20009/kairos:Primitives_Events_failure:1:thing_failing",
+          "roleName": "A1_pag_thing_failing",
+          "entity": "resin:Entities/00001/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "state or event of not meeting a desirable or intended objective, relative to a particular observer or belief system",
+      "qlabel": "failure",
+      "privateData": {
+        "@type": "resin:Events/10012/Steps_kairos:Primitives_Events_failure:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10013/Steps_kairos:Primitives_Events_intentional_human_activity:1",
+      "name": "intentional_human_activity",
+      "comment": "",
+      "aka": "act.02",
+      "participants": [
+        {
+          "@id": "resin:Participants/20013/kairos:Primitives_Events_intentional_human_activity:1:actor",
+          "roleName": "A0_pag_actor",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20014/kairos:Primitives_Events_intentional_human_activity:1:grounds_for_action",
+          "roleName": "A1_ppt_grounds_for_action",
+          "entity": "resin:Entities/00005/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "human activity driven by purposeful motives",
+      "qnode": "wd:Q451967",
+      "qlabel": "intentional human activity",
+      "privateData": {
+        "@type": "resin:Events/10013/Steps_kairos:Primitives_Events_intentional_human_activity:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10014/Steps_kairos:Primitives_Events_decision:1",
+      "name": "decision",
+      "comment": "",
+      "aka": "decide.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20018/kairos:Primitives_Events_decision:1:decider",
+          "roleName": "A0_pag_decider",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20019/kairos:Primitives_Events_decision:1:the_decision_itself",
+          "roleName": "A1_ppt_the_decision_itself",
+          "entity": "resin:Entities/00013/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "result of deliberation",
+      "qnode": "wd:Q16513426",
+      "qlabel": "decision",
+      "privateData": {
+        "@type": "resin:Events/10014/Steps_kairos:Primitives_Events_decision:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10015/Steps_kairos:Primitives_Events_buy:1",
+      "name": "buy",
+      "comment": "",
+      "qnode": "wd:Q12887029",
+      "aka": "buy.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20023/kairos:Primitives_Events_buy:1:buyer",
+          "roleName": "A0_pag_buyer",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20024/kairos:Primitives_Events_buy:1:thing_bought",
+          "roleName": "A1_ppt_thing_bought",
+          "entity": "resin:Entities/00006/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "None",
+      "goal": "",
+      "ta1explanation": "purchase weapon for crime",
+      "qlabel": "buy",
+      "privateData": {
+        "@type": "resin:Events/10015/Steps_kairos:Primitives_Events_buy:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10016/Steps_kairos:Primitives_Events_announcement:1",
+      "name": "announcement",
+      "comment": "",
+      "aka": "announce.01",
+      "qnode": "wd:Q567303",
+      "participants": [
+        {
+          "@id": "resin:Participants/20029/kairos:Primitives_Events_announcement:1:announcer",
+          "roleName": "A0_pag_agent_announcer",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20030/kairos:Primitives_Events_announcement:1:hearer",
+          "roleName": "A2_gol_recipient_hearer",
+          "entity": "resin:Entities/00009/"
+        },
+        {
+          "@id": "resin:Participants/20031/kairos:Primitives_Events_announcement:1:manner",
+          "roleName": "AM_mnr__manner",
+          "entity": "resin:Entities/00011/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "printed, spoken, or published statement or notice of intent of mass shooting",
+      "qlabel": "announcement",
+      "privateData": {
+        "@type": "resin:Events/10016/Steps_kairos:Primitives_Events_announcement:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10017/Steps_kairos:Primitives_Events_motion:1",
+      "name": "motion",
+      "comment": "",
+      "aka": "move.01",
+      "qnode": "wd:Q79782",
+      "participants": [
+        {
+          "@id": "resin:Participants/20034/kairos:Primitives_Events_motion:1:mover",
+          "roleName": "A0_pag_mover",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20036/kairos:Primitives_Events_motion:1:destination",
+          "roleName": "A2_gol_destination",
+          "entity": "resin:Entities/00003/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "change in position of an object over time; a body is said to be inmotion if it changes its position with respect to its immediatesurroundings",
+      "qlabel": "motion",
+      "privateData": {
+        "@type": "resin:Events/10017/Steps_kairos:Primitives_Events_motion:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10019/Steps_kairos:Primitives_Events_gun_violence:1",
+      "name": "gun_violence",
+      "comment": "",
+      "aka": "commit.02",
+      "qnode": "wd:Q5618454",
+      "participants": [
+        {
+          "@id": "resin:Participants/20043/kairos:Primitives_Events_gun_violence:1:criminal",
+          "roleName": "A0_pag_criminal",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20044/kairos:Primitives_Events_gun_violence:1:crime",
+          "roleName": "A1_ppt_crime",
+          "entity": "resin:Entities/00013/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "broadly defined as violence committed with the use of a gun",
+      "qlabel": "gun_violence",
+      "privateData": {
+        "@type": "resin:Events/10019/Steps_kairos:Primitives_Events_gun_violence:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10020/Steps_kairos:Primitives_Events_violent_death:1",
+      "name": "violent_death",
+      "comment": "",
+      "qnode": "wd:Q74948922",
+      "aka": "kill.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20046/kairos:Primitives_Events_violent_death:1:killer",
+          "roleName": "A0_pag_agent_killer",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20047/kairos:Primitives_Events_violent_death:1:corpse",
+          "roleName": "A1_ppt_patient_corpse",
+          "entity": "resin:Entities/00012/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "death caused by violence through the shooting",
+      "qlabel": "violent_death",
+      "privateData": {
+        "@type": "resin:Events/10020/Steps_kairos:Primitives_Events_violent_death:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10021/Steps_kairos:Primitives_Events_killing:1",
+      "name": "killing",
+      "comment": "",
+      "qnode": "wd:Q844482",
+      "aka": "kill.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20050/kairos:Primitives_Events_killing:1:killer",
+          "roleName": "A0_pag_killer",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20051/kairos:Primitives_Events_killing:1:corpse",
+          "roleName": "A1_ppt_corpse",
+          "entity": "resin:Entities/00012/"
+        },
+        {
+          "@id": "resin:Participants/20052/kairos:Primitives_Events_killing:1:instrument",
+          "roleName": "A2_mnr_instrument",
+          "entity": "resin:Entities/00006/"
+        },
+        {
+          "@id": "resin:Participants/20053/kairos:Primitives_Events_killing:1:location",
+          "roleName": "AM_loc",
+          "entity": "resin:Entities/00003/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "act of killing a living being",
+      "qlabel": "killing",
+      "privateData": {
+        "@type": "resin:Events/10021/Steps_kairos:Primitives_Events_killing:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10022/Steps_kairos:Primitives_Events_injury:1",
+      "name": "injury",
+      "qnode": "wd:Q193078",
+      "comment": "",
+      "aka": "wound.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20054/kairos:Primitives_Events_injury:1:injured_party",
+          "roleName": "A1_ppt_experiencer_injured_party",
+          "entity": "resin:Entities/00012/"
+        },
+        {
+          "@id": "resin:Participants/20055/kairos:Primitives_Events_injury:1:stimulus_of_injury",
+          "roleName": "A0_pag_stimulus_stimulus_of_injury",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20056/kairos:Primitives_Events_injury:1:instrument",
+          "roleName": "A2_mnr__instrument",
+          "entity": "resin:Entities/00006/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "physiological wound caused by shooter",
+      "qlabel": "injury",
+      "privateData": {
+        "@type": "resin:Events/10022/Steps_kairos:Primitives_Events_injury:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10023/Steps_kairos:Primitives_Events_survival:1",
+      "name": "survival",
+      "qnode": "wd:Q104482419",
+      "comment": "",
+      "aka": "survive.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20058/kairos:Primitives_Events_survival:1:survivor",
+          "roleName": "A0_pag_survivor",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20059/kairos:Primitives_Events_survival:1:adverse_circumstances",
+          "roleName": "A1_ppt_adverse_circumstances",
+          "entity": "resin:Entities/00013/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "act of being still alive after a threatening or dangerous situation",
+      "qlabel": "survival",
+      "privateData": {
+        "@type": "resin:Events/10023/Steps_kairos:Primitives_Events_survival:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10024/Steps_kairos:Primitives_Events_emergency_call:1",
+      "name": "emergency_call",
+      "qnode": "wd:Q106691145",
+      "comment": "",
+      "aka": "call.02",
+      "participants": [
+        {
+          "@id": "resin:Participants/20060/kairos:Primitives_Events_emergency_call:1:caller",
+          "roleName": "A0_pag_caller",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20126/kairos:Primitives_Events_emergency_call:1:entity_summoned",
+          "roleName": "A1_ppt_entity_summoned",
+          "entity": "resin:Entities/00007/"
+        },
+        {
+          "@id": "resin:Participants/20127/kairos:Primitives_Events_emergency_call:1:benefactive",
+          "roleName": "A2_gol_benefactive",
+          "entity": "resin:Entities/00012/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "way of contacting an emergency call center usually by a phone to an emergency telephone number",
+      "qlabel": "emergency_call",
+      "privateData": {
+        "@type": "resin:Events/10024/Steps_kairos:Primitives_Events_emergency_call:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10025/Steps_kairos:Primitives_Events_driving:1",
+      "name": "driving",
+      "qnode": "wd:Q999646",
+      "comment": "",
+      "aka": "drive.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20061/kairos:Primitives_Events_driving:1:driver",
+          "roleName": "A0_pag_driver",
+          "entity": "resin:Entities/00009/"
+        },
+        {
+          "@id": "resin:Participants/20062/kairos:Primitives_Events_driving:1:vehicle_or_path",
+          "roleName": "A1_ppt_vehicle_or_path",
+          "entity": "resin:Entities/00010/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "operation of a vehicle to the crime scene",
+      "qlabel": "driving",
+      "privateData": {
+        "@type": "resin:Events/10025/Steps_kairos:Primitives_Events_driving:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10027/Steps_kairos:Primitives_Events_first_aid:1",
+      "name": "first_aid",
+      "qnode": "wd:Q133981",
+      "comment": "",
+      "aka": "treat.03",
+      "participants": [
+        {
+          "@id": "resin:Participants/20068/kairos:Primitives_Events_first_aid:1:doctor",
+          "roleName": "A0_pag_doctor",
+          "entity": "resin:Entities/00007/"
+        },
+        {
+          "@id": "resin:Participants/20069/kairos:Primitives_Events_first_aid:1:patient",
+          "roleName": "A1_ppt_patient",
+          "entity": "resin:Entities/00012/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "first and immediate assistance given to any person suffering from shooting injury",
+      "qlabel": "first_aid",
+      "privateData": {
+        "@type": "resin:Events/10027/Steps_kairos:Primitives_Events_first_aid:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10028/Steps_kairos:Primitives_Events_rescue:1",
+      "name": "rescue",
+      "comment": "",
+      "qnode": "wd:Q1341429",
+      "aka": "rescue.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20073/kairos:Primitives_Events_rescue:1:rescuer",
+          "roleName": "A0_pag_rescuer",
+          "entity": "resin:Entities/00009/"
+        },
+        {
+          "@id": "resin:Participants/20074/kairos:Primitives_Events_rescue:1:entity_rescued",
+          "roleName": "A1_ppt_entity_rescued",
+          "entity": "resin:Entities/00012/"
+        },
+        {
+          "@id": "resin:Participants/20075/kairos:Primitives_Events_rescue:1:rescued_from",
+          "roleName": "A2_dir_rescued_from",
+          "entity": "resin:Entities/00001/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "comprises responsive operations that usually involve the saving of life, or prevention of injury",
+      "qlabel": "rescue",
+      "privateData": {
+        "@type": "resin:Events/10028/Steps_kairos:Primitives_Events_rescue:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10029/Steps_kairos:Primitives_Events_accusation:1",
+      "name": "accusation",
+      "comment": "",
+      "qnode": "wd:Q19357312",
+      "aka": "accuse.01",
+      "participants": [
+        {
+          "@id": "resin:Participants/20077/kairos:Primitives_Events_accusation:1:accuser",
+          "roleName": "A0_pag_agent_accuser",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20078/kairos:Primitives_Events_accusation:1:accused",
+          "roleName": "A1_ppt_theme_accused",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20079/kairos:Primitives_Events_accusation:1:crime",
+          "roleName": "A2_prd_attribute_crime",
+          "entity": "resin:Entities/00013/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "act of accusing or charging another with a crime",
+      "qlabel": "accusation",
+      "privateData": {
+        "@type": "resin:Events/10029/Steps_kairos:Primitives_Events_accusation:1",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10030/Steps_kairos:Primitives_Events_arrest:1",
+      "name": "arrest",
+      "comment": "",
+      "aka": "arrest.01",
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "detention of a person and taking it into custody, usually because it has been suspected of committing a crime",
+      "privateData": {
+        "@type": "resin:Events/10030/Steps_kairos:Primitives_Events_arrest:1",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q1403016",
+      "qlabel": "arrest",
+      "participants": [
+        {
+          "@id": "resin:Participants/20081/kairos:Primitives_Events_arrest:1:police",
+          "roleName": "A0_pag__police",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20082/kairos:Primitives_Events_arrest:1:criminal",
+          "roleName": "A1_ppt__criminal",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20083/kairos:Primitives_Events_arrest:1:crime",
+          "roleName": "A2_cau__crime",
+          "entity": "resin:Entities/00013/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10031/Steps_kairos:Primitives_Events_detention:1",
+      "name": "detention",
+      "comment": "",
+      "aka": "detain.01",
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "removal of the freedom of liberty by a state",
+      "privateData": {
+        "@type": "resin:Events/10031/Steps_kairos:Primitives_Events_detention:1",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q1071447",
+      "qlabel": "detention",
+      "participants": [
+        {
+          "@id": "resin:Participants/20085/kairos:Primitives_Events_detention:1:police",
+          "roleName": "A0_pag_police",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20086/kairos:Primitives_Events_detention:1:entity_detained",
+          "roleName": "A1_ppt_entity_detained",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20087/kairos:Primitives_Events_detention:1:detained_for_what?",
+          "roleName": "A2_cau_detained_for_what?",
+          "entity": "resin:Entities/00013/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10032/Steps_kairos:Primitives_Events_conviction:1",
+      "name": "conviction",
+      "comment": "",
+      "aka": "convict.01",
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "verdict that results when a court of law finds a defendant guilty of a crime",
+      "privateData": {
+        "@type": "resin:Events/10032/Steps_kairos:Primitives_Events_conviction:1",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q2916183",
+      "qlabel": "conviction",
+      "participants": [
+        {
+          "@id": "resin:Participants/20089/kairos:Primitives_Events_conviction:1:judge",
+          "roleName": "A0_pag__judge",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20090/kairos:Primitives_Events_conviction:1:person_convicted",
+          "roleName": "A1_ppt__person_convicted",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20091/kairos:Primitives_Events_conviction:1:convicted_of",
+          "roleName": "A2_cau__convicted_of",
+          "entity": "resin:Entities/00013/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10033/Steps_kairos:Primitives_Events_plea:1",
+      "name": "plea",
+      "comment": "",
+      "aka": "plead.02",
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "answer to a claim made by someone in a criminal case under common law using the adversarial system",
+      "privateData": {
+        "@type": "resin:Events/10033/Steps_kairos:Primitives_Events_plea:1",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q15916459",
+      "qlabel": "plea",
+      "participants": [
+        {
+          "@id": "resin:Participants/20093/kairos:Primitives_Events_plea:1:the_accused",
+          "roleName": "A0_pag_the_accused",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20095/kairos:Primitives_Events_plea:1:alleged_crime",
+          "roleName": "A2_gol_alleged_crime",
+          "entity": "resin:Entities/00013/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10034/Steps_kairos:Primitives_Events_trial:1",
+      "name": "trial",
+      "comment": "",
+      "aka": "try.02",
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "coming together of parties to a dispute, to present information in a tribunal",
+      "privateData": {
+        "@type": "resin:Events/10034/Steps_kairos:Primitives_Events_trial:1",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q8016240",
+      "qlabel": "trial",
+      "participants": [
+        {
+          "@id": "resin:Participants/20098/kairos:Primitives_Events_trial:1:entity_tried",
+          "roleName": "A1_ppt__entity_tried",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20100/kairos:Primitives_Events_trial:1:tried_for",
+          "roleName": "A3_cau_tried_for",
+          "entity": "resin:Entities/00013/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10035/Steps_kairos:Primitives_Events_legal_hearing:1",
+      "name": "legal_hearing",
+      "comment": "",
+      "aka": "hearing.02",
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "A legal hearing",
+      "privateData": {
+        "@type": "resin:Events/10035/Steps_kairos:Primitives_Events_legal_hearing:1",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q545861",
+      "qlabel": "legal_hearing",
+      "participants": [
+        {
+          "@id": "resin:Participants/20102/kairos:Primitives_Events_legal_hearing:1:judge",
+          "roleName": "A0_pag__judge",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20103/kairos:Primitives_Events_legal_hearing:1:person_on_trial",
+          "roleName": "A1_ppt__person_on_trial",
+          "entity": "resin:Entities/00001/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10036/Steps_kairos:Primitives_Events_court_decision:1",
+      "name": "court_decision",
+      "comment": "",
+      "aka": "judge.01",
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "formal decision made by a court",
+      "privateData": {
+        "@type": "resin:Events/10036/Steps_kairos:Primitives_Events_court_decision:1",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q327000",
+      "qlabel": "court_decision ",
+      "participants": [
+        {
+          "@id": "resin:Participants/20107/kairos:Primitives_Events_court_decision:1:judge",
+          "roleName": "A0_pag_agent_judge",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20108/kairos:Primitives_Events_court_decision:1:judged",
+          "roleName": "A1_ppt_theme_judged",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20109/kairos:Primitives_Events_court_decision:1:on_what_grounds",
+          "roleName": "A3_cau__on_what_grounds",
+          "entity": "resin:Entities/00013/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10037/Steps_kairos:Primitives_Events_sentence:1",
+      "name": "sentence",
+      "comment": "",
+      "aka": "sentence.01",
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "decree of punishment in law",
+      "privateData": {
+        "@type": "resin:Events/10037/Steps_kairos:Primitives_Events_sentence:1",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q1763090",
+      "qlabel": "sentence",
+      "participants": [
+        {
+          "@id": "resin:Participants/20111/kairos:Primitives_Events_sentence:1:judge_jury",
+          "roleName": "A0_pag__judge_jury",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20112/kairos:Primitives_Events_sentence:1:criminal",
+          "roleName": "A1_ppt__criminal",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20113/kairos:Primitives_Events_sentence:1:crime",
+          "roleName": "A3_cau__crime",
+          "entity": "resin:Entities/00013/"
+        },
+        {
+          "@id": "resin:Participants/20114/kairos:Primitives_Events_sentence:1:punishment",
+          "roleName": "A2_ppt__punishment",
+          "entity": "resin:Entities/00014/"
+        }
+      ]
+    },
+    {
+      "@id": "resin:Events/10038/Steps_kairos:Primitives_Events_acquittal:1",
+      "name": "acquittal",
+      "comment": "",
+      "qnode": "wd:Q1454723",
+      "participants": [
+        {
+          "@id": "resin:Participants/20116/kairos:Primitives_Events_acquittal:1:remover_of_guilt",
+          "roleName": "A0_cau_remover_of_guilt",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20117/kairos:Primitives_Events_acquittal:1:unguilty_person",
+          "roleName": "A1_dir_source_unguilty_person",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20118/kairos:Primitives_Events_acquittal:1:explicit_mention_of_guilt",
+          "roleName": "A2_ppt_theme_explicit_mention_of_guilt",
+          "entity": "resin:Entities/00013/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "the legal result of a verdict of not guilty",
+      "qlabel": "acquittal",
+      "privateData": {
+        "@type": "resin:Events/10038/Steps_kairos:Primitives_Events_acquittal:1",
+        "template": "",
+        "repeatable": false
+      },
+      "aka": "acquit.01"
+    },
+    {
+      "@id": "resin:Events/10039/Steps_kairos:Primitives_Events_imprisonment:1",
+      "name": "imprisonment",
+      "comment": "",
+      "qnode": "wd:Q841236",
+      "participants": [
+        {
+          "@id": "resin:Participants/20120/kairos:Primitives_Events_imprisonment:1:police",
+          "roleName": "A0_pag_agent_police",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20121/kairos:Primitives_Events_imprisonment:1:entity_detained",
+          "roleName": "A1_ppt_patient_entity_detained",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20122/kairos:Primitives_Events_imprisonment:1:detained_for_what",
+          "roleName": "A2_cau_theme_detained_for_what",
+          "entity": "resin:Entities/00013/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "restraint of a person's liberty by judicial or other detention",
+      "qlabel": "imprisonment",
+      "privateData": {
+        "@type": "resin:Events/10039/Steps_kairos:Primitives_Events_imprisonment:1",
+        "template": "",
+        "repeatable": false
+      },
+      "aka": "detain.01"
+    },
+    {
+      "@id": "resin:Events/10040/Steps_kairos:Primitives_Events_execution:1",
+      "name": "execution",
+      "comment": "",
+      "qnode": "wd:Q3966286",
+      "participants": [
+        {
+          "@id": "resin:Participants/20125/kairos:Primitives_Events_execution:1:corpse",
+          "roleName": "A1_ppt_patient_corpse",
+          "entity": "resin:Entities/00001/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "homicide as capital punishment",
+      "qlabel": "execution",
+      "privateData": {
+        "@type": "resin:Events/10040/Steps_kairos:Primitives_Events_execution:1",
+        "template": "",
+        "repeatable": false
+      },
+      "aka": "execute.01"
+    },
+    {
+      "@id": "resin:Events/10041/Steps_kairos:Container:100",
+      "name": "Injury outlinks",
+      "comment": "container node",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children": [
+        {
+          "child": "resin:Events/10023/Steps_kairos:Primitives_Events_survival:1",
+          "comment": "Survival",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10020/Steps_kairos:Primitives_Events_violent_death:1",
+          "comment": "Violent Death",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "xor",
+      "privateData": {
+        "@type": "",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10042/Steps_kairos:Container:101",
+      "name": "Court Decision outlinks",
+      "comment": "container node",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children": [
+        {
+          "child": "resin:Events/10037/Steps_kairos:Primitives_Events_sentence:1",
+          "comment": "Sentence",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10038/Steps_kairos:Primitives_Events_acquittal:1",
+          "comment": "Acquittal",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "xor",
+      "privateData": {
+        "@type": "",
+        "template": "",
+        "repeatable": false
+      }
+    }
+  ],
+  "entities": [
+    {
+      "@id": "resin:Entities/00001/",
+      "name": "shooter",
+      "qnode": "wd:Q109648129",
+      "qlabel": "shooter",
+      "centrality": 1
+    },
+    {
+      "@id": "resin:Entities/00002/",
+      "name": "target group",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group of humans"
+    },
+    {
+      "@id": "resin:Entities/00003/",
+      "name": "crime scene",
+      "qnode": "wd:Q1360677",
+      "qlabel": "crime scene"
+    },
+    {
+      "@id": "resin:Entities/00004/",
+      "name": "person",
+      "qnode": "wd:Q5",
+      "qlabel": "human"
+    },
+    {
+      "@id": "resin:Entities/00005/",
+      "name": "motive",
+      "qnode": "wd:Q4583280",
+      "qlabel": "motive"
+    },
+    {
+      "@id": "resin:Entities/00006/",
+      "name": "weapon",
+      "qnode": "wd:Q728",
+      "qlabel": "weapon"
+    },
+    {
+      "@id": "resin:Entities/00007/",
+      "name": "emergency service",
+      "qnode": "wd:Q814610",
+      "qlabel": "emergency service"
+    },
+    {
+      "@id": "resin:Entities/00008/",
+      "name": "court",
+      "qnode": "wd:Q41487",
+      "qlabel": "court"
+    },
+    {
+      "@id": "resin:Entities/00009/",
+      "name": "general population",
+      "qnode": "wd:Q16334295",
+      "qlabel": "group of humans"
+    },
+    {
+      "@id": "resin:Entities/00010/",
+      "name": "emergency vehicle",
+      "qnode": "wd:Q1308737",
+      "qlabel": "emergency vehicle"
+    },
+    {
+      "@id": "resin:Entities/00011/",
+      "name": "media",
+      "qnode": "wd:Q340169",
+      "qlabel": "media"
+    },
+    {
+      "@id": "resin:Entities/00012/",
+      "name": "victim",
+      "qnode": "wd:Q1851760",
+      "qlabel": "victim"
+    },
+    {
+      "@id": "resin:Entities/00013/",
+      "name": "crime",
+      "qnode": "wd:Q83267",
+      "qlabel": "crime"
+    },
+    {
+      "@id": "resin:Entities/00014/",
+      "name": "imprisonment",
+      "qnode": "wd:Q841236",
+      "qlabel": "imprisonment"
+    }
+  ],
+  "relations": []
+}

@@ -1,0 +1,4011 @@
+{
+  "@context": [
+    "https://kairos-sdf.s3.amazonaws.com/context/kairos-v1.4.1.jsonld",
+    {
+      "caci": "https://caci.com/kairos/",
+      "my_key": "caci:my_key",
+      "giant_bitstring": "caci:giant_bitstring",
+      "resin": "https://blender.cs.illinois.edu/kairos/"
+    }
+  ],
+  "@id": "resin:Submissions/TA1/schemas_quizlet9",
+  "sdfVersion": "1.4.1",
+  "version": "resin:disease-outbreak/quizlet9",
+  "events": [
+    {
+      "@id": "resin:Events/10000/resin:Events_disease-outbreak",
+      "name": "Disease Outbreak with Hierarchy",
+      "description": "disease outbreak",
+      "qnode": "wd:Q3241045",
+      "qlabel": "disease outbreak",
+      "minDuration": "P7D",
+      "maxDuration": "P10Y",
+      "goal": "",
+      "ta1explanation": "Root node for disease outbreak schema.",
+      "privateData": {
+        "template": "",
+        "repeatable": false,
+        "importance": 1
+      },
+      "participants": [
+        {
+          "@id": "resin:Participants/20000/kairos:Primitives_Events_Disaster.Diseaseoutbreak.Unspecified:1_victim",
+          "roleName": "A2-GOL_location_victims",
+          "entity": "resin:Entities/00001/"
+        }
+      ],
+      "children": [
+        {
+          "child": "resin:Events/10023/Steps_kairos:Container:1",
+          "comment": "onset",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10096/Steps_kairos:Container:100"
+          ]
+        },
+        {
+          "child": "resin:Events/10096/Steps_kairos:Container:100",
+          "comment": "onset outlinks",
+          "optional": false,
+          "importance": 1.0,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10024/Steps_kairos:Container:2",
+          "comment": "authority response",
+          "optional": false,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10064/Steps_kairos:Primitives_Events_Investigation"
+          ]
+        },
+        {
+          "child": "resin:Events/10026/Steps_kairos:Container:4",
+          "comment": "society response",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10027/Steps_kairos:Container:5",
+          "comment": "research response",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10028/Steps_kairos:Container:6",
+          "comment": "Contributory factors",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10023/Steps_kairos:Container:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10029/Steps_kairos:Container:7",
+          "comment": "outbreak",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10064/Steps_kairos:Primitives_Events_Investigation"
+          ]
+        },
+        {
+          "child": "resin:Events/10064/Steps_kairos:Primitives_Events_Investigation",
+          "comment": "Investigation",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10065/Steps_kairos:Primitives_Events_Civil_Justice"
+          ]
+        },
+        {
+          "child": "resin:Events/10065/Steps_kairos:Primitives_Events_Civil_Justice",
+          "comment": "Civil Justice",
+          "optional": true,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or"
+    },
+    {
+      "@id": "resin:Events/10001/Steps_kairos:Primitives_Events_Socialbehavior.Complyobey.Unspecified:1",
+      "name": "Compliance",
+      "comment": "often negated",
+      "aka": "",
+      "qnode": "wd:Q1399332",
+      "participants": [
+        {
+          "@id": "resin:Participants/20001/kairos:Primitives_Events_Socialbehavior.Complyobey.Unspecified:1_complier",
+          "roleName": "A0-pag_X_complier",
+          "entity": "resin:Entities/00040/"
+        }
+      ],
+      "minDuration": "P7D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Compliance to a rule or regulation. Often negated, for example violating health regulations.",
+      "qlabel": "Compliance",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Socialbehavior.Complyobey.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10002/Steps_kairos:Primitives_Events_GenericCrime.GenericCrime.GenericCrime:1",
+      "name": "Generic Crime",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q83267",
+      "participants": [
+        {
+          "@id": "resin:Participants/20002/kairos:Primitives_Events_GenericCrime.GenericCrime.GenericCrime:1_victim",
+          "roleName": "A2-gol_X_victim",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20092/kairos:Primitives_Events_GenericCrime_Perp",
+          "roleName": "A0_pag__perp",
+          "entity": "resin:Entities/00003/"
+        }
+      ],
+      "minDuration": "P7D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "The disease outbreak could be the result of a crime, i.e., someone polluting the water with a chemical",
+      "qlabel": "crime",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/GenericCrime.GenericCrime.GenericCrime",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10003/Steps_kairos:Primitives_Events_Life.Infect.Unspecified:1",
+      "name": "Early Infections",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q166231",
+      "participants": [
+        {
+          "@id": "resin:Participants/20003/kairos:Primitives_Events_Life.Infect.Unspecified:1_victim",
+          "roleName": "A1-gol_thing_becoming_infected",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20004/kairos:Primitives_Events_Life.Infect.Unspecified:1_infectingagent",
+          "roleName": "A2-ppt_infectant",
+          "entity": "resin:Entities/00020/"
+        },
+        {
+          "@id": "resin:Participants/20088/kairos:Primitives_Events_Life.Infect.Unspecified:1_cause",
+          "roleName": "A0_pag_agent_causer_of_infection",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "P7D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Invasion of an organism's body tissues by the virus. People can be infected by the virus in the disease outbreak",
+      "qlabel": "infection",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Life.Infect.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10004/Steps_kairos:Primitives_Events_Life.Illness.Unspecified:1",
+      "name": "Early Illness",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q814207",
+      "participants": [
+        {
+          "@id": "resin:Participants/20005/kairos:Primitives_Events_Life.Illness.Unspecified:1_victim",
+          "roleName": "A1-ppt_X_sick/ill_one",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20063/kairos:Primitives_Events_Life.Illness.Unspecified:2_cause",
+          "roleName": "A2_cau__cause_or_disease",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P60Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Abnormal condition that negatively affects the structure or function of all or part of an organism due to the virus in the disease outbreak",
+      "qlabel": "illness",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Life.Illness.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10005/Steps_kairos:Primitives_Events_Medical.Diagnosis.Unspecified:1",
+      "name": "Diagnosis",
+      "comment": "DiagnosePatient: Medical personnel diagnose patient",
+      "qnode": "wd:Q177719",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20006/kairos:Primitives_Events_Medical.Diagnosis.Unspecified:1_treater",
+          "roleName": "A0-pag_agent_doctor",
+          "entity": "resin:Entities/00168/"
+        },
+        {
+          "@id": "resin:Participants/20007/kairos:Primitives_Events_Medical.Diagnosis.Unspecified:1_patient",
+          "roleName": "A1-ppt_theme_patient",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20008/kairos:Primitives_Events_Medical.Diagnosis.Unspecified:1_place",
+          "roleName": "AM-LOC",
+          "entity": "resin:Entities/00018/"
+        },
+        {
+          "@id": "resin:Participants/20093/kairos:Primitives_Events_Medical.Diagnosis.Unspecified:1_illness",
+          "roleName": "A2_prd_attribute_illness",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "PT10M",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Medical diagnosis on infection of the virus in the disease outbreak",
+      "qlabel": "medical diagnosis",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Medical.Diagnosis.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10006/Steps_kairos:Primitives_Events_Medical.Intervention.Unspecified:1",
+      "name": "Treatment",
+      "comment": "TreatPatient: Medical personnel treat patient",
+      "qnode": "wd:Q179661",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20009/kairos:Primitives_Events_Medical.Intervention.Unspecified:1_treater",
+          "roleName": "A0-pag_X_doctor",
+          "entity": "resin:Entities/00168/"
+        },
+        {
+          "@id": "resin:Participants/20087/kairos:Primitives_Events_Medical.Intervention.Unspecified:1_patient",
+          "roleName": "A1_dir_source_patient",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20010/kairos:Primitives_Events_Medical.Intervention.Unspecified:1_place",
+          "roleName": "AM-LOC",
+          "entity": "resin:Entities/00018/"
+        },
+        {
+          "@id": "resin:Participants/20094/kairos:Primitives_Events_Medical.Intervention.Unspecified:1_illness",
+          "roleName": "A2_ppt__illness_or_injury",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "PT5M",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Attempted remediation of a health problem due to infection of the virus in the disease outbreak",
+      "qlabel": "treatment",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Medical.Intervention.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10007/Steps_kairos:Primitives_Events_Movement.Transportation.PreventPassage:1",
+      "name": "Quarantine",
+      "comment": "",
+      "qnode": "wd:Q182899",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20011/kairos:Primitives_Events_Movement.Transportation.PreventPassage:1_transporter",
+          "roleName": "A0-pag_agent_transporter",
+          "entity": "resin:Entities/00024/"
+        },
+        {
+          "@id": "resin:Participants/20012/kairos:Primitives_Events_Movement.Transportation.PreventPassage:1_passengerartifact",
+          "roleName": "A1-ppt_theme_thing_transported",
+          "entity": "resin:Entities/00001/"
+        }
+      ],
+      "minDuration": "PT1M",
+      "maxDuration": "P7Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Restriction on the movement of people, animals and goods which is intended to prevent the spread of the disease",
+      "qlabel": "quarantine",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Movement.Transportation.PreventPassage",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10008/Steps_kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:1",
+      "name": "Gather Data",
+      "comment": "",
+      "qnode": "wd:Q193181",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20013/kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:1_observer",
+          "roleName": "A0-ppt_experiencer_observer",
+          "entity": "resin:Entities/00029/"
+        },
+        {
+          "@id": "resin:Participants/20014/kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:1_observedentity",
+          "roleName": "A1-pag_stimulus_thing_looked_at",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20015/kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:1_place",
+          "roleName": "AM-LOC",
+          "entity": "resin:Entities/00023/"
+        }
+      ],
+      "minDuration": "PT1M",
+      "maxDuration": "P1M",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Epidemiologic data collection",
+      "qlabel": "data collection",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Cognitive.Inspection.SensoryObserve",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10009/Steps_kairos:Primitives_Events_Cognitive.IdentifyCategorize.Unspecified:1",
+      "name": "Identify Outbreak",
+      "comment": "",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20016/kairos:Primitives_Events_Cognitive.IdentifyCategorize.Unspecified:1_identifier",
+          "roleName": "A0-pag_agent_caller",
+          "entity": "resin:Entities/00029/"
+        },
+        {
+          "@id": "resin:Participants/20017/kairos:Primitives_Events_Cognitive.IdentifyCategorize.Unspecified:1_identifiedobject",
+          "roleName": "A1-ppt_theme_item_being_labelled",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20018/kairos:Primitives_Events_Cognitive.IdentifyCategorize.Unspecified:1_place",
+          "roleName": "AM-LOC",
+          "entity": "resin:Entities/00023/"
+        }
+      ],
+      "minDuration": "PT1S",
+      "maxDuration": "P1M",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Detecting a possible outbreak. Usually accompanied by an announcement.",
+      "qnode": "wd:Q3265221",
+      "qlabel": "identification",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Cognitive.IdentifyCategorize.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10010/Steps_kairos:Primitives_Events_Contact.Contact.Unspecified:1",
+      "name": "Alert Authorities",
+      "comment": "",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20019/kairos:Primitives_Events_Contact.Contact.Unspecified:1_participant1",
+          "roleName": "A0-pag_agent_first_communicator",
+          "entity": "resin:Entities/00029/"
+        },
+        {
+          "@id": "resin:Participants/20080/kairos:Primitives_Events_Contact.Contact.Unspecified:Topic",
+          "roleName": "A1_ppt_topic_utterance",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20081/kairos:Primitives_Events_Contact.Contact.Unspecified:Hearer",
+          "roleName": "A2_gol_recipient_hearer",
+          "entity": "resin:Entities/00024/"
+        }
+      ],
+      "minDuration": "PT1M",
+      "maxDuration": "P1D",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Alerting and reporting the detected outbreak to state and local public health authorities",
+      "qnode": "wd:Q446078",
+      "qlabel": "Alert",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Contact.Contact.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10011/Steps_kairos:Primitives_Events_Contact.Contact.Broadcast:1",
+      "name": "Alert Population",
+      "comment": "",
+      "qnode": "wd:Q17012118",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20020/kairos:Primitives_Events_Contact.Contact.Broadcast:1_recipient",
+          "roleName": "A2-gol_recipient_hearer",
+          "entity": "resin:Entities/00040/"
+        },
+        {
+          "@id": "resin:Participants/20095/kairos:Primitives_Events_Contact.Contact.Broadcast:Topic",
+          "roleName": "A1_ppt_topic_utterance",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20096/kairos:Primitives_Events_Contact.Contact.Broadcase:announcer",
+          "roleName": "A0_pag_agent_announcer",
+          "entity": "resin:Entities/00024/"
+        }
+      ],
+      "minDuration": "PT1M",
+      "maxDuration": "P1D",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Alerting population of the exposure of the virus",
+      "qlabel": "emergency population warning",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Contact.Contact.Broadcast",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10012/Steps_kairos:Primitives_Events_Life.Infect.Unspecified:2",
+      "name": "Additional Infections",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q166231",
+      "participants": [
+        {
+          "@id": "resin:Participants/20021/kairos:Primitives_Events_Life.Infect.Unspecified:2_victim",
+          "roleName": "A1-gol_thing_becoming_infected",
+          "entity": "resin:Entities/00044/"
+        },
+        {
+          "@id": "resin:Participants/20022/kairos:Primitives_Events_Life.Infect.Unspecified:2_infectingagent",
+          "roleName": "A2-ppt_infectant",
+          "entity": "resin:Entities/00020/"
+        }
+      ],
+      "minDuration": "P7D",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Invasion of an organism's body tissues by disease-causing agents. People can be infected by the virus in the disease outbreak",
+      "qlabel": "infection",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Life.Infect.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10013/Steps_kairos:Primitives_Events_Life.Illness.Unspecified:2",
+      "name": "Additional Illnesses",
+      "comment": "",
+      "aka": "",
+      "qnode": "wd:Q814207",
+      "participants": [
+        {
+          "@id": "resin:Participants/20064/kairos:Primitives_Events_Life.Illness.Unspecified:1_victim",
+          "roleName": "A1-ppt_X_sick/ill_one",
+          "entity": "resin:Entities/00044/"
+        },
+        {
+          "@id": "resin:Participants/20065/kairos:Primitives_Events_Life.Illness.Unspecified:2_cause",
+          "roleName": "A2_cau__cause_or_disease",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "P1D",
+      "maxDuration": "P60Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Abnormal condition that negatively affects the structure or function of all or part of an organism due to infection of the virus in the disease outbreak",
+      "qlabel": "illness",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Life.Illness.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10014/Steps_kairos:Primitives_Events_Medical.Diagnosis.Unspecified:2",
+      "name": "Additional Diagnosis",
+      "comment": "DiagnosePatient: Medical personnel diagnose patient",
+      "aka": "",
+      "qnode": "wd:Q177719",
+      "participants": [
+        {
+          "@id": "resin:Participants/20023/kairos:Primitives_Events_Medical.Diagnosis.Unspecified:2_patient",
+          "roleName": "A1-ppt_theme_patient",
+          "entity": "resin:Entities/00044/"
+        },
+        {
+          "@id": "resin:Participants/20097/kairos:Primitives_Events_Medical.Diagnosis.Unspecified:2_treater",
+          "roleName": "A0-pag_agent_doctor",
+          "entity": "resin:Entities/00168/"
+        },
+        {
+          "@id": "resin:Participants/20098/kairos:Primitives_Events_Medical.Diagnosis.Unspecified:2_place",
+          "roleName": "AM-LOC",
+          "entity": "resin:Entities/00018/"
+        },
+        {
+          "@id": "resin:Participants/20099/kairos:Primitives_Events_Medical.Diagnosis.Unspecified:2_illness",
+          "roleName": "A2_prd_attribute_illness",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "PT10M",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Medical diagnoisis on infection of the virus in the disease outbreak",
+      "qlabel": "medical diagnosis",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Medical.Diagnosis.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10015/Steps_kairos:Primitives_Events_Medical.Intervention.Unspecified:3",
+      "name": "Subsequent Treatment",
+      "comment": "TreatPatient: Medical personnel treat patient",
+      "qnode": "wd:Q179661",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20100/kairos:Primitives_Events_Medical.Intervention.Unspecified:2_treater",
+          "roleName": "A0-pag_X_doctor",
+          "entity": "resin:Entities/00168/"
+        },
+        {
+          "@id": "resin:Participants/20101/kairos:Primitives_Events_Medical.Intervention.Unspecified:2_patient",
+          "roleName": "A1_dir_source_patient",
+          "entity": "resin:Entities/00044/"
+        },
+        {
+          "@id": "resin:Participants/20102/kairos:Primitives_Events_Medical.Intervention.Unspecified:2_place",
+          "roleName": "AM-LOC",
+          "entity": "resin:Entities/00018/"
+        },
+        {
+          "@id": "resin:Participants/20103/kairos:Primitives_Events_Medical.Intervention.Unspecified:2_illness",
+          "roleName": "A2_ppt__illness_or_injury",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "PT5M",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Medical treatment applied to the patient infected with the disease.",
+      "qlabel": "treatment",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Medical.Intervention.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10016/Steps_kairos:Primitives_Events_Movement.Transportation.PreventPassage:3",
+      "name": "Subsequent Quarantine",
+      "comment": "",
+      "qnode": "wd:Q182899",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20024/kairos:Primitives_Events_Movement.Transportation.PreventPassage:3_passengerartifact",
+          "roleName": "A1-ppt_theme_thing_transported",
+          "entity": "resin:Entities/00044/"
+        }
+      ],
+      "minDuration": "PT1M",
+      "maxDuration": "P7Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Restriction on the movement of people, animals and goods which is intended to prevent the spread of the disease",
+      "qlabel": "quarantine",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Movement.Transportation.PreventPassage",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10017/Steps_kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:2",
+      "name": "Additional Data Gathering",
+      "qnode": "wd:Q4929239",
+      "comment": "",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20105/kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:2_observer",
+          "roleName": "A0-ppt_experiencer_observer",
+          "entity": "resin:Entities/00029/"
+        },
+        {
+          "@id": "resin:Participants/20106/kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:1_observedentity",
+          "roleName": "A1-pag_stimulus_thing_looked_at",
+          "entity": "resin:Entities/00044/"
+        },
+        {
+          "@id": "resin:Participants/20104/kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:1_place",
+          "roleName": "AM-LOC",
+          "entity": "resin:Entities/00023/"
+        }
+      ],
+      "minDuration": "PT1M",
+      "maxDuration": "P1M",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Epidemiologic data collection",
+      "qlabel": "data collection",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Cognitive.Inspection.SensoryObserve",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10018/Steps_kairos:Primitives_Events_Contact.RequestCommand.Broadcast:1",
+      "name": "Gov Health Decree",
+      "qnode": "wd:Q1298239",
+      "comment": "",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20026/kairos:Primitives_Events_Contact.RequestCommand.Broadcast:1_communicator",
+          "roleName": "A0-pag_agent_xx",
+          "entity": "resin:Entities/00024/"
+        },
+        {
+          "@id": "resin:Participants/20107/kairos:Primitives_Events_Contact.RequestCommand.Broadcast:1_topic",
+          "roleName": "A1-ppt_topic_subject",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "PT1M",
+      "maxDuration": "P1D",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Legislations were issued fighting the disease outbreak by government",
+      "qlabel": "decree",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Contact.RequestCommand.Broadcast",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10019/Steps_kairos:Primitives_Events_Movement.Transportation.PreventPassage:2",
+      "name": "Restrict Travel",
+      "qnode": "wd:Q87745167",
+      "comment": "",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20027/kairos:Primitives_Events_Movement.Transportation.PreventPassage:2_passengerartifact",
+          "roleName": "A1-ppt_theme_thing_transported",
+          "entity": "resin:Entities/00040/"
+        },
+        {
+          "@id": "resin:Participants/20028/kairos:Primitives_Events_Movement.Transportation.PreventPassage:2_preventer",
+          "roleName": "A0-pag_agent_Agent",
+          "entity": "resin:Entities/00024/"
+        }
+      ],
+      "minDuration": "PT1M",
+      "maxDuration": "P7Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Restrictions on traveling to slow down the spread of the virus",
+      "qlabel": "travel restriction",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Movement.Transportation.PreventPassage",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10103/Steps_kairos:Primitives_Events_Destruction",
+      "name": "Destruction",
+      "qnode": "wd:Q17781833",
+      "comment": "",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20109/kairos:Primitives_Events_Destruction_destroyer",
+          "roleName": "A0_pag_agent_destroyer",
+          "entity": "resin:Entities/00024/"
+        },
+        {
+          "@id": "resin:Participants/20110/kairos:Primitives_Events_Destruction_thing_destroyed",
+          "roleName": "A1_ppt_patient_thing_destroyed",
+          "entity": "resin:Entities/00045/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "The government destroys the source of the disease, for example, Haiti demolished the fishing nuts where the Cholera epidemic started.",
+      "qlabel": "destruction"
+    },
+    {
+      "@id": "resin:Events/10020/Steps_kairos:Primitives_Events_Cognitive.Research.Unspecified:1",
+      "name": "Research",
+      "qnode": "wd:Q42240",
+      "comment": "",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20111/kairos:Primitives_Events_Cognitive.Research.Unspecified:1_researcher",
+          "roleName": "A0-pag_agent_researcher",
+          "entity": "resin:Entities/00029/"
+        },
+        {
+          "@id": "resin:Participants/20108/kairos:Primitives_Events_Cognitive.Research.Unspecified:1_subject",
+          "roleName": "A1-ppt_theme_thing_reseached",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "PT1H",
+      "maxDuration": "P100Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Conducting research fighting the disease outbreak",
+      "qlabel": "research",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Cognitive.Research.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10021/Steps_kairos:Primitives_Events_Transaction.AidBetweenGovernments.Unspecified:1",
+      "name": "Aid",
+      "comment": "",
+      "qnode": "wd:Q2827815",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20119/AidBetweenGovernments:Giver",
+          "roleName": "A0_pag_agent_giver",
+          "entity": "resin:Entities/00025/"
+        },
+        {
+          "@id": "resin:Participants/20120/AidBetweenGovernments:Recipient",
+          "roleName": "A2_gol_recipient_entity_given_to",
+          "entity": "resin:Entities/00024/"
+        }
+      ],
+      "minDuration": "P1M",
+      "maxDuration": "P3Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Financial assistance with food, housing and bills",
+      "qlabel": "international aid",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Transaction.AidBetweenGovernments.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10022/Steps_kairos:Primitives_Events_Medical.Intervention.Unspecified:2",
+      "name": "New Treatments",
+      "comment": "Clinical testing of treatments.",
+      "qnode": "wd:Q179661",
+      "aka": "",
+      "participants": [
+        {
+          "@id": "resin:Participants/20121/Intervention:Illness",
+          "roleName": "A2_ppt__illness_or_injury",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20122/Intervention:Doctor",
+          "roleName": "A0_pag__doctor",
+          "entity": "resin:Entities/00029/"
+        },
+        {
+          "@id": "resin:Participants/20123/Intervention:Treatment",
+          "roleName": "A3_mnr__instrument",
+          "entity": "resin:Entities/00030/"
+        }
+      ],
+      "minDuration": "PT5M",
+      "maxDuration": "P10Y",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Developing effective treatment or cure for the disease",
+      "qlabel": "treatment",
+      "privateData": {
+        "@type": "kairos:Primitives/Events/Medical.Intervention.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10023/Steps_kairos:Container:1",
+      "name": "Onset",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10025/Steps_kairos:Container:3",
+          "comment": "medical response 1",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10009/Steps_kairos:Primitives_Events_Cognitive.IdentifyCategorize.Unspecified:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10003/Steps_kairos:Primitives_Events_Life.Infect.Unspecified:1",
+          "comment": "Early Infections",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10004/Steps_kairos:Primitives_Events_Life.Illness.Unspecified:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10004/Steps_kairos:Primitives_Events_Life.Illness.Unspecified:1",
+          "comment": "Early Illness",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10025/Steps_kairos:Container:3",
+            "resin:Events/10005/Steps_kairos:Primitives_Events_Medical.Diagnosis.Unspecified:1",
+            "resin:Events/10039/Steps_kairos:Primitives_Events_Identifycategorize",
+            "resin:Events/10051/Steps_kairos:Primitives_Events_Testing"
+          ]
+        },
+        {
+          "child": "resin:Events/10009/Steps_kairos:Primitives_Events_Cognitive.IdentifyCategorize.Unspecified:1",
+          "comment": "Identify Outbreak",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10010/Steps_kairos:Primitives_Events_Contact.Contact.Unspecified:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10010/Steps_kairos:Primitives_Events_Contact.Contact.Unspecified:1",
+          "comment": "Alert Authorities",
+          "optional": true,
+          "importance": 0.3,
+          "outlinks": [
+            "resin:Events/10011/Steps_kairos:Primitives_Events_Contact.Contact.Broadcast:1",
+            "resin:Events/10018/Steps_kairos:Primitives_Events_Contact.RequestCommand.Broadcast:1",
+            "resin:Events/10020/Steps_kairos:Primitives_Events_Cognitive.Research.Unspecified:1",
+            "resin:Events/10021/Steps_kairos:Primitives_Events_Transaction.AidBetweenGovernments.Unspecified:1",
+            "resin:Events/10012/Steps_kairos:Primitives_Events_Life.Infect.Unspecified:2",
+            "resin:Events/10035/Steps_kairos:Primitives_Events_StartPosition"
+          ]
+        },
+        {
+          "child": "resin:Events/10105/Steps_kairos:Primitives_Events_Contaminate_Substance",
+          "comment": "Contaminate Substance",
+          "optional": true,
+          "importance": 0.7,
+          "outlinks": [
+            "resin:Events/10085/Steps_kairos:Primitives_Events_Consume"
+          ]
+        },
+        {
+          "child": "resin:Events/10085/Steps_kairos:Primitives_Events_Consume",
+          "comment": "Consume",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10089/Steps_kairos:Primitives_Events_Contamination"
+          ]
+        },
+        {
+          "child": "resin:Events/10089/Steps_kairos:Primitives_Events_Contamination",
+          "comment": "Spread Disease",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10003/Steps_kairos:Primitives_Events_Life.Infect.Unspecified:1"
+          ]
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "or",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10024/Steps_kairos:Container:2",
+      "name": "Authority Response",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10021/Steps_kairos:Primitives_Events_Transaction.AidBetweenGovernments.Unspecified:1",
+          "comment": "Aid",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10018/Steps_kairos:Primitives_Events_Contact.RequestCommand.Broadcast:1",
+          "comment": "Government Health Decrees",
+          "optional": false,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10031/Steps_kairos:Primitives_Events_Distribute",
+            "resin:Events/10032/Steps_kairos:Primitives_Events_ExchangeBuySell",
+            "resin:Events/10034/Steps_kairos:Primitives_Events_CloseBorder",
+            "resin:Events/10036/Steps_kairos:Primitives_Events_Debunk_Misinformation",
+            "resin:Events/10021/Steps_kairos:Primitives_Events_Transaction.AidBetweenGovernments.Unspecified:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10031/Steps_kairos:Primitives_Events_Distribute",
+          "comment": "Distribute",
+          "optional": false,
+          "importance": 0.5,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10032/Steps_kairos:Primitives_Events_ExchangeBuySell",
+          "comment": "ExchangeBuySell",
+          "optional": false,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10033/Steps_kairos:Primitives_Events_Donate"
+          ]
+        },
+        {
+          "child": "resin:Events/10033/Steps_kairos:Primitives_Events_Donate",
+          "comment": "Donate",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10034/Steps_kairos:Primitives_Events_CloseBorder",
+          "comment": "CloseBorder",
+          "optional": true,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10035/Steps_kairos:Primitives_Events_StartPosition",
+          "comment": "StartPosition",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10036/Steps_kairos:Primitives_Events_Debunk_Misinformation",
+          "comment": "Debunk Misinformation",
+          "optional": false,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10103/Steps_kairos:Primitives_Events_Destruction",
+          "comment": "Destruction",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "or",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10025/Steps_kairos:Container:3",
+      "name": "Medical Response",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10005/Steps_kairos:Primitives_Events_Medical.Diagnosis.Unspecified:1",
+          "comment": "Diagnosis",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10006/Steps_kairos:Primitives_Events_Medical.Intervention.Unspecified:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10006/Steps_kairos:Primitives_Events_Medical.Intervention.Unspecified:1",
+          "comment": "Treatment",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10097/Steps_kairos:Container:101"
+          ]
+        },
+        {
+          "child": "resin:Events/10097/Steps_kairos:Container:101",
+          "comment": "Treatment outlinks",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10008/Steps_kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:1",
+          "comment": "Gather Data",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": [
+            "resin:Events/10009/Steps_kairos:Primitives_Events_Cognitive.IdentifyCategorize.Unspecified:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10007/Steps_kairos:Primitives_Events_Movement.Transportation.PreventPassage:1",
+          "comment": "Quarantine",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10098/Steps_kairos:Container:102"
+          ]
+        },
+        {
+          "child": "resin:Events/10098/Steps_kairos:Container:102",
+          "comment": "Quarantine outlinks",
+          "optional": true,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10051/Steps_kairos:Primitives_Events_Testing",
+          "comment": "Testing",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10005/Steps_kairos:Primitives_Events_Medical.Diagnosis.Unspecified:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10053/Steps_kairos:Primitives_Events_Tracing",
+          "comment": "Tracing",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10007/Steps_kairos:Primitives_Events_Movement.Transportation.PreventPassage:1",
+            "resin:Events/10008/Steps_kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10057/Steps_kairos:Primitives_Events_Recover",
+          "comment": "Recover",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10058/Steps_kairos:Primitives_Events_Die",
+          "comment": "Die",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": [
+            "resin:Events/10059/Steps_kairos:Primitives_Events_Funeral"
+          ]
+        },
+        {
+          "child": "resin:Events/10059/Steps_kairos:Primitives_Events_Funeral",
+          "comment": "Funeral",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "or",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": true
+      }
+    },
+    {
+      "@id": "resin:Events/10026/Steps_kairos:Container:4",
+      "name": "Society Response",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10011/Steps_kairos:Primitives_Events_Contact.Contact.Broadcast:1",
+          "comment": "Alert Population",
+          "optional": false,
+          "importance": 0.3,
+          "outlinks": [
+            "resin:Events/10019/Steps_kairos:Primitives_Events_Movement.Transportation.PreventPassage:2",
+            "resin:Events/10070/Steps_kairos:Primitives_Events_Educate",
+            "resin:Events/10073/Steps_kairos:Primitives_Events_Exchange",
+            "resin:Events/10074/Steps_kairos:Primitives_Events_Demonstrate",
+            "resin:Events/10075/Steps_kairos:Primitives_Events_Business_Close"
+          ]
+        },
+        {
+          "child": "resin:Events/10019/Steps_kairos:Primitives_Events_Movement.Transportation.PreventPassage:2",
+          "comment": "Restrict Travel",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10066/Steps_kairos:Primitives_Events_Sanitize",
+          "comment": "Sanitize",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10067/Steps_kairos:Primitives_Events_Wash",
+          "comment": "Wash",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10068/Steps_kairos:Primitives_Events_Comply",
+          "comment": "Comply",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10066/Steps_kairos:Primitives_Events_Sanitize",
+            "resin:Events/10019/Steps_kairos:Primitives_Events_Movement.Transportation.PreventPassage:2",
+            "resin:Events/10069/Steps_kairos:Primitives_Events_Wear",
+            "resin:Events/10067/Steps_kairos:Primitives_Events_Wash",
+            "resin:Events/10072/Steps_kairos:Primitives_Events_Vaccinate",
+            "resin:Events/10071/Steps_kairos:Primitives_Events_Social_Distancing"
+          ]
+        },
+        {
+          "child": "resin:Events/10069/Steps_kairos:Primitives_Events_Wear",
+          "comment": "Wear",
+          "optional": true,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10070/Steps_kairos:Primitives_Events_Educate",
+          "comment": "Educate",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10068/Steps_kairos:Primitives_Events_Comply"
+          ]
+        },
+        {
+          "child": "resin:Events/10071/Steps_kairos:Primitives_Events_Social_Distancing",
+          "comment": "Social Distancing",
+          "optional": true,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10072/Steps_kairos:Primitives_Events_Vaccinate",
+          "comment": "Vaccinate",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10073/Steps_kairos:Primitives_Events_Exchange",
+          "comment": "Exchange",
+          "optional": false,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10074/Steps_kairos:Primitives_Events_Demonstrate",
+          "comment": "Demonstrate",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10075/Steps_kairos:Primitives_Events_Business_Close",
+          "comment": "Business Close",
+          "optional": false,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10101/Steps_kairos:Container:105"
+          ]
+        },
+        {
+          "child": "resin:Events/10101/Steps_kairos:Container:105",
+          "comment": "Business Close outlinks",
+          "optional": false,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10076/Steps_kairos:Primitives_Events_Business_Reopen",
+          "comment": "Business Reopen",
+          "optional": false,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10095/Steps_kairos:Primitives_Events_Business_Shutdown",
+          "comment": "Business Shutdown",
+          "optional": false,
+          "importance": 0.8,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "or",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10027/Steps_kairos:Container:5",
+      "name": "Research Response",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10020/Steps_kairos:Primitives_Events_Cognitive.Research.Unspecified:1",
+          "comment": "Research",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10022/Steps_kairos:Primitives_Events_Medical.Intervention.Unspecified:2"
+          ]
+        },
+        {
+          "child": "resin:Events/10022/Steps_kairos:Primitives_Events_Medical.Intervention.Unspecified:2",
+          "comment": "New Treatments",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10062/Steps_kairos:Primitives_Events_Collaborate",
+          "comment": "Collaborate",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10020/Steps_kairos:Primitives_Events_Cognitive.Research.Unspecified:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10063/Steps_kairos:Primitives_Events_Meeting",
+          "comment": "Meeting",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10062/Steps_kairos:Primitives_Events_Collaborate"
+          ]
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "or",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10028/Steps_kairos:Container:6",
+      "name": "Contributory Factors",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10002/Steps_kairos:Primitives_Events_GenericCrime.GenericCrime.GenericCrime:1",
+          "comment": "Generic Crime",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": [
+            "resin:Events/10001/Steps_kairos:Primitives_Events_Socialbehavior.Complyobey.Unspecified:1",
+            "resin:Events/10037/Steps_kairos:Primitives_Events_Create_Artifact"
+          ]
+        },
+        {
+          "child": "resin:Events/10001/Steps_kairos:Primitives_Events_Socialbehavior.Complyobey.Unspecified:1",
+          "comment": "Compliance",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": [
+            "resin:Events/10055/Steps_kairos:Primitives_Events_Biological_Warfare"
+          ]
+        },
+        {
+          "child": "resin:Events/10037/Steps_kairos:Primitives_Events_Create_Artifact",
+          "comment": "Create Artifact",
+          "optional": true,
+          "importance": 0.3,
+          "outlinks": [
+            "resin:Events/10001/Steps_kairos:Primitives_Events_Socialbehavior.Complyobey.Unspecified:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10038/Steps_kairos:Primitives_Events_Climate_Change",
+          "comment": "Climate Change",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": [
+            "resin:Events/10003/Steps_kairos:Primitives_Events_Life.Infect.Unspecified:1",
+            "resin:Events/10056/Steps_kairos:Primitives_Events_Mutate_life"
+          ]
+        },
+        {
+          "child": "resin:Events/10055/Steps_kairos:Primitives_Events_Biological_Warfare",
+          "comment": "Biological Warfare",
+          "optional": true,
+          "importance": 0.3,
+          "outlinks": [
+            "resin:Events/10003/Steps_kairos:Primitives_Events_Life.Infect.Unspecified:1"
+          ]
+        },
+        {
+          "child": "resin:Events/10056/Steps_kairos:Primitives_Events_Mutate_life",
+          "comment": "Mutate life",
+          "optional": true,
+          "importance": 0.3,
+          "outlinks": [
+            "resin:Events/10003/Steps_kairos:Primitives_Events_Life.Infect.Unspecified:1"
+          ]
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "or",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10029/Steps_kairos:Container:7",
+      "name": "Outbreak",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10091/Steps_kairos:Primitives_Events_Additional_Consume",
+          "comment": "Additional Consumption",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10090/Steps_kairos:Primitives_Events_Additional_Contamination"
+          ]
+        },
+        {
+          "child": "resin:Events/10090/Steps_kairos:Primitives_Events_Additional_Contamination",
+          "comment": "Additional Contamination",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10012/Steps_kairos:Primitives_Events_Life.Infect.Unspecified:2"
+          ]
+        },
+        {
+          "child": "resin:Events/10012/Steps_kairos:Primitives_Events_Life.Infect.Unspecified:2",
+          "comment": "Additional Infections",
+          "optional": false,
+          "importance": 0.5,
+          "outlinks": [
+            "resin:Events/10013/Steps_kairos:Primitives_Events_Life.Illness.Unspecified:2"
+          ]
+        },
+        {
+          "child": "resin:Events/10013/Steps_kairos:Primitives_Events_Life.Illness.Unspecified:2",
+          "comment": "Additional Illnesses",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10030/Steps_kairos:Container:3:2",
+            "resin:Events/10014/Steps_kairos:Primitives_Events_Medical.Diagnosis.Unspecified:2",
+            "resin:Events/10052/Steps_kairos:Primitives_Events_Additional_Testing",
+            "resin:Events/10061/Steps_kairos:Primitives_Events_Construction"
+          ]
+        },
+        {
+          "child": "resin:Events/10030/Steps_kairos:Container:3:2",
+          "comment": "medical response 2",
+          "optional": false,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10060/Steps_kairos:Primitives_Events_Mutation",
+          "comment": "Mutation",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10091/Steps_kairos:Primitives_Events_Additional_Consume"
+          ]
+        },
+        {
+          "child": "resin:Events/10061/Steps_kairos:Primitives_Events_Construction",
+          "comment": "Construction",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "or",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": true
+      }
+    },
+    {
+      "@id": "resin:Events/10030/Steps_kairos:Container:3:2",
+      "name": "Medical Response 2",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10014/Steps_kairos:Primitives_Events_Medical.Diagnosis.Unspecified:2",
+          "comment": "Additional Diagnosis",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10015/Steps_kairos:Primitives_Events_Medical.Intervention.Unspecified:3"
+          ]
+        },
+        {
+          "child": "resin:Events/10015/Steps_kairos:Primitives_Events_Medical.Intervention.Unspecified:3",
+          "comment": "Subsequent Treatment",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": [
+            "resin:Events/10099/Steps_kairos:Container:103"
+          ]
+        },
+        {
+          "child": "resin:Events/10099/Steps_kairos:Container:103",
+          "comment": "Subsequent Treatment outlinks",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10016/Steps_kairos:Primitives_Events_Movement.Transportation.PreventPassage:3",
+          "comment": "Subsequent Quarantine",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": [
+            "resin:Events/10077/Steps_kairos:Primitives_Events_Recover_2",
+            "resin:Events/10078/Steps_kairos:Primitives_Events_Die_2"
+          ]
+        },
+        {
+          "child": "resin:Events/10017/Steps_kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:2",
+          "comment": "Additional Data Gathering",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10052/Steps_kairos:Primitives_Events_Additional_Testing",
+          "comment": "Additional Testing",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10014/Steps_kairos:Primitives_Events_Medical.Diagnosis.Unspecified:2"
+          ]
+        },
+        {
+          "child": "resin:Events/10054/Steps_kairos:Primitives_Events_Additional_Tracing",
+          "comment": "Additional Tracing",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10016/Steps_kairos:Primitives_Events_Movement.Transportation.PreventPassage:3",
+            "resin:Events/10017/Steps_kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:2"
+          ]
+        },
+        {
+          "child": "resin:Events/10077/Steps_kairos:Primitives_Events_Recover_2",
+          "comment": "",
+          "optional": true,
+          "importance": 0.8,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10078/Steps_kairos:Primitives_Events_Die_2",
+          "comment": "",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": [
+            "resin:Events/10079/Steps_kairos:Primitives_Events_Funeral_2"
+          ]
+        },
+        {
+          "child": "resin:Events/10079/Steps_kairos:Primitives_Events_Funeral_2",
+          "comment": "Funeral 2",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "or",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": true
+      }
+    },
+    {
+      "@id": "resin:Events/10031/Steps_kairos:Primitives_Events_Distribute",
+      "name": "Distribute",
+      "comment": "",
+      "qnode": "wd:Q225802",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Distributing the vaccines of the virus",
+      "qlabel": "Distribution",
+      "privateData": {
+        "@type": "FrameNet.Dispersal",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10032/Steps_kairos:Primitives_Events_ExchangeBuySell",
+      "name": "ExchangeBuySell",
+      "comment": "",
+      "qnode": "wd:Q601401",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Buying, selling or exchanging goods related to the disease outbreak",
+      "qlabel": "trade",
+      "privateData": {
+        "@type": "transaction.exchangebuysell.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10033/Steps_kairos:Primitives_Events_Donate",
+      "name": "Donate",
+      "comment": "",
+      "qnode": "wd:Q1124860",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Charitable activities related to the disease outbreak",
+      "qlabel": "donation",
+      "privateData": {
+        "@type": "transaction.donation.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10034/Steps_kairos:Primitives_Events_CloseBorder",
+      "name": "CloseBorder",
+      "comment": "",
+      "qnode": "wd:Q218719",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Border were closed to slow the spread of the virus",
+      "qlabel": "border control",
+      "privateData": {
+        "@type": "FrameNet.Locale_closure",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10035/Steps_kairos:Primitives_Events_StartPosition",
+      "name": "StartPosition",
+      "comment": "",
+      "qnode": "wd:Q7091744",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Officials are assigned to monitor, prevent, contain, and mitigate the disease outbreak",
+      "qlabel": "onboarding",
+      "privateData": {
+        "@type": "personnel.startposition.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10036/Steps_kairos:Primitives_Events_Debunk_Misinformation",
+      "name": "Debunk Misinformation",
+      "comment": "",
+      "qnode": "wd:Q59555084",
+      "participants": [
+        {
+          "@id": "resin:Participants/20029/Steps_kairos:Primitives_Events_Debunk_Misinformation_Topic",
+          "roleName": "A1-PPT_topic_subject",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Debunking misinformation of related to the disease outbreak",
+      "qlabel": "fact-checking",
+      "privateData": {
+        "@type": "Communication.Debunk",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10037/Steps_kairos:Primitives_Events_Create_Artifact",
+      "name": "Create Artifact",
+      "comment": "",
+      "qnode": "wd:Q63244734",
+      "participants": [
+        {
+          "@id": "resin:Participants/20089/Steps_kairos:Primitives_Events_Create_Creation",
+          "roleName": "A1_ppt_result_thing_created",
+          "entity": "resin:Entities/00020/"
+        },
+        {
+          "@id": "resin:Participants/20090/Steps_kairos:Primitives_Events_Create_Creator",
+          "roleName": "A0_pag_agent_creator",
+          "entity": "resin:Entities/00003/"
+        },
+        {
+          "@id": "resin:Participants/20091/Steps_kairos:Primitives_Events_Create_Location",
+          "roleName": "AM_loc__location",
+          "entity": "resin:Entities/00018/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Creation of a disease by laboratories or organizations",
+      "qlabel": "Creation",
+      "privateData": {
+        "@type": "artifactexistence.creation.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10038/Steps_kairos:Primitives_Events_Climate_Change",
+      "name": "Climate Change",
+      "comment": "",
+      "qnode": "wd:Q125928",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Contemporary climate change may contribute to the disease outbreak, i.e., global warming",
+      "qlabel": "climate change",
+      "privateData": {
+        "@type": "",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10039/Steps_kairos:Primitives_Events_Identifycategorize",
+      "name": "Identifycategorize",
+      "comment": "",
+      "qnode": "wd:Q912550",
+      "participants": [
+        {
+          "@id": "resin:Participants/20070/Steps_kairos:Primitives_Events_Identifycategorize_Identifier",
+          "roleName": "A0_pag_agent_caller",
+          "entity": "resin:Entities/00028/"
+        },
+        {
+          "@id": "resin:Participants/20071/Steps_kairos:Primitives_Events_Identifycategorize_IdentifiedObject",
+          "roleName": "A1_ppt_theme_item_being_labelled",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Investigation of the disease outbreak includes identify the source of the virus as well as the suspect of the creator",
+      "qlabel": "categorization",
+      "privateData": {
+        "@type": "cognitive.identifycategorize.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10040/Steps_kairos:Primitives_Events_Contact",
+      "name": "Contact",
+      "comment": "",
+      "qnode": "wd:Q11024",
+      "participants": [
+        {
+          "@id": "resin:Participants/20124/Contact:Agent",
+          "roleName": "A0_pag_agent_one_party",
+          "entity": "resin:Entities/00028/"
+        },
+        {
+          "@id": "resin:Participants/20125/Contact:Agent",
+          "roleName": "A1_com_co_agent_other_party",
+          "entity": "resin:Entities/00027/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Make contact with the suspect",
+      "qlabel": "communication",
+      "privateData": {
+        "@type": "contact.contact.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10041/Steps_kairos:Primitives_Events_Arrest",
+      "name": "Arrest",
+      "comment": "",
+      "qnode": "wd:Q1403016",
+      "participants": [
+        {
+          "@id": "resin:Participants/20126/Arrest:Police",
+          "roleName": "A0_pag__police",
+          "entity": "resin:Entities/00028/"
+        },
+        {
+          "@id": "resin:Participants/20127/Arrest:Criminal",
+          "roleName": "A1_ppt__criminal",
+          "entity": "resin:Entities/00027/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Taking the suspect who created the virus or violated laws during the outbreak into custody",
+      "qlabel": "arrest",
+      "children": [
+        {
+          "child": "resin:Events/10080/Steps_kairos:Primitives_Events_Handcuffing",
+          "comment": "",
+          "optional": true,
+          "importance": 0.3,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10082/Steps_kairos:Primitives_Events_Restrain",
+          "comment": "",
+          "optional": true,
+          "importance": 0.1,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or",
+      "privateData": {
+        "@type": "arrest_Q1403016",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10042/Steps_kairos:Primitives_Events_Inspect",
+      "name": "Inspect",
+      "comment": "",
+      "qnode": "wd:Q1137655",
+      "participants": [
+        {
+          "@id": "resin:Participants/20128/Inspect:Examiner",
+          "roleName": "A0_pag_examiner",
+          "entity": "resin:Entities/00028/"
+        },
+        {
+          "@id": "resin:Participants/20129/Inspect:Inspected",
+          "roleName": "A1_ppt_entity_inspected",
+          "entity": "resin:Entities/00027/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Organized examination or formal evaluation on the suspect for creating the virus",
+      "qlabel": "inspection",
+      "privateData": {
+        "@type": "cognitive.inspection.assesstestmeasure",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10043/Steps_kairos:Primitives_Events_File_Complaint",
+      "name": "File Complaint",
+      "comment": "",
+      "qnode": "wd:Q836925",
+      "participants": [
+        {
+          "@id": "resin:Participants/20043/Steps_kairos:Primitives_Events_File_Complaint_Plaintif",
+          "roleName": "A0_pag_prosecutor_plaintif",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20072/Steps_kairos:Primitives_Events_File_Complaint_Cause",
+          "roleName": "A2-cau_X_cause",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Plaintiff files a complaint to initiate a lawsuit",
+      "qlabel": "complaint",
+      "privateData": {
+        "@type": "justice.initiatejudicialprocess.filecomplaint",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10044/Steps_kairos:Primitives_Events_Answer",
+      "name": "Answer",
+      "comment": "",
+      "qnode": "wd:Q33622550",
+      "participants": [
+        {
+          "@id": "resin:Participants/20044/Steps_kairos:Primitives_Events_Answer_Defendant",
+          "roleName": "A1_ppt_defendant",
+          "entity": "resin:Entities/00003/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "In law, a solemn assertion in opposition to someone or something by the defendant",
+      "qlabel": "answer",
+      "privateData": {
+        "@type": "justice.initiatejudicialprocess.answer",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10045/Steps_kairos:Primitives_Events_Discovery",
+      "name": "Discovery",
+      "comment": "",
+      "qnode": "wd:Q902342",
+      "participants": [
+        {
+          "@id": "resin:Participants/20045/Steps_kairos:Primitives_Events_Discovery_Plaintif",
+          "roleName": "A0_pag_prosecutor_plaintif",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20046/Steps_kairos:Primitives_Events_Discovery_Defendant",
+          "roleName": "A1_ppt_defendant",
+          "entity": "resin:Entities/00003/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Pre-trial procedure in common law countries for obtaining evidence",
+      "qlabel": "discovery",
+      "privateData": {
+        "@type": "justice.initiatejudicialprocess.discovery",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10046/Steps_kairos:Primitives_Events_Motion",
+      "name": "Motion",
+      "comment": "",
+      "qnode": "wd:Q6917734",
+      "participants": [
+        {
+          "@id": "resin:Participants/20047/Steps_kairos:Primitives_Events_Motion_Plaintif",
+          "roleName": "A0_pag_prosecutor_plaintif",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20048/Steps_kairos:Primitives_Events_Motion_Defendant",
+          "roleName": "A1_ppt_defendant",
+          "entity": "resin:Entities/00003/"
+        },
+        {
+          "@id": "resin:Participants/20112/Steps_kairos:Primitives_Events_Motion_Judgecourt",
+          "roleName": "A0-pag_X_judge",
+          "entity": "resin:Entities/00135/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "In US law, a procedural device to bring a limited, contested issue before a court for decision",
+      "qlabel": "motion",
+      "privateData": {
+        "@type": "justice.initiatejudicialprocess.motion",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10047/Steps_kairos:Primitives_Events_Mediation",
+      "name": "Mediation",
+      "comment": "",
+      "qnode": "wd:Q223871",
+      "participants": [
+        {
+          "@id": "resin:Participants/20050/Steps_kairos:Primitives_Events_Mediation_Plaintif",
+          "roleName": "A0_pag_prosecutor_plaintif",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20051/Steps_kairos:Primitives_Events_Mediation_Defendant",
+          "roleName": "A1_ppt_defendant",
+          "entity": "resin:Entities/00003/"
+        },
+        {
+          "@id": "resin:Participants/20052/Steps_kairos:Primitives_Events_Mediation_Judgecourt",
+          "roleName": "A0-pag_X_judge",
+          "entity": "resin:Entities/00135/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Dispute resolution with assistance of an impartial third party moderator throughthe use of communication and negotiation techniques",
+      "qlabel": "mediation",
+      "privateData": {
+        "@type": "justice.judicialconsequences.mediation",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10102/Steps_kairos:Primitives_Events_Settlement",
+      "name": "Settlement",
+      "comment": "",
+      "qnode": "wd:Q21651837",
+      "participants": [
+        {
+          "@id": "resin:Participants/20066/Steps_kairos:Primitives_Events_Settlement_Agent",
+          "roleName": "A0-pag_agent_Agent",
+          "entity": "resin:Entities/00003/"
+        },
+        {
+          "@id": "resin:Participants/20067/Steps_kairos:Primitives_Events_Settlement_Receiver",
+          "roleName": "A2_com_co_agent_other_exchanger",
+          "entity": "resin:Entities/00002/"
+        },
+        {
+          "@id": "resin:Participants/20068/Steps_kairos:Primitives_Events_Settlement_Money",
+          "roleName": "A1_ppt_theme_thing_being_traded",
+          "entity": "resin:Entities/00009/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "The dispute is resolved through a payment of money.",
+      "qlabel": "exchange_of_goods",
+      "privateData": {
+        "@type": "Transaction.ExchangeBuySell.Unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10048/Steps_kairos:Primitives_Events_Trial",
+      "name": "Trial",
+      "comment": "",
+      "qnode": "wd:Q8016240",
+      "participants": [
+        {
+          "@id": "resin:Participants/20053/Steps_kairos:Primitives_Events_Trial_Judgecourt",
+          "roleName": "A0-pag_X_judge",
+          "entity": "resin:Entities/00135/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Coming together of parties to a dispute, to present information in a tribunal",
+      "qlabel": "trial",
+      "privateData": {
+        "@type": "justice.initiatejudicialprocess.trialhearing",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10049/Steps_kairos:Primitives_Events_Judgement",
+      "name": "Judgement",
+      "comment": "",
+      "qnode": "wd:Q3769186",
+      "participants": [
+        {
+          "@id": "resin:Participants/20054/Steps_kairos:Primitives_Events_Judgement_Judgecourt",
+          "roleName": "A0-pag_X_judge",
+          "entity": "resin:Entities/00135/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "The formal decision made by a court following a lawsuit",
+      "qlabel": "judgement",
+      "privateData": {
+        "@type": "justice.judicialconsequences.judgement",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10050/Steps_kairos:Primitives_Events_Appeal",
+      "name": "Appeal",
+      "comment": "",
+      "qnode": "wd:Q329777",
+      "participants": [
+        {
+          "@id": "resin:Participants/20055/Steps_kairos:Primitives_Events_Appeal_Defendant",
+          "roleName": "A1_ppt_defendant",
+          "entity": "resin:Entities/00003/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Resort to a superior court to review the decision of an inferior court or administrative agency",
+      "qlabel": "appeal",
+      "privateData": {
+        "@type": "justice.appeal.unspecified",
+        "template": "",
+        "repeatable": true
+      }
+    },
+    {
+      "@id": "resin:Events/10051/Steps_kairos:Primitives_Events_Testing",
+      "name": "Testing",
+      "comment": "",
+      "qnode": "wd:Q1003030",
+      "participants": [
+        {
+          "@id": "resin:Participants/20034/Steps_kairos:Primitives_Events_Testing_Assessor",
+          "roleName": "A0-pag_agent_estimator",
+          "entity": "resin:Entities/00168/"
+        },
+        {
+          "@id": "resin:Participants/20035/Steps_kairos:Primitives_Events_Testing_Thing_Assessed_for",
+          "roleName": "A1-ppt_theme_thing_estimated",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "A viral test checks specimens from your nose or your mouth to find out if you are currently infected with the virus",
+      "qlabel": "test",
+      "privateData": {
+        "@type": "cognitive.inspection.assesstestmeasure",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10052/Steps_kairos:Primitives_Events_Additional_Testing",
+      "name": "Additional Testing",
+      "comment": "",
+      "qnode": "wd:Q1003030",
+      "participants": [
+        {
+          "@id": "resin:Participants/20036/Steps_kairos:Primitives_Events_Additional_Testing_Assessor",
+          "roleName": "A0-pag_agent_estimator",
+          "entity": "resin:Entities/00168/"
+        },
+        {
+          "@id": "resin:Participants/20037/Steps_kairos:Primitives_Events_Additional_Testing_Thing_Assessed_for",
+          "roleName": "A1-ppt_theme_thing_estimated",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "A viral test checks specimens from your nose or your mouth to find out if you are currently infected with the virus",
+      "qlabel": "test",
+      "privateData": {
+        "@type": "cognitive.inspection.assesstestmeasure",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10053/Steps_kairos:Primitives_Events_Tracing",
+      "name": "Tracing",
+      "comment": "",
+      "qnode": "wd:Q1128437",
+      "participants": [
+        {
+          "@id": "resin:Participants/20038/Steps_kairos:Primitives_Events_Tracing_Agent",
+          "roleName": "A0-pag_agent_Agent",
+          "entity": "resin:Entities/00168/"
+        },
+        {
+          "@id": "resin:Participants/20039/Steps_kairos:Primitives_Events_Tracing_Virus",
+          "roleName": "A2-cau_X_cause_or_disease",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Contact tracing identifies persons who may have come into contact with an infected person during the disease outbreak",
+      "qlabel": "contact tracing",
+      "privateData": {
+        "@type": "",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10054/Steps_kairos:Primitives_Events_Additional_Tracing",
+      "name": "Additional Tracing",
+      "comment": "",
+      "qnode": "wd:Q1128437",
+      "participants": [
+        {
+          "@id": "resin:Participants/20040/Steps_kairos:Primitives_Events_Additional_Tracing_Virus",
+          "roleName": "A2-cau_X_cause_or_disease",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Contact tracing identifies persons who may have come into contact with an infected person during the disease outbreak",
+      "qlabel": "contact tracing",
+      "privateData": {
+        "@type": "",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10055/Steps_kairos:Primitives_Events_Biological_Warfare",
+      "name": "Biological Warfare",
+      "comment": "",
+      "qnode": "wd:Q8242560",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "The disease outbreak may result from the use of biological toxins or infectious agents such as bacteria, viruses, insects, and fungi with the intent to kill, harm or incapacitate humans, animals or plants as an act of war",
+      "qlabel": "biological warfare",
+      "privateData": {
+        "@type": "biological_warfare_Q8242560",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10056/Steps_kairos:Primitives_Events_Mutate_life",
+      "name": "Mutate life",
+      "comment": "",
+      "qnode": "wd:Q42918",
+      "participants": [
+        {
+          "@id": "resin:Participants/20130/Mutate:Agent",
+          "roleName": "A1_ppt_patient_entity_undergoing_mutation",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20131/Mutate:Result",
+          "roleName": "A2_prd_result_end_state",
+          "entity": "resin:Entities/00011/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "The virus may undergo an alteration in the nucleotide sequence of the genome during the disease outbreak",
+      "qlabel": "mutation",
+      "privateData": {
+        "@type": "life.mutate.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10057/Steps_kairos:Primitives_Events_Recover",
+      "name": "Recover",
+      "comment": "",
+      "qnode": "wd:Q7302970",
+      "participants": [
+        {
+          "@id": "resin:Participants/20144/Recover:Agent",
+          "roleName": "A1_ppt_sick",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20041/Recover:Affliction",
+          "roleName": "A2-cau_X_cause_or_disease",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Patients may recover from the infection of the virus",
+      "qlabel": "recover",
+      "privateData": {
+        "@type": "FrameNet.Recovery",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10058/Steps_kairos:Primitives_Events_Die",
+      "name": "Die",
+      "comment": "",
+      "qnode": "wd:Q4",
+      "participants": [
+        {
+          "@id": "resin:Participants/20142/Die:Deceased",
+          "roleName": "A1_ppt_the_deceased",
+          "entity": "resin:Entities/00001/"
+        },
+        {
+          "@id": "resin:Participants/20143/Die:Cause",
+          "roleName": "AM_cau__cause",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Patients may die from the infection of the virus",
+      "qlabel": "death",
+      "privateData": {
+        "@type": "life.die.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10059/Steps_kairos:Primitives_Events_Funeral",
+      "name": "Funeral",
+      "comment": "",
+      "qnode": "wd:Q201676",
+      "participants": [
+        {
+          "@id": "resin:Participants/20145/Funeral:Deceased",
+          "roleName": "A1_ppt_entity_buried",
+          "entity": "resin:Entities/00001/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "A ceremony for patients died in the disease outbreak",
+      "qlabel": "funeral",
+      "privateData": {
+        "@type": "contact.funeralvigil.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10060/Steps_kairos:Primitives_Events_Mutation",
+      "name": "Mutation",
+      "comment": "",
+      "qnode": "wd:Q42918",
+      "participants": [
+        {
+          "@id": "resin:Participants/20140/Mutate:Agent",
+          "roleName": "A1_ppt_patient_entity_undergoing_mutation",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20141/Mutate:Result",
+          "roleName": "A2_prd_result_end_state",
+          "entity": "resin:Entities/00011/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "The virus may undergo an alteration in the nucleotide sequence of the genome during the disease outbreak",
+      "qlabel": "mutation",
+      "privateData": {
+        "@type": "mutation_Q42918",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10061/Steps_kairos:Primitives_Events_Construction",
+      "name": "Construction",
+      "comment": "",
+      "qnode": "wd:Q385378",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Field hospitals may be constructed to accommodate patients during the outbreak",
+      "qlabel": "construction",
+      "privateData": {
+        "@type": "FrameNet.Building",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10062/Steps_kairos:Primitives_Events_Collaborate",
+      "name": "Collaborate",
+      "comment": "",
+      "qnode": "wd:Q1145523",
+      "participants": [
+        {
+          "@id": "resin:Participants/20138/Collaborate:Agent",
+          "roleName": "A0_pag_agent_focussed_party",
+          "entity": "resin:Entities/00029/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Research collaboration on finding treatment for the virus",
+      "qlabel": "collaboration",
+      "privateData": {
+        "@type": "contact.collaborate.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10063/Steps_kairos:Primitives_Events_Meeting",
+      "name": "Meeting",
+      "comment": "",
+      "qnode": "wd:Q625994",
+      "participants": [
+        {
+          "@id": "resin:Participants/20139/Meeting:Agent",
+          "roleName": "A0_pag_one_party",
+          "entity": "resin:Entities/00029/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Academic conference or scientific conference for conducting research on fighting the virus",
+      "qlabel": "convention",
+      "children": [
+        {
+          "child": "resin:Events/10083/Steps_kairos:Primitives_Events_Discussion",
+          "comment": "",
+          "optional": true,
+          "importance": 0.3,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or",
+      "privateData": {
+        "@type": "Contact.contact.meet",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10064/Steps_kairos:Primitives_Events_Investigation",
+      "name": "Investigation",
+      "comment": "",
+      "qnode": "wd:Q21004260",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "qlabel": "inquiry",
+      "children": [
+        {
+          "child": "resin:Events/10039/Steps_kairos:Primitives_Events_Identifycategorize",
+          "comment": "Identifycategorize",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10040/Steps_kairos:Primitives_Events_Contact"
+          ]
+        },
+        {
+          "child": "resin:Events/10040/Steps_kairos:Primitives_Events_Contact",
+          "comment": "Contact",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10041/Steps_kairos:Primitives_Events_Arrest",
+            "resin:Events/10080/Steps_kairos:Primitives_Events_Handcuffing",
+            "resin:Events/10082/Steps_kairos:Primitives_Events_Restrain"
+          ]
+        },
+        {
+          "child": "resin:Events/10041/Steps_kairos:Primitives_Events_Arrest",
+          "comment": "Arrest",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10042/Steps_kairos:Primitives_Events_Inspect",
+            "resin:Events/10081/Steps_kairos:Primitives_Events_Interrogation"
+          ]
+        },
+        {
+          "child": "resin:Events/10042/Steps_kairos:Primitives_Events_Inspect",
+          "comment": "Inspect",
+          "optional": true,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10043/Steps_kairos:Primitives_Events_File_Complaint"
+          ]
+        },
+        {
+          "child": "resin:Events/10081/Steps_kairos:Primitives_Events_Interrogation",
+          "comment": "Interrogation",
+          "optional": true,
+          "importance": 0.1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10080/Steps_kairos:Primitives_Events_Handcuffing",
+          "comment": "Handcuffing",
+          "optional": true,
+          "importance": 0.1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10082/Steps_kairos:Primitives_Events_Restrain",
+          "comment": "Restrain",
+          "optional": true,
+          "importance": 0.1,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or",
+      "privateData": {
+        "@type": "FrameNet.Scrutiny",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10065/Steps_kairos:Primitives_Events_Civil_Justice",
+      "name": "Civil Justice",
+      "comment": "",
+      "qnode": "wd:Q5167661",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "qlabel": "justice",
+      "children": [
+        {
+          "child": "resin:Events/10043/Steps_kairos:Primitives_Events_File_Complaint",
+          "comment": "File Complaint",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10044/Steps_kairos:Primitives_Events_Answer"
+          ]
+        },
+        {
+          "child": "resin:Events/10044/Steps_kairos:Primitives_Events_Answer",
+          "comment": "Answer",
+          "optional": false,
+          "importance": 0.5,
+          "outlinks": [
+            "resin:Events/10045/Steps_kairos:Primitives_Events_Discovery"
+          ]
+        },
+        {
+          "child": "resin:Events/10045/Steps_kairos:Primitives_Events_Discovery",
+          "comment": "Discovery",
+          "optional": false,
+          "importance": 0.5,
+          "outlinks": [
+            "resin:Events/10046/Steps_kairos:Primitives_Events_Motion"
+          ]
+        },
+        {
+          "child": "resin:Events/10046/Steps_kairos:Primitives_Events_Motion",
+          "comment": "Motion",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": [
+            "resin:Events/10100/Steps_kairos:Container:104"
+          ]
+        },
+        {
+          "child": "resin:Events/10100/Steps_kairos:Container:104",
+          "comment": "Motion outlinks",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10047/Steps_kairos:Primitives_Events_Mediation",
+          "comment": "Mediation",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10102/Steps_kairos:Primitives_Events_Settlement"
+          ]
+        },
+        {
+          "child": "resin:Events/10102/Steps_kairos:Primitives_Events_Settlement",
+          "comment": "Settlement",
+          "optional": true,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10048/Steps_kairos:Primitives_Events_Trial",
+          "comment": "Trial",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10049/Steps_kairos:Primitives_Events_Judgement"
+          ]
+        },
+        {
+          "child": "resin:Events/10049/Steps_kairos:Primitives_Events_Judgement",
+          "comment": "Judgement",
+          "optional": false,
+          "importance": 1,
+          "outlinks": [
+            "resin:Events/10050/Steps_kairos:Primitives_Events_Appeal"
+          ]
+        },
+        {
+          "child": "resin:Events/10050/Steps_kairos:Primitives_Events_Appeal",
+          "comment": "Appeal",
+          "optional": true,
+          "importance": 0.5,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or",
+      "privateData": {
+        "@type": "FrameNet.Legal_rulings",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10066/Steps_kairos:Primitives_Events_Sanitize",
+      "name": "Sanitize",
+      "comment": "",
+      "qnode": "wd:Q24887418",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Disinfection to prevent infection of the virus",
+      "qlabel": "disinfection",
+      "privateData": {
+        "@type": "socialbehavior.clean.sanitize",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10067/Steps_kairos:Primitives_Events_Wash",
+      "name": "Wash",
+      "comment": "",
+      "qnode": "wd:Q23841",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Washing hands to prevent infection",
+      "qlabel": "washing",
+      "privateData": {
+        "@type": "socialbehavior.clean.wash",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10068/Steps_kairos:Primitives_Events_Comply",
+      "name": "Comply",
+      "comment": "",
+      "qnode": "wd:Q1456974",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Complying to the government legislations",
+      "qlabel": "obedience",
+      "privateData": {
+        "@type": "socialbehavior.complyobey.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10069/Steps_kairos:Primitives_Events_Wear",
+      "name": "Wear",
+      "comment": "",
+      "qnode": "wd:Q579282",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Wearing masks to prevent the spread of virus",
+      "qlabel": "Wear",
+      "privateData": {
+        "@type": "socialbehavior.wear.wear",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10070/Steps_kairos:Primitives_Events_Educate",
+      "name": "Educate",
+      "comment": "",
+      "qnode": "wd:Q8434",
+      "participants": [
+        {
+          "@id": "resin:Participants/20042/Steps_kairos:Primitives_Events_Educate_Learner",
+          "roleName": "A2-gol_recipient_student",
+          "entity": "resin:Entities/00040/"
+        },
+        {
+          "@id": "resin:Participants/20069/Steps_kairos:Primitives_Events_Educate_Teacher",
+          "roleName": "A0_pag_agent_teacher",
+          "entity": "resin:Entities/00010/"
+        },
+        {
+          "@id": "resin:Participants/20113/Steps_kairos:Primitives_Events_Educate_Subject",
+          "roleName": "A1_ppt_topic_subject",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Sharing and educating related knowledge for fighting the disease outbreak",
+      "qlabel": "education",
+      "privateData": {
+        "@type": "cognitive.teachingtraininglearning.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10071/Steps_kairos:Primitives_Events_Social_Distancing",
+      "name": "Social Distancing",
+      "comment": "",
+      "qnode": "wd:Q30314010",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Keep physical distance to prevent the spread of the disease",
+      "qlabel": "social distancing",
+      "privateData": {
+        "@type": "",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10072/Steps_kairos:Primitives_Events_Vaccinate",
+      "name": "Vaccinate",
+      "comment": "",
+      "qnode": "wd:Q192995",
+      "participants": [
+        {
+          "@id": "resin:Participants/20132/Vaccinate:Inoculator",
+          "roleName": "A0_pag__inoculator",
+          "entity": "resin:Entities/00168/"
+        },
+        {
+          "@id": "resin:Participants/20133/Vaccinate:Inoculated",
+          "roleName": "A1_ppt__patient_inoculated",
+          "entity": "resin:Entities/00040/"
+        },
+        {
+          "@id": "resin:Participants/20134/Vaccinate:Pathogen",
+          "roleName": "A2_ppt__inoculated_against",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20135/Vaccinate:Vaccine",
+          "roleName": "Ax_mnr__innoculated_with",
+          "entity": "resin:Entities/00031/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Vaccine intended to provide acquired immunity against the virus",
+      "qlabel": "vaccination",
+      "children": [
+        {
+          "child": "resin:Events/10084/Steps_kairos:Primitives_Events_Inject",
+          "comment": "inject vaccine, event from vision",
+          "optional": true,
+          "importance": 0.1,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "or",
+      "privateData": {
+        "@type": "medical.vaccinate.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10073/Steps_kairos:Primitives_Events_Exchange",
+      "name": "Exchange",
+      "comment": "",
+      "qnode": "wd:Q21651837",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Buying, selling or exchanging goods related to the disease outbreak",
+      "qlabel": "exchange of goods",
+      "privateData": {
+        "@type": "exchange_of_goods_Q21651837",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10074/Steps_kairos:Primitives_Events_Demonstrate",
+      "name": "Demonstrate",
+      "comment": "",
+      "qnode": "wd:Q175331",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Protests over responses to the disease outbreak",
+      "qlabel": "demonstration",
+      "privateData": {
+        "@type": "conflict.demonstrate.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10075/Steps_kairos:Primitives_Events_Business_Close",
+      "name": "Business Close",
+      "comment": "",
+      "qnode": "wd:Q89681240",
+      "participants": [
+        {
+          "@id": "resin:Participants/20114/kairos:Primitives_Events_Business_Close_Business",
+          "roleName": "A0_pag_agent",
+          "entity": "resin:Entities/00007/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Business close due to the disease outbreak",
+      "qlabel": "closing of non-essential businesses",
+      "privateData": {
+        "@type": "FrameNet.Business_closure",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10076/Steps_kairos:Primitives_Events_Business_Reopen",
+      "name": "Business Reopen",
+      "comment": "",
+      "qnode": "wd:Q16571590",
+      "participants": [
+        {
+          "@id": "resin:Participants/20073/kairos:Primitives_Events_Business_Reopen_Business",
+          "roleName": "A0_pag_agent",
+          "entity": "resin:Entities/00007/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Business reopen due to the disease outbreak",
+      "qlabel": "reopening",
+      "privateData": {
+        "@type": "FrameNet.Activity_resume",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10077/Steps_kairos:Primitives_Events_Recover_2",
+      "name": "Recover 2",
+      "comment": "",
+      "qnode": "wd:Q7302970",
+      "qlabel": "recover",
+      "participants": [
+        {
+          "@id": "resin:Participants/20146/Recover:Agent",
+          "roleName": "A1_ppt_sick",
+          "entity": "resin:Entities/00044/"
+        },
+        {
+          "@id": "resin:Participants/20147/Recover:Affliction",
+          "roleName": "A2-cau_X_cause_or_disease",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Patients may recover from the infection of the virus",
+      "privateData": {
+        "@type": "FrameNet.Recovery",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10078/Steps_kairos:Primitives_Events_Die_2",
+      "name": "Die 2",
+      "comment": "",
+      "qnode": "wd:Q4",
+      "qlabel": "death",
+      "participants": [
+        {
+          "@id": "resin:Participants/20148/Die:Deceased",
+          "roleName": "A1_ppt_the_deceased",
+          "entity": "resin:Entities/00044/"
+        },
+        {
+          "@id": "resin:Participants/20149/Die:Cause",
+          "roleName": "AM_cau__cause",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Patients may die from the infection of the virus",
+      "privateData": {
+        "@type": "life.die.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10079/Steps_kairos:Primitives_Events_Funeral_2",
+      "name": "Funeral 2",
+      "comment": "",
+      "qnode": "wd:Q201676",
+      "participants": [
+        {
+          "@id": "resin:Participants/20150/Funeral:Deceased",
+          "roleName": "A1_ppt_entity_buried",
+          "entity": "resin:Entities/00044/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "A ceremony for patients died in the disease outbreak",
+      "qlabel": "funeral",
+      "privateData": {
+        "@type": "contact.funeralvigil.unspecified",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10080/Steps_kairos:Primitives_Events_Handcuffing",
+      "name": "Handcuffing",
+      "comment": "",
+      "qnode": "wd:Q15808",
+      "participants": [
+        {
+          "@id": "resin:Participants/20151/Handcuffing:Police",
+          "roleName": "A0_pag__police",
+          "entity": "resin:Entities/00028/"
+        },
+        {
+          "@id": "resin:Participants/20152/Handcuffing:Criminal",
+          "roleName": "A1_ppt__criminal",
+          "entity": "resin:Entities/00027/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Using handcuffs to secure a suspect who violated law during the disease outbreak",
+      "qlabel": "handcuffs",
+      "privateData": {
+        "@type": "handcuffs_Q15808",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10081/Steps_kairos:Primitives_Events_Interrogation",
+      "name": "Interrogation",
+      "comment": "",
+      "qnode": "wd:Q327018",
+      "participants": [
+        {
+          "@id": "resin:Participants/20153/Interrogation:Police",
+          "roleName": "A0_pag__police",
+          "entity": "resin:Entities/00028/"
+        },
+        {
+          "@id": "resin:Participants/20154/Interrogation:Criminal",
+          "roleName": "A1_ppt__criminal",
+          "entity": "resin:Entities/00027/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Interviewing with the goal of eliciting useful information related to suspected crime during the disease outbreak",
+      "qlabel": "interrogation",
+      "privateData": {
+        "@type": "interrogation_Q327018",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10082/Steps_kairos:Primitives_Events_Restrain",
+      "name": "Restrain",
+      "comment": "",
+      "qnode": "wd:Q357003",
+      "participants": [
+        {
+          "@id": "resin:Participants/20155/Restrain:Agent",
+          "roleName": "A0_pag__agent",
+          "entity": "resin:Entities/00028/"
+        },
+        {
+          "@id": "resin:Participants/20156/Restrain:Restrained",
+          "roleName": "A1_ppt__restrained",
+          "entity": "resin:Entities/00027/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Physical restraint on the suspect",
+      "qlabel": "physical restraint",
+      "privateData": {
+        "@type": "physical_restraint_Q357003",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10083/Steps_kairos:Primitives_Events_Discussion",
+      "name": "Discussion",
+      "comment": "",
+      "qnode": "wd:Q3030248",
+      "participants": [],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "conversation between two or more people on responding to the disease outbreak",
+      "qlabel": "discussion",
+      "privateData": {
+        "@type": "discussion_Q3030248",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10084/Steps_kairos:Primitives_Events_Inject",
+      "name": "Inject",
+      "comment": "",
+      "qnode": "wd:Q245359",
+      "participants": [
+        {
+          "@id": "resin:Participants/20136/Inject:Injector",
+          "roleName": "A0_pag_injector",
+          "entity": "resin:Entities/00168/"
+        },
+        {
+          "@id": "resin:Participants/20137/Inject:InjectedObject",
+          "roleName": "A1_ppt_stuff_being_put_in",
+          "entity": "resin:Entities/00031/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "The act of administering a liquid, especially a drug, into a patient infected by the virus using a needle and a syringe",
+      "qlabel": "injection",
+      "privateData": {
+        "@type": "injection_Q245359",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10085/Steps_kairos:Primitives_Events_Consume",
+      "name": "Consume",
+      "comment": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Consumption of a substance by an organism",
+      "children": [
+        {
+          "child": "resin:Events/10086/Steps_kairos:Primitives_Events_Eat",
+          "comment": "Eat",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10087/Steps_kairos:Primitives_Events_Drink",
+          "comment": "Drink",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10088/Steps_kairos:Primitives_Events_Contact_Through_Skin",
+          "comment": "Contact Through Skin",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "xor",
+      "privateData": {
+        "@type": "ingestion_Q1663054",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q1663054",
+      "participants": [
+        {
+          "@id": "resin:Participants/20074/kairos:Primitives_Events_Consume_Eater",
+          "roleName": "A0-pag_agent_eater",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20075/kairos:Primitives_Events_Consume_Entity_Ingested",
+          "roleName": "A1-ppt_patient_entity_ingested",
+          "entity": "resin:Entities/00005/"
+        }
+      ],
+      "qlabel": "ingestion"
+    },
+    {
+      "@id": "resin:Events/10086/Steps_kairos:Primitives_Events_Eat",
+      "name": "Eat",
+      "comment": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Ingestion of food to provide for all organisms their nutritional or medicinal needs",
+      "privateData": {
+        "@type": "eating_Q213449",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q213449",
+      "participants": [
+        {
+          "@id": "resin:Participants/20076/kairos:Primitives_Events_Eat_Consume",
+          "roleName": "A0-pag_consumer",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20077/kairos:Primitives_Events_Eat_Food",
+          "roleName": "A1-ppt_meal",
+          "entity": "resin:Entities/00005/"
+        }
+      ],
+      "qlabel": "eating"
+    },
+    {
+      "@id": "resin:Events/10087/Steps_kairos:Primitives_Events_Drink",
+      "name": "Drink",
+      "comment": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Ingesting water or other liquids into the body through the mouth",
+      "privateData": {
+        "@type": "drinking_Q876776",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q876776",
+      "participants": [
+        {
+          "@id": "resin:Participants/20078/kairos:Primitives_Events_Drink_Drinker",
+          "roleName": "A0-pag_drinker",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20079/kairos:Primitives_Events_Drink_Liquid",
+          "roleName": "A1-ppt_liquid",
+          "entity": "resin:Entities/00006/"
+        }
+      ],
+      "qlabel": "drinking"
+    },
+    {
+      "@id": "resin:Events/10088/Steps_kairos:Primitives_Events_Contact_Through_Skin",
+      "name": "Contact Through Skin",
+      "comment": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Route through which substances may be received",
+      "privateData": {
+        "@type": "skin_absorption_Q4669896",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q4669896",
+      "participants": [
+        {
+          "@id": "resin:Participants/20049/kairos:Primitives_Events_Contact_Through_Skin_Absorber",
+          "roleName": "A0-pag_absorber",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20115/kairos:Primitives_Events_Contact_Through_Skin_Absorbed",
+          "roleName": "A1-ppt_absorbed",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "qlabel": "skin absorption"
+    },
+    {
+      "@id": "resin:Events/10105/Steps_kairos:Primitives_Events_Contaminate_Substance",
+      "name": "Contaminate Substance",
+      "comment": "Pathogen contaminates object, which is later consumed.",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Presence of an unwanted constituent, harmful substance or impurity in a material, physical body, or environment",
+      "privateData": {
+        "@type": "contamination_Q60528603",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q60528603",
+      "participants": [
+        {
+          "@id": "resin:Participants/20116/kairos:Primitives_Events_Contamination_Causer",
+          "roleName": "A0-pag_agent_causer_of_contamination",
+          "entity": "resin:Entities/00008/"
+        },
+        {
+          "@id": "resin:Participants/20082/kairos:Primitives_Events_Contamination_Destination",
+          "roleName": "A1-gol_destination_thing_becoming_contaminated",
+          "entity": "resin:Entities/00020/"
+        }
+      ],
+      "qlabel": "contamination"
+    },
+    {
+      "@id": "resin:Events/10089/Steps_kairos:Primitives_Events_Contamination",
+      "name": "Spread Disease",
+      "comment": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Presence of an unwanted constituent, harmful substance or impurity in a material, physical body, or environment",
+      "privateData": {
+        "@type": "contamination_Q60528603",
+        "template": "",
+        "repeatable": false
+      },
+      "qnode": "wd:Q60528603",
+      "participants": [
+        {
+          "@id": "resin:Participants/20117/kairos:Primitives_Events_Contamination_Causer",
+          "roleName": "A0-pag_agent_causer_of_contamination",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20118/kairos:Primitives_Events_Contamination_Destination",
+          "roleName": "A1-gol_destination_thing_becoming_contaminated",
+          "entity": "resin:Entities/00001/"
+        }
+      ],
+      "qlabel": "contamination"
+    },
+    {
+      "@id": "resin:Events/10090/Steps_kairos:Primitives_Events_Additional_Contamination",
+      "name": "Additional Spread Disease",
+      "comment": "",
+      "qnode": "wd:Q60528603",
+      "participants": [
+        {
+          "@id": "resin:Participants/20083/kairos:Primitives_Events_Contamination_Causer",
+          "roleName": "A0-pag_agent_causer_of_contamination",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20084/kairos:Primitives_Events_Contamination_Destination",
+          "roleName": "A1-gol_destination_thing_becoming_contaminated",
+          "entity": "resin:Entities/00044/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Presence of an unwanted constituent, harmful substance or impurity in a material, physical body, or environment",
+      "qlabel": "contamination",
+      "privateData": {
+        "@type": "contamination_Q60528603",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10091/Steps_kairos:Primitives_Events_Additional_Consume",
+      "name": "Additional Consumption",
+      "comment": "",
+      "qnode": "wd:Q1663054",
+      "participants": [
+        {
+          "@id": "resin:Participants/20085/kairos:Primitives_Events_Consume_Eater",
+          "roleName": "A0-pag_agent_eater",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20056/kairos:Primitives_Events_Consume_Entity_Ingested",
+          "roleName": "A1-ppt_patient_entity_ingested",
+          "entity": "resin:Entities/00005/"
+        }
+      ],
+      "maxDuration": "",
+      "minDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Consumption of a substance by an organism",
+      "qlabel": "ingestion",
+      "children": [
+        {
+          "child": "resin:Events/10092/Steps_kairos:Primitives_Events_Additional_Eat",
+          "comment": "Eat",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10093/Steps_kairos:Primitives_Events_Additional_Drink",
+          "comment": "Drink",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10094/Steps_kairos:Primitives_Events_Additional_Contact_Through_Skin",
+          "comment": "Contact Through Skin",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "children_gate": "xor",
+      "privateData": {
+        "@type": "ingestion_Q1663054",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10092/Steps_kairos:Primitives_Events_Additional_Eat",
+      "name": "Eat",
+      "comment": "",
+      "qnode": "wd:Q213449",
+      "participants": [
+        {
+          "@id": "resin:Participants/20057/kairos:Primitives_Events_Eat_Consume",
+          "roleName": "A0-pag_consumer",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20058/kairos:Primitives_Events_Eat_Food",
+          "roleName": "A1-ppt_meal",
+          "entity": "resin:Entities/00005/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Ingestion of food to provide for all organisms their nutritional or medicinal needs",
+      "qlabel": "eating",
+      "privateData": {
+        "@type": "eating_Q213449",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10093/Steps_kairos:Primitives_Events_Additional_Drink",
+      "name": "Drink",
+      "comment": "",
+      "qnode": "wd:Q876776",
+      "participants": [
+        {
+          "@id": "resin:Participants/20059/kairos:Primitives_Events_Drink_Drinker",
+          "roleName": "A0-pag_drinker",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20060/kairos:Primitives_Events_Drink_Liquid",
+          "roleName": "A1-ppt_liquid",
+          "entity": "resin:Entities/00006/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Ingesting water or other liquids into the body through the mouth",
+      "qlabel": "drinking",
+      "privateData": {
+        "@type": "drinking_Q876776",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10094/Steps_kairos:Primitives_Events_Additional_Contact_Through_Skin",
+      "name": "Contact Through Skin",
+      "comment": "",
+      "qnode": "wd:Q4669896",
+      "participants": [
+        {
+          "@id": "resin:Participants/20061/kairos:Primitives_Events_Contact_Through_Skin_Absorber",
+          "roleName": "A0-pag_absorber",
+          "entity": "resin:Entities/00004/"
+        },
+        {
+          "@id": "resin:Participants/20062/kairos:Primitives_Events_Contact_Through_Skin_Absorbed",
+          "roleName": "A1-ppt_absorbed",
+          "entity": "resin:Entities/00008/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Route through which substances may be received",
+      "qlabel": "skin absorption",
+      "privateData": {
+        "@type": "skin_absorption_Q4669896",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10095/Steps_kairos:Primitives_Events_Business_Shutdown",
+      "name": "Business Shutdown",
+      "comment": "",
+      "qnode": "wd:Q152074",
+      "participants": [
+        {
+          "@id": "resin:Participants/20086/kairos:Primitives_Events_Business_Close",
+          "roleName": "A0_pag_agent",
+          "entity": "resin:Entities/00007/"
+        }
+      ],
+      "minDuration": "",
+      "maxDuration": "",
+      "description": "",
+      "goal": "",
+      "ta1explanation": "Business close permanently due to the disease outbreak",
+      "qlabel": "bankruptcy",
+      "privateData": {
+        "@type": "FrameNet.Business_closure",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10096/Steps_kairos:Container:100",
+      "name": "onset outlinks",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10024/Steps_kairos:Container:2",
+          "comment": "container node",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10026/Steps_kairos:Container:4",
+          "comment": "container node",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10027/Steps_kairos:Container:5",
+          "comment": "container node",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10029/Steps_kairos:Container:7",
+          "comment": "container node",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "and",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10097/Steps_kairos:Container:101",
+      "name": "Treatment outlinks",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10007/Steps_kairos:Primitives_Events_Movement.Transportation.PreventPassage:1",
+          "comment": "container node",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10008/Steps_kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:1",
+          "comment": "container node",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10053/Steps_kairos:Primitives_Events_Tracing",
+          "comment": "container node",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "and",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10098/Steps_kairos:Container:102",
+      "name": "Quarantine outlinks",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10057/Steps_kairos:Primitives_Events_Recover",
+          "comment": "recover from quarantine",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10058/Steps_kairos:Primitives_Events_Die",
+          "comment": "die",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "xor",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10099/Steps_kairos:Container:103",
+      "name": "Subsequent Treatment outlinks",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10016/Steps_kairos:Primitives_Events_Movement.Transportation.PreventPassage:3",
+          "comment": "container node",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10017/Steps_kairos:Primitives_Events_Cognitive.Inspection.SensoryObserve:2",
+          "comment": "container node",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10054/Steps_kairos:Primitives_Events_Additional_Tracing",
+          "comment": "container node",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "and",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10100/Steps_kairos:Container:104",
+      "name": "Motion outlinks",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10047/Steps_kairos:Primitives_Events_Mediation",
+          "comment": "mediation",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10048/Steps_kairos:Primitives_Events_Trial",
+          "comment": "trial",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "xor",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    },
+    {
+      "@id": "resin:Events/10101/Steps_kairos:Container:105",
+      "name": "Business Close outlinks",
+      "comment": "container node",
+      "aka": "",
+      "minDuration": "",
+      "maxDuration": "",
+      "children": [
+        {
+          "child": "resin:Events/10076/Steps_kairos:Primitives_Events_Business_Reopen",
+          "comment": "business reopen",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        },
+        {
+          "child": "resin:Events/10095/Steps_kairos:Primitives_Events_Business_Shutdown",
+          "comment": "business shutdown",
+          "optional": false,
+          "importance": 1,
+          "outlinks": []
+        }
+      ],
+      "description": "",
+      "goal": "",
+      "ta1explanation": "",
+      "children_gate": "xor",
+      "privateData": {
+        "@type": "kairos:Container",
+        "template": "",
+        "repeatable": false
+      }
+    }
+  ],
+  "entities": [
+    {
+      "@id": "resin:Entities/00001/",
+      "name": "initial person infected",
+      "qnode": "wd:Q1851760",
+      "qlabel": "victim"
+    },
+    {
+      "@id": "resin:Entities/00044/",
+      "name": "second group of infected people",
+      "qnode": "wd:Q12722854",
+      "qlabel": "sick person"
+    },
+    {
+      "@id": "resin:Entities/00004/",
+      "name": "consumer, person in contact with the infectant",
+      "qnode": "wd:Q215627",
+      "qlabel": "person"
+    },
+    {
+      "@id": "resin:Entities/00005/",
+      "name": "food",
+      "qnode": "wd:Q2095",
+      "qlabel": "food"
+    },
+    {
+      "@id": "resin:Entities/00006/",
+      "name": "liquid",
+      "qnode": "wd:Q11435",
+      "qlabel": "liquid"
+    },
+    {
+      "@id": "resin:Entities/00007/",
+      "name": "business",
+      "qnode": "wd:Q4830453",
+      "qlabel": "business"
+    },
+    {
+      "@id": "resin:Entities/00020/",
+      "name": "infectant, carrier of disease",
+      "qnode": [
+        "wd:Q170065",
+        "wd:Q2095",
+        "wd:Q11435"
+      ],
+      "qlabel": [
+        "pathogen",
+        "food",
+        "liquid"
+      ]
+    },
+    {
+      "@id": "resin:Entities/00008/",
+      "name": "cause of disease",
+      "qnode": "wd:Q170065",
+      "qlabel": "pathogen"
+    },
+    {
+      "@id": "resin:Entities/00011/",
+      "name": "mutated strain of pathogen",
+      "qnode": "wd:Q170065",
+      "qlabel": "pathogen"
+    },
+    {
+      "@id": "resin:Entities/00002/",
+      "name": "plaintiff",
+      "qnode": "wd:Q468489",
+      "qlabel": "plaintiff"
+    },
+    {
+      "@id": "resin:Entities/00003/",
+      "name": "defendant",
+      "qnode": "wd:Q159394",
+      "qlabel": "defendant"
+    },
+    {
+      "@id": "resin:Entities/00009/",
+      "name": "settlement money",
+      "qnode": "wd:Q1368",
+      "qlabel": "money"
+    },
+    {
+      "@id": "resin:Entities/00010/",
+      "name": "educator",
+      "qnode": "wd:Q974144",
+      "qlabel": "educator"
+    },
+    {
+      "@id": "resin:Entities/00018/",
+      "name": "location / facility",
+      "qnode": "wd:Q2221906",
+      "qlabel": "geographic location"
+    },
+    {
+      "@id": "resin:Entities/00023/",
+      "name": "research facility",
+      "qnode": "wd:Q2221906",
+      "qlabel": "geographic location"
+    },
+    {
+      "@id": "resin:Entities/00024/",
+      "name": "government / authorities",
+      "qnode": "wd:Q327333",
+      "qlabel": "government agency"
+    },
+    {
+      "@id": "resin:Entities/00025/",
+      "name": "other government / authorities",
+      "qnode": "wd:Q327333",
+      "qlabel": "government agency"
+    },
+    {
+      "@id": "resin:Entities/00027/",
+      "name": "suspect of crime",
+      "qnode": "wd:Q224952",
+      "qlabel": "suspect"
+    },
+    {
+      "@id": "resin:Entities/00028/",
+      "name": "law enforcement agent",
+      "qnode": "wd:Q732717",
+      "qlabel": "law_enforcement_agency"
+    },
+    {
+      "@id": "resin:Entities/00029/",
+      "name": "researcher",
+      "qnode": "wd:Q901",
+      "qlabel": "scientist"
+    },
+    {
+      "@id": "resin:Entities/00030/",
+      "name": "new treatment",
+      "qnode": "wd:Q796194",
+      "qlabel": "medical_procedure"
+    },
+    {
+      "@id": "resin:Entities/00031/",
+      "name": "vaccine",
+      "qnode": "wd:Q134808",
+      "qlabel": "vaccine"
+    },
+    {
+      "@id": "resin:Entities/00040/",
+      "name": "general population",
+      "qnode": "wd:Q28008314",
+      "qlabel": "addressee"
+    },
+    {
+      "@id": "resin:Entities/00135/",
+      "name": "judicial system",
+      "qnode": "wd:Q41487",
+      "qlabel": "court"
+    },
+    {
+      "@id": "resin:Entities/00168/",
+      "name": "medical team",
+      "qnode": "wd:Q11974939",
+      "qlabel": "health_professional"
+    },
+    {
+      "@id": "resin:Entities/00045/",
+      "name": "source of disease",
+      "qnode": "wd:Q13226383",
+      "qlabel": "facility"
+    }
+  ],
+  "relations": [
+    {
+      "name": "proximity",
+      "relationSubject": "resin:Entities/00001/",
+      "relationPredicate": "wd:Q19267375",
+      "relationObject": "resin:Entities/00018/",
+      "@id": "resin:Relations/30005/"
+    },
+    {
+      "name": "proximity",
+      "relationSubject": "resin:Entities/00001/",
+      "relationPredicate": "wd:Q19267375",
+      "relationObject": "resin:Entities/00018/",
+      "@id": "resin:Relations/30007/"
+    },
+    {
+      "name": "partially coincident with",
+      "relationSubject": "resin:Entities/00002/",
+      "relationObject": "resin:Entities/00001/",
+      "relationPredicate": "wd:P1382",
+      "@id": "resin:Relations/30001/"
+    },
+    {
+      "name": "partially coincident with",
+      "relationSubject": "resin:Entities/00003/",
+      "relationObject": "resin:Entities/00007/",
+      "relationPredicate": "wd:P1382",
+      "@id": "resin:Relations/30002/"
+    },
+    {
+      "name": "partially coincident with",
+      "relationSubject": "resin:Entities/00001/",
+      "relationObject": "resin:Entities/00004/",
+      "relationPredicate": "wd:P1382",
+      "@id": "resin:Relations/30003/"
+    },
+    {
+      "name": "partially coincident with",
+      "relationSubject": "resin:Entities/00027/",
+      "relationObject": "resin:Entities/00003/",
+      "relationPredicate": "wd:P1382",
+      "@id": "resin:Relations/30004/"
+    },
+    {
+      "name": "partially coincident with",
+      "relationSubject": "resin:Entities/00030/",
+      "relationObject": "resin:Entities/00031/",
+      "relationPredicate": "wd:P1382",
+      "@id": "resin:Relations/30006/"
+    }
+  ]
+}
