@@ -1,7 +1,10 @@
-# RESIN-pipeline
-RESIN 2022: Schema-Guided Cross-document Cross-lingual Cross-media Information Extraction and Event Tracking System 2022
+# RESIN-11
+RESIN-11: Schema-guided Event Prediction for 11 Newsworthy Scenarios
 
-## Instructions
+## Schema Library
+
+
+## Instructions to Run the System
 1. Run `git clone https://github.com/RESIN-KAIROS/RESIN-pipeline2022`
 
 2. Run `cd RESIN-pipeline2022`
@@ -21,7 +24,7 @@ RESIN 2022: Schema-Guided Cross-document Cross-lingual Cross-media Information E
 
 5. Start APIs using: `docker-compose up`
 
-6. Send the following POST message to the main API (https://github.com/RESIN-KAIROS/entrypoint2022) to start processing:
+6. Send the following POST message to the main API to start processing:
 
        curl -X POST --header "Content-Type: application/json" -d '{"id": "3fa85f64-5717-4562-b3fc-2c963f66afa6", "runId": "my_run_id", "sender": "string", "time": "2020-11-25T03:34:48.008Z", "content": {"data": "Example source document content here."}, "contentUri": "s3://kairos-experiment-data/performera/"}' http://0.0.0.0:10100/kairos/entrypoint
 
