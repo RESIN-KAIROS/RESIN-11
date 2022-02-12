@@ -6,12 +6,12 @@ The schema library is in `schemas/scenario-schemas`.
 For each schema, we also provide visualizations and explanations in `schemas/hrf`.
 
 ## Instructions to Run the System
-1. Run `git clone https://github.com/RESIN-KAIROS/RESIN-pipeline2022`
+1. Run `git clone https://github.com/RESIN-KAIROS/RESIN-11`
 
-2. Run `cd RESIN-pipeline2022`
+2. Run `cd RESIN-11`
 
 3. Setup `${KAIROS_LIB}` dir:
-   - https://github.com/RESIN-KAIROS/RESIN-pipeline2022/blob/api/docker-compose.yaml#L8;
+   - https://github.com/RESIN-KAIROS/RESIN-11/blob/api/docker-compose.yaml#L8;
 
    - Uncompress data package (e.g, LDC2021E19_KAIROS_Quizlet_9_Source_Data_V1.0) and put everything under `${KAIROS_LIB}/resin/resin/input/task1`;
 
@@ -21,7 +21,7 @@ For each schema, we also provide visualizations and explanations in `schemas/hrf
 
 4. Set up device number for each GPU-based component, e.g.,
 
-   https://github.com/RESIN-KAIROS/RESIN-pipeline2022/blob/api/docker-compose.yaml#L57
+   https://github.com/RESIN-KAIROS/RESIN-11/blob/api/docker-compose.yaml#L57
 
 5. Start APIs using: `docker-compose up`
 
